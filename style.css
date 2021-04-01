@@ -1,0 +1,31 @@
+@import url('https://fonts.google.com/specimen/Merriweather?query=Merriweather&selection.family=Merriweather:wght@300|Oswald:wght@200');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+
+p, .serif {
+    font-family: 'Merriweather';
+}
+
+.sans {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.monospace {
+    font-family: 'Inconsolata', monospace;
+}
+
+.mt-6 {
+    position: relative;
+    top: 200px;
+}
+
+.product-container {
+    -webkit-transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+}
+
+.product-container:hover {
+    opacity: 0.9;
+}
