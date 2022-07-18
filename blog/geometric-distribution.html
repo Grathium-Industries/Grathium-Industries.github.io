@@ -15,9 +15,45 @@
         <h3 class="pub-time">18/07/2022</h3>
         <h3>Use Case</h3>
         <p>The <u>Geometric Distribution</u> is used to calculate how many events / failures will occur until we get <u>one</u> success<br>
-        <i>Note: The geometric distribution is just the negative binomial distribution with the number of successes r = 1</i></p>
+        <i>Note: The geometric distribution is just the negative binomial distribution with the number of successes r = 1</i></p><br>
 
-        <h4>Expected Value</h4>
+		<p>
+			<code>
+				X ~ Geo(p), 0 < p < 1<br>
+				p = probability of event occurring<br>
+				i = number of events until one success<br>
+			</code>
+		</p>
+
+		<div class="divider"></div>
+
+		<div class="container">
+			<h4>Pr(X = i), p(i)<h4>
+			<code>
+				p * ((1 - p)^(i - 1))
+			</code>
+		</div>
+
+		<div class="container">
+			<h4>Pr(X <= i), F(i)</h4>
+			<code>
+				1 - (1 - p)^i
+			</code>
+		</div>
+
+		<div class="container">
+			<h4>Expected Value (E[X])</h4>
+			<code>
+				1 / p
+			</code>
+		</div>
+
+		<div class="container">
+			<h4>Variance (Var[X])</h4>
+			<code>
+				(r(1 - p)) / (p^2)
+			</code>
+		</div>
 	</body>
 
 	<footer>
