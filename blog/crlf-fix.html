@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="How to install R studio on Ubuntu 22 linux">
+		<meta name="keywords" content="command not found, '\r', macos, windows, shell, bash, terminal">
+		<meta name="author" content="Grathium Industries">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Fix: '\r': command not found when running script</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>Fix: '\r': command not found</h1>
+		<h3>18/07/2022</h3>
+		
+		<h3>Fixes Errors</h3>
+		<code>
+            '\r': command not found<br>
+        </code>
+
+		<h3>Description</h3>
+		<p>
+			When transfering a shell, or bash script from Windows to MacOS or Linux, you will get the error: '\r': command not found.<br>
+            This is due to the fact that Windows uses '\r\n' to represent a new line character, while MacOS and Linux uses '\n'.<br>
+		</p>
+
+		<h3>Problem</h3>
+		<p>
+			<p>After running a script from the command line, the script will start with, and run, but show an end of line (EOL) error after each line.</p>
+			<code>
+				$ ./script.sh<br>
+			</code>
+		</p>
+
+		<h3>Solution</h3>
+		<p>
+		<i>Change the end of line sequence from CRLF to LF</i><br>
+			<div>
+                <b>Visual Studio Code (vscode)</b>
+                <div>
+					<p>Ctrl + Shift + P > Change End of Line Sequence > LF</p>
+                    <img src="images/eol.png" alt="ctrl+shift+p > Change End of Line Sequence"><br>
+					<img src="images/eol2.png" alt="ctrl+shift+p > Change End of Line Sequence">
+                </div>
+            </div>
+
+			<div>
+				<b>Using Terminal (Linux)</b>
+				<div>
+					<code>$ sed 's/\r$//' inFile.sh > outFile.sh</code>
+				</div>
+			</div>
+			</div>
+		</p>
+	</body>
+
+	<footer>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-R245NSN3MZ');
+		</script>
+	</footer>
+</html>

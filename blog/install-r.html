@@ -13,7 +13,7 @@
 		<h1>How to install R studio on Ubuntu 22</h1>
 		<h3>18/07/2022</h3>
 		
-		<h3>Fixes Error Codes</h3>
+		<h3>Fixes Errors</h3>
 		<code>
 			rstudio: error while loading shared libraries: libcrypto.so.1.1: cannot open shared object file: No such file or directory<br>
 			rstudio /usr/lib/rstudio/bin/rsession: error while loading shared libraries: libssl.so.1.1: cannot open shared object file: No such file or directory<br>
@@ -33,7 +33,7 @@
 				$ rstudio<br>
 				$ sudo gdebi ./rstudio-2022.07.0-546-amd64.deb<br>
 			</code>
-		</p><br><br>
+		</p>
 
 		<h3>Solution</h3>
 		<a href="exec/r-sudio-ubuntu-22.sh">Download Solution</a>
@@ -52,7 +52,6 @@
 					<li>$ sudo gdebi install ./rstudio-2022.07.0-546-amd64.deb && ./rstudio-2022.07.0-546-amd64.deb</li>
 					<li>$ var="sudo locate libcrypto.so.1.1 -n 1" && SSLLoc=$(eval $var) && cp $SSLLoc /usr/lib/libcrypto.so.1.1</li>
 				</code>
-				<br>
 			</ol>
 		</p>
 	</body>
