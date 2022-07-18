@@ -6,22 +6,23 @@
 		<meta name="keywords" content="privacy, private, easy, simple">
 		<meta name="author" content="Grathium Industries">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Geometric Distribution</title>
+		<title>Negative Binomial</title>
         <link rel="icon" href="favicon.ico">
         <link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<h1>Geometric Distribution</h1>
+		<h1>Negative Binomial</h1>
         <h3 class="pub-time">18/07/2022</h3>
         <h3>Use Case</h3>
-        <p>The <u>Geometric Distribution</u> is used to calculate how many events / failures will occur until we get <u>one</u> success<br>
-        <i>Note: The geometric distribution is just the negative binomial distribution with the number of successes r = 1</i></p><br>
+        <p>The <u>Negative Binomial Distribution</u> is used to calculate how many events / failures will occur until we get <i>r</i> number of success<br>
+        <p>This distribution is used if we have independent trials and perform them until we get a specific number of successes</p>
 
 		<p>
 			<code>
-				X ~ Geo(p), 0 < p < 1<br>
-				p = probability of event occurring<br>
-				i = number of events until one success<br>
+				X ~ NB(r, p), 0 < p < 1<br>
+				r = success trials<br>
+				p = probability of the event occurring once<br>
+                i = number of trials / failures until <i>r</i> successes<br>
 			</code>
 		</p>
 
@@ -29,29 +30,25 @@
 
 		<div class="container">
 			<h4>Pr(X = i), p(i)<h4>
-			<code>
-				p * ((1 - p)^(i - 1))
-			</code>
+			<img src="images/nb.png" alt="Pr(X = i)">
 		</div>
 
 		<div class="container">
 			<h4>Pr(X <= i), F(i)</h4>
-			<code>
-				1 - (1 - p)^i
-			</code>
+			<img src="images/nb2.png" alt="Pr(X <= i)">
 		</div>
 
 		<div class="container">
 			<h4>Expected Value (E[X])</h4>
 			<code>
-				1 / p
+				r / p
 			</code>
 		</div>
 
 		<div class="container">
 			<h4>Variance (Var[X])</h4>
 			<code>
-				(1 - p) / (p^2)
+				(r(1 - p)) / (p^2)
 			</code>
 		</div>
 	</body>
