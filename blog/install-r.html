@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<h1>How to install R studio on Ubuntu 22</h1>
-		<h3>18/07/2022</h3>
+		<h3 class="pub-time">18/07/2022</h3>
 		
 		<h3>Fixes Errors</h3>
 		<code>
@@ -43,16 +43,14 @@
 				$ sudo gdebi -r rstudio
 			</code><br><br>
 
-			<i>Reinstall RStudio</i>
-			<ol>
-				<code>
-					<li>$ sudo apt update</li>
-					<li>$ sudo apt install gdebi-core && sudo apt install r-base</li>
-					<li>$ wget https://s3.amazonaws.com/rstudio-ide-build/desktop/jammy/amd64/rstudio-2022.07.0-546-amd64.deb</li>
-					<li>$ sudo gdebi install ./rstudio-2022.07.0-546-amd64.deb && ./rstudio-2022.07.0-546-amd64.deb</li>
-					<li>$ var="sudo locate libcrypto.so.1.1 -n 1" && SSLLoc=$(eval $var) && cp $SSLLoc /usr/lib/libcrypto.so.1.1</li>
-				</code>
-			</ol>
+			<i>Reinstall RStudio</i><br>
+			<code>
+				$ sudo apt update<br>
+				$ sudo apt install gdebi-core && sudo apt install r-base<br>
+				$ wget https://s3.amazonaws.com/rstudio-ide-build/desktop/jammy/amd64/rstudio-2022.07.0-546-amd64.deb<br>
+				$ sudo gdebi install ./rstudio-2022.07.0-546-amd64.deb && ./rstudio-2022.07.0-546-amd64.deb<br>
+				$ var="sudo locate libcrypto.so.1.1 -n 1" && SSLLoc=$(eval $var) && cp $SSLLoc /usr/lib/libcrypto.so.1.1<br>
+			</code>
 		</p>
 	</body>
 

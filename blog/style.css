@@ -1,3 +1,19 @@
+h3 {
+    position: relative;
+    padding-top: 20px;
+    margin: 0;
+}
+
+p {
+    position: relative;
+    margin: 0;
+}
+
+.pub-time {
+    position: relative;
+    padding-top: 0 !important;
+}
+
 code {
     position: relative;
     font-family: "Source Code Pro", monospace;
