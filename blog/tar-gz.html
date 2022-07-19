@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="How to install R studio on Ubuntu 22 linux">
+		<meta name="keywords" content="R, r-studio, rstudio, ubuntu22, linux, error, install">
+		<meta name="author" content="Grathium Industries">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>How to Extract / Open .tar.gz File</title>
+		<link rel="icon" href="favicon.ico">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>How to Extract / Open .tar.gz File</h1>
+		<h3 class="pub-time">19/07/2022</h3>
+		
+		<h3>Description</h3>
+		<p>
+			.tar.gz files are compressed files and archives that are used to store data, and is primarily used by Linux / MacOS platforms for web downloads. Tar or "tape archiver" is a file format which combines multiple or directory files into a single file. gz or "gzip" is a compression format which is used to compress a singular file. Therefore, for this reason, tar is used to combine a directory into a single file, while gz is used to compress and reduce the size of the file.
+		</p>
+
+		<h3>Problem</h3>
+		<p>
+			<p>After downloading a file with a filename similar to file.tar.gz, you are unable to open it.</p>
+		</p>
+
+		<h3>Solution</h3>
+		<a href="exec/r-sudio-ubuntu-22.sh">Download Solution</a>
+		<p>
+			<i>Extract the fileName.tar.gz File Using the CLI</i><br>
+			<code>
+				$ tar -xvzf fileName.tar.gz
+			</code>
+
+            <div class="divider"></div><br>
+
+            <div>
+                <strong>CLA Breakdown</strong>
+                <p><code>tar</code> The tar program installed by default on most Linux, and MacOS distributions</p><br>
+                <p><code>-x</code> Extracts files from an archive (specifies that the program should extract files)</p><br>
+                <p><code>-v</code> Displays verbose / debug info</p><br>
+                <p><code>-z</code> Filters the archive through the separate <code>gzip</code> program</p><br>
+                <p><code>-f</code> Specifies in file name / path</p><br>
+            </div>
+		</p>
+	</body>
+
+	<footer>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-R245NSN3MZ');
+		</script>
+	</footer>
+</html>
