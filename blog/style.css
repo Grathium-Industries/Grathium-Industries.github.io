@@ -7,6 +7,12 @@ html {
     margin-top: 10px;
 }
 
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+}
+
 h3 {
     position: relative;
     padding-top: 20px;

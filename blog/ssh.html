@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="How to install R studio on Ubuntu 22 linux">
+		<meta name="keywords" content="ssh, connect, linux">
+		<meta name="author" content="Grathium Industries">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>How to Connect to Device Shell Using SSH</title>
+		<link rel="icon" href="favicon.ico">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>How to Connect to Device Shell Using SSH</h1>
+		<h3 class="pub-time">19/07/2022</h3>
+		
+        <div>
+            <h3>Description</h3>
+            <p>
+                SSH (secure shell) allows you to remotely connect to a computer or device's terminal / shell session. This is typically useful for sysadmins, and provides a way to access a device's filesystem, or to run commands on a device without having physical access.
+            </p>
+        </div>
+
+		<h3>How to Use</h3>
+		<p>
+			<i>Run SSH From a Linux or MacOS Device and Remotely Connect to Another Device</i><br>
+			<code>$ ssh username@hostname</code><br>
+            or<br>
+            <code>$ ssh hostname -l username</code><br>
+            <br>
+            
+            <div>
+                <strong>e.g.</strong><br>
+                <code>$ ssh pi@192.168.0.24</code>
+            </div>
+        </p>
+
+        <div class="divider"></div><br>
+
+        <div>
+            <strong>CLA Breakdown</strong>
+            <p><code>ssh</code> The SSH program installed by default on most Linux, and MacOS distributions</p>
+            <p><code>-l</code> Specifies the local account username on the remote machine. SSH will then prompt the for the corrosponding password of this account.</p>
+
+            <div class="indent">
+                <p>
+                    <i>Note: The login credentials you will supply in SSH is for logging into an account present on the machine you are connecting to. The credentials used on your machine will not work when using SSH to log into another device.</i>
+                </p>
+            </div>
+        </div>
+	</body>
+
+	<footer>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-R245NSN3MZ');
+		</script>
+	</footer>
+</html>
