@@ -1,6 +1,12 @@
+let scrollFrameHeight = 800;
+
+let updateScrollFrameHeight = () => {
+  scrollFrameHeight = document.getElementById('infinateScroll').contentDocument.body.scrollHeight
+}
+
 let infinateScroll = () => {
   var h = (screen.height / 1.6) + document.getElementById('webpage').scrollTop;
-  if (h < 900) {
+  if (h < scrollFrameHeight) {
     document.getElementById('infinateScroll').style.height = h + "px";
   }
 }
