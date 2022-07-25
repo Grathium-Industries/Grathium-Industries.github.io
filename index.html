@@ -1,66 +1,50 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="description" content="How to install R studio on Ubuntu 22 linux">
-		<meta name="keywords" content="R, r-studio, rstudio, ubuntu22, linux, error, install">
-		<meta name="author" content="Grathium Industries">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Grathium Industries</title>
-		<link rel="icon" href="favicon.ico">
-		<link rel="stylesheet" href="blog/style.css">
-	</head>
-	<body>
-		<h1>Grathium Industries</h1>
+<html id="webpage" class="container" lang="en" onscroll="updateFooter();">
+<head>
+  <meta charset="UTF-8">
+  <title>Hudson Newey - HOME</title>
+  <link rel="shortcut icon" type="image/png" href="static/favicon.png"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="static/css/home.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-		<div class="divider"></div>
+  <div id="main">
+  </div>
+</head>
 
-		<div>
-			<h2>Projects</h2>
-			<div>
-				<a href="https://github.com/Grathium-Industries/NeonX2.0">NeonX2.0</a><br>
-				<a href="https://github.com/Grathium-Industries/Bundler">Bundler</a><br>
-				<a href="https://github.com/Grathium-Industries/Global-Search">Global Search</a>
-			</div>
-		</div>
 
-		<div>
-			<h2>Articles</h2>
-			<div>
-				<!--19/07/2022-->
-				<a href="blog/tar-gz.html">How to extract / open .tar.gz file</a><br>
-				<a href="blog/install-brave.html">How to Install Brave Browser without the Play Store</a><br>
-				<a href="blog/gitignore.html">What is a .gitignore File</a><br>
-				<a href="blog/ssh.html">How to Connect to Device Shell Using SSH</a><br>
-				<a href="blog/search-engines.html">Top Search Engines 2022</a><br>
+<body>
 
-				<!--18/07/2022-->
-				<a href="blog/install-r.html">How to install R-Studio on Ubuntu 22</a><br>
-				<a href="blog/crlf-fix.html">Fix: '\r': command not found</a><br>
-				<a href="blog/privacy-apps.html">Privacy Apps for your Grandma</a><br>
-				<a href="blog/geometric-distribution.html">Geometric Distribution</a><br>
-				<a href="blog/negative-binomial.html">Negative Binomial</a><br>
-				<a href="blog/gmail-nospam.html">How to mark a sender as not spam in Gmail</a>
-			</div>
-		</div>
+  <div class="container demo">
+    <div class="content">
+        <div id="large-header" class="large-header">
+          <canvas id="demo-canvas"></canvas>
+          <div class="main-title"><i id="title"><h1><span class="thin">Grathium</span> Industries</h1></i></div>
+        </div>
 
-		<div>
-			<h2>Platforms</h2>
-			<a href="https://github.com/Grathium-Industries">GitHub</a><br>
-			<a href="https://twitter.com/grathium">Twitter</a><br>
-			<a href="https://www.youtube.com/channel/UCPxb3gyjh5LXzrHsrGNQkaQ">YouTube</a>
-		</div>
-	</body>
+        <div class="link-container">
+        	<a onclick="window.open('https://github.com/grathium-industries', '_blank');">Github</a>
+          <a onclick="window.open('https://twitter.com/grathium', '_blank');">Twitter</a>
+          <a onclick="window.open('posts/index.html', '_blank');">Articles</a>
+        </div>
 
-	<footer>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+    </div>
+  </div>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js'></script>
+</body>
 
-			gtag('config', 'G-R245NSN3MZ');
-		</script>
-	</footer>
+<a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+<!--Infinate scroll website-->
+<div id="infinateScroll" class="websiteScroll">
+  <iframe id="websiteScroll" src="posts/index.html" scrolling="no" seamless></iframe>
+</div>
+
+<footer>
+  <script src="static/js/script.js" charset="utf-8"></script>
+  <script src="static/js/home.js" charset="urf-8"></script>
+</footer>
 </html>
