@@ -3,14 +3,18 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     padding-bottom: 50px;
-    margin-left: 20px;
+    margin-left: 10%;
     margin-top: 10px;
+    width: 80%;
+    background-color: #efefef;
 }
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.42857143;
+    font-size: 18px;
+    line-height: 1.72857143;
+    padding: 50px;
+    background-color: white;
 }
 
 h3 {
