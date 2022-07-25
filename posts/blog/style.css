@@ -120,13 +120,8 @@ a.button:hover {
 /* when on mobile */
 @media only screen and (max-width: 1026px) {
     header {
-        position: relative;
-        width: 100%;
+        display: none;
 
-    }
-    a.button {
-        position: relative;
-        width: 100%;
     }
     html {
         width: 100%;
