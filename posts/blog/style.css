@@ -108,6 +108,7 @@ a.button {
     width: calc(100% - 10px);
     margin-left: 1px;
     margin-top: 5px;
+    text-align: center;
 }
 
 a.button:hover {
