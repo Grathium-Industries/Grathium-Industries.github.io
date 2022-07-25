@@ -58,7 +58,7 @@ a:hover {
 
 .container {
     position: relative;
-    min-width: 30%;
+    min-width: 60%;
     max-width: fit-content;
     border-style: groove;
     padding: 20px;
