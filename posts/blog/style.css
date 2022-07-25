@@ -37,6 +37,8 @@ p {
 a, a:active, a:visited, a:focus {
     color: #000099;
     text-decoration: underline;
+    max-width:100%;
+    word-wrap:break-word;
 }
 
 a:hover {
@@ -118,7 +120,13 @@ a.button:hover {
 /* when on mobile */
 @media only screen and (max-width: 1026px) {
     header {
-        display: none;
+        position: relative;
+        width: 100%;
+
+    }
+    a.button {
+        position: relative;
+        width: 100%;
     }
     html {
         width: 100%;
