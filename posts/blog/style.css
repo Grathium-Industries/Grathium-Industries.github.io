@@ -34,6 +34,12 @@ p {
     max-width: 80%;
 }
 
+img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
 a, a:active, a:visited, a:focus {
     color: #000099;
     text-decoration: underline;
@@ -71,6 +77,10 @@ a:hover {
     border-style: groove;
     padding: 20px;
     margin: 10px;
+}
+
+.large-container {
+    max-width: 100%;
 }
 
 code, .code-block {
