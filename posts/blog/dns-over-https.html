@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="How to install R studio on Ubuntu 22 linux">
+		<meta name="keywords" content="ssh, connect, linux">
+		<meta name="author" content="Grathium Industries">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>How to Connect to Device Shell Using SSH</title>
+		<link rel="icon" href="favicon.ico">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<a href="/" class="button">Home</a>
+			<a href="/posts/index.html" class="button">Articles</a>
+			<a href="https://github.com/grathium-industries" class="button">GitHub</a>
+		</header>
+
+		<h1>How to Connect to Device Shell Using SSH</h1>
+		<h3 class="pub-time">25/07/2022</h3>
+		
+        <div>
+            <h3>Description</h3>
+            <p>
+                1.1.1.1 is a privacy respecting DNS provided by Cloudflare. It is a DNS server that is used to resolve domain names to IP addresses. However, by default, pihole does not use DNS over HTTPS to resolve DNS names. This can result in a loss of privacy as anyone who can conduct a MITM aattack can see the DNS requests made by the user.
+            </p>
+        </div>
+
+		<h3>Set up DNS Over HTTPS Proxy on PiHole</h3>
+		<p>
+            Copy the ARM binary URL location <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/</a><br>
+            And run the following commands on your PiHole to configure DNS over HTTPS:
+            <code>
+                $ cd /tmp<br>
+                $ wget [ARM Binary URL Location]<br>
+                $ sudo mv cloudflared /usr/local/bin<br>
+                $ sudo chmod +x /usr/local/bin/cloudflared<br>
+                $ sudo useradd -s /usr/sbin/nologin -r -M cloudflared<br>
+				$ sudo chown cloudflared:cloudflared /usr/local/bin/cloudflared<br>
+            </code><br>
+			
+			Copy the following config text into a file called / located under <code>/etc/default/cloudflared</code><br>
+			<div class="code-block">
+				CLOUDFLARED_OPTS=--port 5053 --upstream https://1.1.1.1/dns-query --upstream https://1.0.0.1/dns-query<br>
+			</div><br>
+
+			Copy the following config text into a file called / located under <code>/lib/systemd/system/cloudflared.service</code><br>
+			<div class="code-block">
+				[Unit]<br>
+				Description=cloudflared DNS over HTTPS proxy<br>
+				After=syslog.target network-online.target<br>
+				<br>
+				[Service]<br>
+				Type=simple<br>
+				User=cloudflared<br>
+				EnvironmentFile=/etc/default/cloudflared<br>
+				ExecStart=/usr/local/bin/cloudflared proxy-dns $CLOUDFLARED_OPTS<br>
+				Restart=on-failure<br>
+				RestartSec=10<br>
+				KillMode=process<br>
+				<br>
+				[Install]<br>
+				WantedBy=multi-user.target
+			</div><br>
+			
+			Run from Terminal <br>
+			<code>
+				$ sudo systemctl daemon-reload<br>
+				$ sudo systemctl enable cloudflared<br>
+				$ sudo systemctl start cloudflared
+			</code><br>
+
+			To verify the proxy is working <br>
+			<code>
+				$ sudo systemctl status cloudflared<br>
+			</code>
+
+			<div class="divider"></div>
+			<h3>Configure PiHole to use DNS over HTTPS Proxy</h3>
+			<ol>
+				<li>Navigate to <a href="https://pi.hole/admin">https://pi.hole/admin</a> in your web browser</li>
+				<li>Go to Settings -> DNS</li>
+				<li>Untick all current checkboxes in the top DNS section</li>
+				<li>Tick custom IPV4 DNS</li>
+				<li>Add <code>127.0.0.1#5053</code> as the customer IPV4 DNS server</li>
+				<li>Click "Save" down the bottom and restart PiHole</li>
+			</ol>
+        </p>
+	</body>
+
+	<footer>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-R245NSN3MZ');
+		</script>
+	</footer>
+</html>
