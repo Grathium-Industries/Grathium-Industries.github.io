@@ -96,6 +96,9 @@ code, .code-block {
     border-width: 1px;
     border-radius: 8px;
     width: 100%;
+    line-height: 26px;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 header {
