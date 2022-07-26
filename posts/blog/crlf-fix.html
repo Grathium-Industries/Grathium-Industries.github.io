@@ -20,18 +20,18 @@
 		<h1>Fix: '\r': command not found</h1>
 		<h3 class="pub-time">18/07/2022</h3>
 		
-		<h3>Fixes Errors</h3>
+		<h2>Fixes Errors</h2>
 		<code>
             '\r': command not found<br>
         </code>
 
-		<h3>Description</h3>
+		<h2>Description</h2>
 		<p>
 			When transfering a shell, or bash script from Windows to MacOS or Linux, you will get the error: '\r': command not found.<br>
             This is due to the fact that Windows uses '\r\n' to represent a new line character, while MacOS and Linux uses '\n'.<br>
 		</p>
 
-		<h3>Problem</h3>
+		<h2>Problem</h2>
 		<p>
 			<p>After running a script from the command line, the script will start with, and run, but show an end of line (EOL) error after each line.</p>
 			<code>
@@ -39,7 +39,7 @@
 			</code>
 		</p>
 
-		<h3>Solution</h3>
+		<h2>Solution</h2>
 		<p>
 		<i>Change the end of line sequence from CRLF to LF</i><br>
 			<div>

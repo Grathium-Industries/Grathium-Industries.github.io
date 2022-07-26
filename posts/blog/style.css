@@ -21,11 +21,12 @@ body {
     background-color: white;
 }
 
-h3 {
+h2 {
     position: relative;
     padding-top: 20px;
     margin: 0;
     color: black;
+    font-size: 22px;
 }
 
 p {
@@ -54,6 +55,8 @@ a:hover {
 .pub-time {
     position: relative;
     padding-top: 0 !important;
+    margin-top: -25px;
+    font-size: 20px;
 }
 
 .indent {
