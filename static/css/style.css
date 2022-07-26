@@ -16,7 +16,7 @@ html {
   position: absolute;
   z-index: -1;
   top: 0px;
-  background-image: url("../background.png"); */ /* depricated background image meathod */
+  background-image: url("../background.png"); /* depricated background image meathod */
 }
 
 .main-title {
@@ -57,6 +57,14 @@ html {
 @media only screen and (max-width: 768px) {
   .demo .main-title {
     font-size: 3em;
+  }
+
+  h1 {
+    font-size: 0.3em !important;
+  }
+
+  a {
+    font-size: 1.5em !important;
   }
 }
 
