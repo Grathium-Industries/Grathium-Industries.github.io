@@ -17,7 +17,7 @@
 			<a href="https://github.com/grathium-industries" class="button">GitHub</a>
 		</header>
 
-		<h1>How to Connect to Device Shell Using SSH</h1>
+		<h1>How to Configure DNS over HTTPS on PiHole</h1>
 		<h3 class="pub-time">25/07/2022</h3>
 		
         <div>
@@ -31,14 +31,14 @@
 		<p>
             Copy the ARM binary URL location <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/</a><br>
             And run the following commands on your PiHole to configure DNS over HTTPS:
-            <code>
+            <div class="code-block">
                 $ cd /tmp<br>
                 $ wget [ARM Binary URL Location]<br>
                 $ sudo mv cloudflared /usr/local/bin<br>
                 $ sudo chmod +x /usr/local/bin/cloudflared<br>
                 $ sudo useradd -s /usr/sbin/nologin -r -M cloudflared<br>
 				$ sudo chown cloudflared:cloudflared /usr/local/bin/cloudflared<br>
-            </code><br>
+			</div><br>
 			
 			Copy the following config text into a file called / located under <code>/etc/default/cloudflared</code><br>
 			<div class="code-block">
@@ -65,11 +65,11 @@
 			</div><br>
 			
 			Run from Terminal <br>
-			<code>
+			<div class="code-block">
 				$ sudo systemctl daemon-reload<br>
 				$ sudo systemctl enable cloudflared<br>
 				$ sudo systemctl start cloudflared
-			</code><br>
+			</div><br>
 
 			To verify the proxy is working <br>
 			<code>
