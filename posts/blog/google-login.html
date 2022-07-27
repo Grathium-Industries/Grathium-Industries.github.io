@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="How to Fix 'App not enabled for this user' When Signing in with Google">
+		<meta name="keywords" content="google, saml, sso, app, error, 403, app_not_enabled_for_user error">
+		<meta name="author" content="Grathium Industries">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>How to Fix 'App not enabled for this user'</title>
+		<link rel="icon" href="/static/favicon.ico">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<a href="/" class="button">Home</a>
+			<a href="/posts/index.html" class="button">Articles</a>
+			<a href="https://github.com/grathium-industries" class="button">GitHub</a>
+		</header>
+
+		<h1>How to Fix 'App not enabled for this user' When Signing in with Google</h1>
+		<h3 class="pub-time">27/07/2022</h3>
+		
+		<h2>Fixes Errors</h2>
+		<code>403 app_not_enabled_for_user error<br></code>
+
+		<h2>Description</h2>
+		<p>
+			When using SSO with Google, sometimes you will meet the error 403 app_not_enabled_for_user error. This is most common on mobile devices. You may be able to connect using the Google account on another device, but fail to log in on another.
+		</p>
+
+		<h2>Problem</h2>
+		<p>
+			<p>After logging into an external application (Slack, Calendar, etc...) with Google SSO, you will be met with a nasty error code</p>
+		</p>
+
+		<h2>Solution</h2>
+		<p>One of two things is happening. 1) You are trying to log in with a different account, rather than the one which has the app enabled or 2) Your system administrator has not allowed you to use the app</p>
+
+		<p>
+			<ol>
+				<li>The quickest fix for this problem, is to install a separate web browser which you do not currently have installed. Sign into the account you want to sign in with on that browser. Switch the default browser to the new web browser. Click the "Sign in with Google" button again. This should force your sign in to use the specified account. <br> <i>Note: Don't forget to change the web browser back later!</i></li>
+				<li>Contact your System administrator to gain access to the app</li>
+			</ol>
+		</p>
+
+		<div class="divider"></div>
+
+		<h2>For Sysadmin</h2>
+		<p>
+			<ol>
+				<li>Navigate to your <a href="https://admin.google.com/">Google Admin Portal</a></li>
+				<li>Navigate to "Users" in the side panel</li>
+				<li>Search for your user</li>
+				<li>Go to "Apps"</li>
+				<li>Make sure the App is enabled for the user under "External Apps"</li>
+				<li>If not, you may need to enable the app, or change the users OU or group where the app is enabled</li>
+			</ol>
+		</p>
+
+		<div class="divier"></div>
+
+		<h2>External Links</h2>
+		<a href="https://support.google.com/a/answer/6301076?hl=en">https://support.google.com/a/answer/6301076?hl=en</a>
+
+	<footer>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-R245NSN3MZ');
+		</script>
+	</footer>
+</html>
