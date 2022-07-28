@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="How to Create a Lightweight Webpage Redirect Using Only HTML">
+		<meta name="keywords" content="html, light, redirect, webpage, re-direct">
+		<meta name="author" content="Grathium Industries">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>How to Create a Lightweight Webpage Redirect Using Only HTML</title>
+		<link rel="icon" href="/static/favicon.ico">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<a href="/" class="button">Home</a>
+			<a href="/posts/index.html" class="button">Articles</a>
+			<a href="https://github.com/grathium-industries" class="button">GitHub</a>
+		</header>
+
+		<h1>How to Create a Lightweight Webpage Redirect Using Only HTML</h1>
+		<h3 class="pub-time">29/07/2022</h3>
+		
+        <div>
+            <h2>Description</h2>
+            <p>
+                Web redirects are common and useful in the modern world. They let us point the user to a new or update website, webpage, or domain. In the modern world, a lot of users will navigate away from a webpage if it takes longer than 3 seconds to load. For this reason, light and efficient redirects are a must. As any time it takes the web page to load, the more users you will lose. The three most common ways to redirect a webpage is either through DNS redirects for domain redirects, and HTML and JavaScript redirects for individual webpages. <br>
+                While JavaScript redirects are useful, taking full advantage of HTML redirects will improve the time a webpage takes to load significantly (compared in a ratio to Javascript redirects, HTML:JS). <br>
+            </p>
+        </div>
+
+		<h2>How to Use</h2>
+		<p>
+			<i>A template for the most basic HTML redirect can be found bellow</i><br>
+			
+			<div class="code-block">
+				&#60;&#33;DOCTYPE html&#62; <br>
+				&#60;html&#62; <br>
+				<div class="indent">
+					&#60;meta http-equiv="refresh" content="0; URL=https://grathium-industries.github.io/" /&#62; <br>
+					&#60;title&#62;Redirect&#60;/title&#62; <br>
+					You are about to be redirected... <br>
+				</div>
+				&#60;/html&#62; <br>
+			</div>
+        </p>
+
+        <div class="divider"></div><br>
+
+        <div>
+            <h2>Tag Breakdown</h2>
+            <p><code>&#60;&#33;DOCTYPE html&#62;</code> Tells the web browser that the current webpage should be loaded as HTML. This is typically only necessary for older web browsers</p><br>
+
+            <p><code>&#60;html&#62;</code> While this is not required, it is good practice to keep it included so all your tags have a parent or root tag</p><br>
+
+			<p><code>&#60;meta http-equiv="refresh" content="0; URL=https://grathium-industries.github.io/" /&#62;</code> This is the main redirect tag. It specifies that the program should redirect to the value specified in the <code>URL=[website]</code> parameter. Other optional parameters include <code>time=[seconds]</code> for a <i>x</i> second delay between the redirect</p><br>
+
+			<p><code>&#60;title&#62;Redirect&#60;/title&#62;</code> Sets the tab to show the title as "Redirect", while this is not required, it may be useful for people watch their history meticulously.</p><br>
+
+			<p><code>You are about to be redirected...</code> This is just some simple text which is displayed to the user, in the event that the webpage does not load. You may wish to add a link here as well incase their web browser is outdated or doesn't support HTML redirect.</p>
+        </div>
+	</body>
+
+	<footer>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-R245NSN3MZ');
+		</script>
+	</footer>
+</html>
