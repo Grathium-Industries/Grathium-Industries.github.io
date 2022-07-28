@@ -1,5 +1,6 @@
 html {
   background-color: black;
+  overflow-x: hidden;
 }
 
 .large-header {
@@ -116,4 +117,13 @@ div iframe {
   margin: 0px;
   padding: 0;
   z-index: 0;
+}
+
+imported from normalize.css
+h1 {
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
 }
