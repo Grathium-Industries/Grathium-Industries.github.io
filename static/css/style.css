@@ -17,7 +17,10 @@ html {
   position: absolute;
   z-index: -1;
   top: 0px;
-  background-image: url("../background.png"); /* depricated background image meathod */
+  background-image: url("../background.png"); /* backup background image */
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .main-title {
