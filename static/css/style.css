@@ -3,6 +3,10 @@ html {
   overflow-x: hidden;
 }
 
+* {
+  left: 0px;
+}
+
 .large-header {
   position: relative;
   width: 100%;
@@ -122,10 +126,7 @@ div iframe {
   z-index: 0;
 }
 
-imported from normalize.css
-h1 {
-}
-
+/* imported from normalize.css */
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
