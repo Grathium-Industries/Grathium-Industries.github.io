@@ -136,6 +136,34 @@ a.button:hover {
     background-color: #ccc;
 }
 
+table, th, td {
+    border:1px solid black;
+}
+
+th {
+    background-color: #efefef;
+}
+
+td {
+    position: relative;
+    padding: 5px;
+    width: 10%;
+}
+
+table {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+}
+
+.note {
+    position: relative;
+    font-style: italic;
+    font-size: 1em;
+    background-color: #ffffed;
+    padding: 1em;
+}
+
 /* when on mobile */
 @media only screen and (max-width: 1026px) {
     header {
