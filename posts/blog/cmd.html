@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="description" content="Windows: command is not recognized as an internal or external command, operable program or batch file">
+		<meta name="description" content="Windows: command not found">
 		<meta name="keywords" content="command, cmd, windows, batch, command prompt, terminal">
 		<meta name="author" content="Grathium Industries">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,14 +19,49 @@
 			<a href="https://github.com/grathium-industries" class="button">GitHub</a>
 		</header>
 
-		<h1>Windows: command is not recognized as an internal or external command, operable program or batch file</h1>
+		<h1>Windows: command not found</h1>
 		<h3 class="pub-time">02/08/2022</h3>
 		
         <div>
+			<h2>Fixes Errors</h2>
+			<code>command is not recognized as an internal or external command, operable program or batch file<br></code>
+
             <h2>Description</h2>
             <p>
-                SSH (secure shell) allows you to remotely connect to a computer or device's terminal / shell session. This is typically useful for sysadmins, and provides a way to access a device's filesystem, or to run commands on a device without having physical access.
+                This <code>stderr</code> standard error stream is a common Windows command line issue experienced among new programers, and we are all to common with it. But what does it actually mean?<br>
+				<br>
+				The text "command is not recognized as an internal or external command" refers to executables or <code>.exe</code> files. This is stating that there is no <code>.exe</code> file with that name in the current directory, or in your <code>%PATH%</code> directories. A <code>%PATH%</code> directory is where command prompt looks for executables or <code>.exe</code> files when you type in a command. The most well known <code>%PATH%</code> directory is the <code>C:\Windows\System32</code> directory where programs such as <code>echo</code> and <code>shutdown</code> are located. Therefore, if you type in <code>echo "Hello World!"</code>, you are actually calling the <code>echo</code> program from within <code>C:\Windows\System32</code> with the <a href="https://en.wikipedia.org/wiki/Command-line_argument_parsing">command line argument</a> of <code>"Hello World!"</code>. Hence why if you delete this directory everything stops working.) <br>
+				<br>
+				The text "or batch file" inherits all the same ideas as the executables, but also contains the idea that you can run batch files (<code>.bat</code> and <code>.cmd</code>) files without specifying the <code>.bat</code> extension to the file path. <br>
+				e.g. <code>helloWorld.bat</code> can be called by <code>helloWorld</code>
             </p>
+
+			<div class="divider"></div>
+
+			<h2>Fix</h2>
+			<div>
+				<b>If you are copying code from the internet</b>
+				<p>
+					<ol>
+						<li>Check that you are running commands for windows command prompt, cmd, dos, or batch</li>
+						<li>If there is a <code>$</code> at the start of the command, remove it and any leading spaces until the first alphanumeric character (as the <code>$</code> character represents that you should run the following from the command line / terminal)</li>
+					</ol>
+				</p>
+				
+				<br>
+				<b>General Fixes</b>
+				<p>
+					<ol>
+						<li>Check that you have any programs you need installed</li>
+						<li>Make sure your operating system is up-to date</li>
+						<li>If you need to use a batch script <code>.bat</code> download the script first</li>
+						<li>Make sure you are in the right directory path</li>
+						<li>Make sure that your <code>%PATH%</code> environment variables contain the path to the executable </li>
+					</ol>
+				</p>
+			</div>
+
+			<p>If all else fails, you may need to try a different solution.</p>
         </div>
 	</body>
 
