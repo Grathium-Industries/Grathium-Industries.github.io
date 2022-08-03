@@ -1,3 +1,5 @@
+const inEu = Intl.DateTimeFormat().resolvedOptions().timeZone.startsWith("Europe")? true : false;
+
 let removeCookieConsentBanner = () => {
     let bannerObj = document.getElementById('cookie-consent');
     
@@ -31,4 +33,8 @@ let checkConsentCookie = () => {
     }
 }
 
-checkConsentCookie();
+if (inEu) {
+    checkConsentCookie();
+} else {
+    removeCookieConsentBanner();
+}
