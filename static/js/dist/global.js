@@ -1,4 +1,4 @@
-var inEu = Intl.DateTimeFormat().resolvedOptions().timeZone.startsWith("Europe") ? true : false;
+var inEu = Intl.DateTimeFormat().resolvedOptions().timeZone.startsWith("Europe");
 var removeCookieConsentBanner = function () {
     var bannerObj = document.getElementById('cookie-consent');
     if (bannerObj != null) {

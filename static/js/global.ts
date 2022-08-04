@@ -1,7 +1,7 @@
-const inEu = Intl.DateTimeFormat().resolvedOptions().timeZone.startsWith("Europe")? true : false;
+const inEu: boolean = Intl.DateTimeFormat().resolvedOptions().timeZone.startsWith("Europe");
 
-let removeCookieConsentBanner = () => {
-    let bannerObj = document.getElementById('cookie-consent');
+let removeCookieConsentBanner = (): void => {
+    let bannerObj: HTMLElement | null = document.getElementById('cookie-consent');
     
     if (bannerObj != null) {
         bannerObj.remove();
@@ -9,24 +9,24 @@ let removeCookieConsentBanner = () => {
     }
 }
 
-let createConsentCookie = () => {
+let createConsentCookie = ():void => {
     // get the current date in the format "day month (in text) year"
-    let date = new Date();
+    let date: Date = new Date();
 
-    let day = date.getDate();
-    let month = date.getMonth();
-    let year = date.getFullYear() + 1;
-    let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    let dateString = day + " " + monthNames[month] + " " + year;
+    let day: number = date.getDate();
+    let month: number = date.getMonth();
+    let year: number = date.getFullYear() + 1;
+    let monthNames: string[] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let dateString: string = day + " " + monthNames[month] + " " + year;
     // create the cookie
     document.cookie = "consent=1; expires=" + dateString + "; path=/";
 
     removeCookieConsentBanner();
 }
 
-let checkConsentCookie = () => {
+let checkConsentCookie = (): void => {
     // get the cookie
-    let consentCookie = document.cookie;
+    let consentCookie: string = document.cookie;
     // check if the cookie exists
     if (consentCookie.indexOf("consent=1") > -1) {
         removeCookieConsentBanner();
