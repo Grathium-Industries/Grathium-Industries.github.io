@@ -1,3 +1,5 @@
+.vscode/
+
 [submodule "posts/deployments/NeonX2.0"]
 	path = posts/deployments/NeonX2.0
 	url = https://github.com/Grathium-Industries/NeonX2.0.git
