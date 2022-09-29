@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Strict Type Setting in Python with Cobra">
+		<meta name="keywords" content="cobra, python, python3">
+		<meta name="author" content="Grathium Industries">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cobra Docs</title>
+		<link rel="icon" href="/static/favicon.ico">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="/static/css/global.css">
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
+     		crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<a href="/" class="button">Home</a>
+			<a href="/posts/index.html" class="button">Articles</a>
+			<a href="https://github.com/grathium-industries" class="button">GitHub</a>
+		</header>
+
+		<h1>Cobra Docs</h1>
+		<h3 class="pub-time">29/10/2022</h3>
+
+        <a href="https://github.com/Grathium-Industries/cobra">Cobra Source & Download</a>
+		
+        <div>
+            <h2>Description</h2>
+            <p>
+                Similar to what TypeScript is to JavaScript, Cobra is an abstraction of Python which can compile into Python, but with improved types, memory management, and syntax. Cobra is also backwards compatible with Pytnon2.7 & Python3, to use (similar to TypeScript), rename your .py files to .pyc<br>
+            </p>
+        </div>
+
+		<h2>How to Use</h2>
+		<p>
+			Compiling Singular <code>program.pyc</code> file.<br>
+            <code>$ cobra.py ./program.pyc</code> <br> <br>
+
+            Compiling an Entire Directory <code>src/</code> of <code>.pyc</code> files <br>
+            <code>$ cobra.py src/</code>
+        </p>
+
+        <div class="divider"></div><br>
+
+        <div>
+            <h2>Tag Breakdown</h2>
+
+            <div class="container large-container">
+                <strong>Comments</strong><br>
+                A comment can be used to annotate a <code>.pyc</code> file, and while not affect the functionality. It is typically used to describe the a purpose of a line or statement. However, to save runtime performance, these comments will be removed from the final <code>.py</code> compiled file<br>
+    
+                <div class="indent">
+                    <b>Usage</b><br>
+                    <code># this is a comment</code>
+                    <br>
+                    <b>Context</b><br>
+                    <div class="code-block">
+                        # prints "Hello World!" to the command line <br>
+                        print("Hello world!")
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="container large-container">
+                <strong>Functions</strong><br>
+                A function shorthand can be used to save time and improve code readability.<br>
+    
+                <div class="indent">
+                    <b>Usage</b><br>
+                    <code>fn main():</code>
+                    <br>
+                    <b>Context</b><br>
+                    <div class="code-block">
+                        fn readFile(fileName): <br>
+                            <div class="indent">
+                                import os <br>
+                                with open(filepath, "r") as file: <br>
+                                <div class="indent">
+                                    return file.read() <br>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="container large-container">
+                <strong>Variable Constants</strong><br>
+                A constant can be used to prefix a variable which should not change. Cobra will throw an error if a constant variable is changed.<br>
+    
+                <div class="indent">
+                    <b>Usage</b><br>
+                    <code>const name: str = "John Doe"</code>
+                    <br>
+                    <b>Context</b><br>
+                    <div class="code-block">
+                        # creates a variable which cannot be changed to the value "Hello World!" <br>
+                        const message: str = "Hello World!" <br>
+                        # prints "Hello World!" to the command line <br>
+                        print(message)
+                    </div><br>
+                    <b>Throws Error When</b><br>
+                    <div class="code-block">
+                        const name: str = "John Doe" <br>
+                        name = "Alice"
+                    </div><br>
+                </div>
+            </div><br>
+        </div>
+
+        <div class="divider"></div><br>
+
+        <div>
+            <h2>Code Example</h2>
+
+            <h3><b>Echo Name Example</b></h3>
+            <div class="code-block">
+                from time import sleep <br>
+                <br>
+                fn main(): <br>
+                <div class="indent">
+                    const greeting: str = "Hello" <br>
+                    myAge: int = int() <br>
+                    <br>
+                    # get the user to input their details <br>
+                    print("Please input your name") <br>
+                    myName = input() <br>
+                    print("\nPlease input your age") <br>
+                    myAge = input() <br>
+                    <br>
+                    sleep(2)
+                    const fullMessage: str = f"{greeting} {myName}!" <br>
+                    print(fullMessage) <br>
+                    <br>
+                </div>
+                main()
+            </div>
+
+            <h4><b>Output</b></h4>
+            <div class="code-block">
+                Code Compiled! <br>
+                from time import sleep <br>
+                def main(): <br>
+                greeting: str = "Hello" <br>
+                myAge: int = 0 <br>
+                print("Please input your name") <br>
+                myName = input() <br>
+                print("\nPlease input your age") <br>
+                myAge = input() <br>
+                sleep(2) fullMessage: str = f"{greeting} {myName}!" <br>
+                print(fullMessage) <br>
+                main() <br>
+
+
+                -------------------- <br>
+                Warning from testing/example.pyc <br>
+                Currently Using Use of escaped newline character in print() statement <br>
+                This can be incorrect because it can lead to worse code legibility and cross platform compatability issues. <br>
+                e.g. Windows uses as a newline character \r\n while Linux and newer MacOS devices use \n,and older MacOS devices use \r for a newline <br>
+                Suggestion: Consider using empty print() statements for newlines
+            </div>
+
+            <h4><i>Notes:</i></h4>
+            <p>
+                After the program is complete the compiled and printed <code>.py</code> file will be created in the same directory as the <code>.pyc</code> source file.
+            </p>
+        </div>
+	</body>
+
+	<footer>
+		<div id="cookie-consent" class="cookie-consent-banner">
+			<div class="cookie-consent-banner__inner">
+				<div class="cookie-consent-banner__copy">
+				<div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES</div>
+				<div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use our website.</div>
+			</div>
+		  
+			<div class="cookie-consent-banner__actions">
+				<a href="#" class="cookie-consent-banner__cta" onclick="createConsentCookie();">
+				OK
+				</a>
+				
+				<a href="https://www.google.com/" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">
+				Decline
+				</a>
+			</div>
+		</div>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-R245NSN3MZ');
+		</script>
+
+		<script src="/static/js/dist/global.js"></script>
+	</footer>
+</html>

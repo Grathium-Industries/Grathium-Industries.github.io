@@ -1,4 +1,4 @@
-# Grathium Industries
+# Grathium Industries Website
 ---
 
 ## Links
