@@ -7,3 +7,6 @@
 [submodule "posts/deployments/Online-Calculator"]
 	path = posts/deployments/Online-Calculator
 	url = https://github.com/Grathium-Industries/Online-Calculator.git
+[submodule "posts/deployments/bluff-ball"]
+	path = posts/deployments/bluff-ball
+	url = https://github.com/hudson-newey/Bluff-Ball.git
