@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="How to Add More swap / zram on Fedora Linux">
+		<meta name="keywords" content="linux, fedora, swap, zram">
+		<meta name="author" content="Grathium Industries">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>How to Add More swap / zram on Fedora Linux</title>
+		<link rel="icon" href="/static/favicon.ico">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="/static/css/global.css">
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
+     		crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<a href="/" class="button">Home</a>
+			<a href="/posts/index.html" class="button">Articles</a>
+			<a href="https://github.com/grathium-industries" class="button">GitHub</a>
+		</header>
+
+		<h1>How to Add More swap / zram on Fedora Linux</h1>
+		<h3 class="pub-time">09/10/2022</h3>
+		
+        <div>
+            <h2>Description</h2>
+            <p>
+                zram is the Fedora Linux's compressed equvilant of swap which comes with <a href="https://linuxreviews.org/The_Benefits_Of_Having_A_Compressed_zram_Swap_Device_On_Linux">many benefits</a> in comparisson to swap on Windows, MacOS, or Ubuntu. However, it can be more difficult to configure as a traditional <code>0600 /swapfile</code> is not compatible with zram, as zram uses storage partitions in replacement of files.
+            </p>
+        </div>
+
+		<h2>zram Configuration File</h2>
+		<p>
+			<i>Fedora Linux Location of zram config file</i><br>
+			<code>/etc/systemd/zram-generator.conf</code><br>
+
+			<br>
+
+			<div>
+				<strong>Example zram Configuration File with 1.8 times RAM space <i>(Figure 1)</i></strong><br>
+				<code>$ cat /etc/systemd/zram-generator.conf</code> <br>
+				<div class="code-block">
+					[zram0] <br>
+					zram-fraction=1.8
+				</div>
+			</div><br>
+		</p>
+
+		<p>
+            <div>
+                <strong>Modifying zram space using nano</strong><br>
+                <code>$ sudo nano /etc/systemd/zram-generator.conf</code>
+            </div><br>
+
+			<div>
+                <strong>Modifying zram space using vim</strong><br>
+                <code>$ sudo vim /etc/systemd/zram-generator.conf</code>
+            </div>
+        </p>
+
+        <div class="divider"></div><br>
+
+        <div>
+            <strong>Config File Breakdown of <i>Figure 1</i></strong>
+            <p><code>[zram0]</code> The zram mounting partition. On Fedora, the default zram name is zram0, therefore, the config setup will be partition name surounded in sqaure brackets.</p> <br>
+            <p>
+				<code>zram-fraction=1.8</code> Specifies the size of the zram partition. By default on Fedora, this is <code>1.0</code>. This sets the size of the zram partition to a scalar multiple of the RAM size. <br>
+				e.g. If the computer has 8GB of RAM, a <code>zram-fraction=1.5</code> will create a zram partition of size 12GB.
+			</p>
+        </div>
+	</body>
+
+	<footer>
+		<div id="cookie-consent" class="cookie-consent-banner">
+			<div class="cookie-consent-banner__inner">
+				<div class="cookie-consent-banner__copy">
+				<div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES</div>
+				<div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use our website.</div>
+			</div>
+		  
+			<div class="cookie-consent-banner__actions">
+				<a href="#" class="cookie-consent-banner__cta" onclick="createConsentCookie();">
+				OK
+				</a>
+				
+				<a href="https://www.google.com/" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">
+				Decline
+				</a>
+			</div>
+		</div>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-R245NSN3MZ');
+		</script>
+
+		<script src="/static/js/dist/global.js"></script>
+	</footer>
+</html>
