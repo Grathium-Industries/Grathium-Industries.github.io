@@ -18,10 +18,9 @@ html {
 }
 
 .demo .large-header {
-  position: absolute;
+  position: initial;
   z-index: -1;
   top: 0px;
-  background-image: url("../background.png"); 
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -89,17 +88,18 @@ html {
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
-  width: 100%
+  width: 100%;
 }
 
-.link-container > a:active, a {
+.link-container > button {
   color: #eee;
   font-size: 1.8em;
   text-decoration: none;
   padding: 10px;
+  margin-left: 10px !important;
 }
 
-.link-container > a:hover{
+.link-container > button:hover{
   color: #fff;
   font-size: 2em;
 }
