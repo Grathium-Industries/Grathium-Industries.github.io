@@ -84,7 +84,7 @@ html {
 .link-container {
   position: absolute;
   text-align: center;
-  top: calc( 35% + 120px );
+  top: calc( 40% + 120px );
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
