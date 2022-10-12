@@ -10,7 +10,6 @@ html {
 .large-header {
   position: relative;
   width: 100%;
-  background: #111;
   overflow: hidden;
   background-size: cover;
   background-position: center center;
@@ -21,9 +20,12 @@ html {
   position: initial;
   z-index: -1;
   top: 0px;
-  background-size: cover;
+}
+
+.content {
+  position: relative;
+  height: 100% !important;
   width: 100%;
-  height: 100%;
 }
 
 .main-title {
@@ -36,7 +38,7 @@ html {
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
-  text-shadow: 2px 1px black;
+  text-shadow: 4pt 4pt #999;
   transition: 0.7s;
   /* disable selecting text */
   -webkit-touch-callout: none;
@@ -53,7 +55,7 @@ html {
 
 #title {
   text-transform: uppercase;
-  font-size: 2.4em;
+  font-size: 50pt;
   letter-spacing: 0.1em;
 }
 
@@ -78,30 +80,6 @@ html {
 #main {
   transition: margin-left .5s;
   padding: 20px;
-}
-
-/* LINKS */
-.link-container {
-  position: absolute;
-  text-align: center;
-  top: calc( 40% + 120px );
-  left: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
-  width: 100%;
-}
-
-.link-container > button {
-  color: #eee;
-  font-size: 1.8em;
-  text-decoration: none;
-  padding: 10px;
-  margin-left: 10px !important;
-}
-
-.link-container > button:hover{
-  color: #fff;
-  font-size: 2em;
 }
 
 /* BELLOW WEBSITE */
@@ -153,7 +131,66 @@ html {
   font-size: 30px;
   text-decoration: none;
 }
+
 #back2Top:hover {
   background-color: #DDF;
   color: #000;
+}
+
+div.arrow {
+	width: 6vmin;
+	height: 6vmin;
+	box-sizing: border-box;
+	position: fixed;
+  left: 50%;
+	bottom: 10%;
+  transform: translateX(-50%);
+  -moz-transform: translateX(-50%); /* For mozilla support */
+  -webkit-transform: translateX(-50%); /* For safari support */
+  -ms-transform: translateX(-50%); /* For IE support */
+  -o-transform: translateX(-50%); /* For opera support */
+	transform: rotate(135deg);
+}
+
+div.arrow::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-width: .8vmin .8vmin 0 0;
+  border-style: solid;
+  border-color: #fafafa;
+  transition: .2s ease;
+  display: block;
+  transform-origin: 100% 0;
+}
+
+div.arrow:after {
+  content: '';
+  float: left;
+  position: relative;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  border-width: 0 .8vmin 0 0;
+  border-style: solid;
+  border-color: #fafafa;
+  transform-origin: 100% 0;
+  transition:.2s ease;
+}
+
+div.arrow:hover::after {
+  transform: rotate(45deg);
+  height: 120%;
+}
+
+div.arrow:hover::before {
+  transform: scale(.8);
+  
+}
+
+#gradient {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  top: 0px;
 }
