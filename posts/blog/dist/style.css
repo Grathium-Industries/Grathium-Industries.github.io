@@ -164,7 +164,6 @@ table {
   padding: 1em;
 }
 
-/* when on mobile */
 @media only screen and (max-width: 1026px) {
   header {
     display: none;

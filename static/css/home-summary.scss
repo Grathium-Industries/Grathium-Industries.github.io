@@ -33,7 +33,7 @@ button:hover {
     margin-top: 20px;
 }
 
-/* hide images on small screens */
+// hide images on small screens
 @media screen and (max-width: 1100px) {
     .preview-image {
       visibility: hidden;
@@ -43,7 +43,7 @@ button:hover {
       width: 28%;
       display: none;
     }
-  }
+}
 
 .preview-image {
     position: relative;

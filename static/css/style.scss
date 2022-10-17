@@ -1,5 +1,10 @@
+$background-color: black;
+$secondary-color: #fafafa;
+$text-color: #F9F1E9;
+$shadow-color: #999;
+
 html {
-  background-color: black;
+  background-color: $background-color;
   overflow-x: hidden;
 }
 
@@ -32,13 +37,13 @@ html {
   position: absolute;
   margin: 0;
   padding: 0;
-  color: #F9F1E9;
+  color: $text-color;
   text-align: center;
   top: 35%;
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
-  text-shadow: 4pt 4pt #999;
+  text-shadow: 4pt 4pt $shadow-color;
   transition: 0.7s;
   /* disable selecting text */
   -webkit-touch-callout: none;
@@ -82,13 +87,57 @@ html {
   padding: 20px;
 }
 
-/* BELLOW WEBSITE */
+// down arrow on main content
+div.arrow::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-width: .8vmin .8vmin 0 0;
+  border-style: solid;
+  border-color: $secondary-color;
+  transition: .2s ease;
+  display: block;
+  transform-origin: 100% 0;
+}
+
+div.arrow:after {
+  content: '';
+  float: left;
+  position: relative;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  border-width: 0 .8vmin 0 0;
+  border-style: solid;
+  border-color: $secondary-color;
+  transform-origin: 100% 0;
+  transition:.2s ease;
+}
+
+div.arrow:hover::after {
+  transform: rotate(45deg);
+  height: 120%;
+}
+
+div.arrow:hover::before {
+  transform: scale(.8);
+}
+
+#gradient {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  top: 0px;
+}
+
+
+// BELLOW WEBSITE
 .websiteScroll {
   position: absolute;
   top: 100%;
   width: 100%;
-  background-color: white;
-  color: #abb2bf;
+  background-color: $background-color;
+  color: $secondary-color;
   margin: 0;
   padding: 0;
 }
@@ -104,9 +153,9 @@ div iframe {
   z-index: 0;
 }
 
-/* imported from normalize.css */
+// scroll up button on subpage
 html {
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif; // font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -125,7 +174,7 @@ html {
   position: fixed;
   bottom: 50px;
   right: 0;
-  background-color: #DDD;
+  background-color: $secondary-color;
   color: #555;
   text-align: center;
   font-size: 30px;
@@ -134,7 +183,7 @@ html {
 
 #back2Top:hover {
   background-color: #DDF;
-  color: #000;
+  color: $background-color;
 }
 
 div.arrow {
@@ -145,52 +194,9 @@ div.arrow {
   left: 50%;
 	bottom: 10%;
   transform: translateX(-50%);
-  -moz-transform: translateX(-50%); /* For mozilla support */
-  -webkit-transform: translateX(-50%); /* For safari support */
-  -ms-transform: translateX(-50%); /* For IE support */
-  -o-transform: translateX(-50%); /* For opera support */
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 	transform: rotate(135deg);
-}
-
-div.arrow::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  border-width: .8vmin .8vmin 0 0;
-  border-style: solid;
-  border-color: #fafafa;
-  transition: .2s ease;
-  display: block;
-  transform-origin: 100% 0;
-}
-
-div.arrow:after {
-  content: '';
-  float: left;
-  position: relative;
-  top: -100%;
-  width: 100%;
-  height: 100%;
-  border-width: 0 .8vmin 0 0;
-  border-style: solid;
-  border-color: #fafafa;
-  transform-origin: 100% 0;
-  transition:.2s ease;
-}
-
-div.arrow:hover::after {
-  transform: rotate(45deg);
-  height: 120%;
-}
-
-div.arrow:hover::before {
-  transform: scale(.8);
-  
-}
-
-#gradient {
-  position: absolute;
-  width: 100%;
-  height: 800px;
-  top: 0px;
 }
