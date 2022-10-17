@@ -9,7 +9,8 @@
       "cSpell.ignorePaths": [
         "**/.vscode/**",
         "**/.well-known/**"
-      ]
+      ],
+      "compile-hero.disable-compile-files-on-did-save-code": false
     },
     "extensions": {
       "recommendations": [
@@ -17,8 +18,7 @@
         "samverschueren.final-newline",
         "ecmel.vscode-html-css",
         "ritwickdey.LiveServer",
-        "Wscats.eno",
-        "gitlength.vscodeintellicode"
+        "Wscats.eno"
       ]
     }
   }
