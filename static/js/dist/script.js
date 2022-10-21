@@ -1,7 +1,3 @@
-var infinateScroll = function () {
-    var h = (screen.height / 1.6) + document.getElementById('webpage').scrollTop;
-    document.getElementById('infinateScroll').style.height = h + "px";
-};
 // scroll to top button
 $(window).scroll(function () {
     var height = $(window).scrollTop();
@@ -67,8 +63,3 @@ function updateGradient() {
     }
 }
 setInterval(updateGradient, 10);
-var loop = function () {
-    infinateScroll();
-    setTimeout(loop, 1);
-};
-loop();

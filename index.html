@@ -17,7 +17,10 @@
 <body>
   <div id="gradient" class="container demo content">
         <div id="large-header" class="large-header container demo content">
-          <div class="main-title"><i id="title"><h1><span class="thin">Grathium</span> [Industries]</h1></i></div>
+          <div class="main-title">
+            <h1 id="title"><span class="thin">Grathium</span> [Industries]</h1>
+            <p>Innovative programing languages, desktop environments, computer aided accelerated learning & irrational linear offset encoding</p>
+          </div>
         </div>
   </div>
   <a href="#content" onclick="scrollToContent();">
@@ -29,7 +32,13 @@
 
 <!--Infinate scroll website-->
 <div id="infinateScroll" class="websiteScroll">
-  <iframe id="websiteScroll" src="posts/summary_index.html" scrolling="no" onload="updateScrollFrameHeight()" seamless></iframe>
+  <iframe
+    id="websiteScroll"
+    src="posts/summary_index.html"
+    scrolling="no"
+    seamless
+    onload="this.style.height=(this.contentWindow.document.body.scrollHeight)+'pt';"
+  ></iframe>
 </div>
 
 <footer>

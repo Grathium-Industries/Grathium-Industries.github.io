@@ -1,9 +1,28 @@
 html {
   background-color: black;
+  font-family: "Barlow", sans-serif;
+}
+
+p {
+  font-family: "Barlow", sans-serif;
 }
 
 h1 {
   color: white;
+}
+
+h2 {
+  font-family: "Barlow", sans-serif;
+}
+
+a {
+  font-family: "Barlow", sans-serif;
+}
+
+img {
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 12px;
 }
 
 button {
