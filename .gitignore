@@ -1,5 +1,3 @@
-server
-
 lib-cov
 *.seed
 *.log
