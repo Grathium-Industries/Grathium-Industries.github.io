@@ -1,0 +1,16 @@
+{
+    "name": "Grathium Industries Website",
+    "short_name" : "Grathium Industries",
+    "start_url": "index.html?ref=homescreen",
+    "scope" : "./",
+    "icons": [
+        {
+            "src": "./static/favicon.ico",
+            "sizes": "200x200",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "display": "standalone"
+}
