@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://grathium-industries.github.io/index.html</loc>
+    <loc>https://grathium-industries.github.io/</loc>
     <lastmod>2022-07-28</lastmod>
   </url>
 
   <url>
-    <loc>https://grathium-industries.github.io/posts/index.html</loc>
+    <loc>https://grathium-industries.github.io/posts/</loc>
     <lastmod>2022-07-28</lastmod>
   </url>
 
@@ -131,7 +131,7 @@
   </url>
 
   <url>
-    <loc>https://grathium-industries.github.io/posts/summary_index.html</loc>
+    <loc>https://grathium-industries.github.io/posts/summary_</loc>
   </url>
 
   <url>
@@ -139,14 +139,14 @@
   </url>
 
   <url>
-    <loc>https://grathium-industries.github.io/posts/deployments/Internet-Speed-Test/index.html</loc>
+    <loc>https://grathium-industries.github.io/posts/deployments/Internet-Speed-Test/</loc>
   </url>
 
   <url>
-    <loc>https://grathium-industries.github.io/posts/deployments/Online-Calculator/index.html</loc>
+    <loc>https://grathium-industries.github.io/posts/deployments/Online-Calculator/</loc>
   </url>
 
   <url>
-    <loc>https://grathium-industries.github.io/posts/deployments/bluff-ball/index.html</loc>
+    <loc>https://grathium-industries.github.io/posts/deployments/bluff-ball/</loc>
   </url>
 </urlset>
