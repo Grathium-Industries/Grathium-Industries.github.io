@@ -7,3 +7,6 @@
 [submodule "posts/deployments/bluff-ball"]
 	path = posts/deployments/bluff-ball
 	url = https://github.com/hudson-newey/Bluff-Ball.git
+[submodule "posts/deployments/purewatch"]
+	path = posts/deployments/purewatch
+	url = https://github.com/Grathium-Industries/Purewatch.git
