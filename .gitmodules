@@ -10,3 +10,6 @@
 [submodule "posts/deployments/purewatch"]
 	path = posts/deployments/purewatch
 	url = https://github.com/Grathium-Industries/Purewatch.git
+[submodule "u"]
+	path = u
+	url = https://github.com/hudson-newey/URL-Shortener-and-Redirect.git
