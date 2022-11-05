@@ -70,3 +70,17 @@
 .cookie-consent-banner__cta:last-child {
   margin-left: 16px;
 }
+
+.content-footer {
+  position: relative;
+  height: max-content;
+  width: 100%;
+  left: 0px;
+  top: auto;
+  border-style: none;
+}
+.content-footer iframe {
+  position: relative;
+  height: 290px;
+  width: 100%;
+}

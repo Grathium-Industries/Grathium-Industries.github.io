@@ -1,102 +1,115 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="description" content="Negative Binomial Distribution">
-		<meta name="keywords" content="negative binomial, nb, distribution, statistics">
-		<meta name="author" content="Grathium Industries">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Negative Binomial Distribution</title>
-        <link rel="icon" href="/static/favicon.ico">
-        <link rel="stylesheet" href="dist/style.css">
-		<link rel="stylesheet" href="/static/css/dist/global.css">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
-     		crossorigin="anonymous"></script>
-	</head>
-	<body>
-		<header>
-			<a href="/" class="button">Home</a>
-			<a href="/posts/" class="button">Articles</a>
-			<a href="https://github.com/grathium-industries" class="button">GitHub</a>
-		</header>
 
-		<h1>Negative Binomial Distribution</h1>
-        <h3 class="pub-time">18/07/2022</h3>
-        <h2>Use Case</h2>
-        <p>The <u>Negative Binomial Distribution</u> is used to calculate how many events / failures will occur until we get <i>r</i> number of success.<br>
-        <p>This distribution is used if we have independent trials and perform them until we get a specific number of successes.</p>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Negative Binomial Distribution">
+	<meta name="keywords" content="negative binomial, nb, distribution, statistics">
+	<meta name="author" content="Grathium Industries">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Negative Binomial Distribution</title>
+	<link rel="icon" href="/static/favicon.ico">
+	<link rel="stylesheet" href="dist/style.css">
+	<link rel="stylesheet" href="/static/css/dist/global.css">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
+		crossorigin="anonymous"></script>
+</head>
 
-		<p>
-			<div class="code-block container">
-				X ~ NB(r, p), 0 < p < 1<br>
-				r = success trials<br>
-				p = probability of the event occurring once<br>
-                i = number of trials / failures until <i>r</i> successes<br>
-			</div>
-		</p>
+<body>
+	<header>
+		<a href="/" class="button">Home</a>
+		<a href="/posts/" class="button">Articles</a>
+		<a href="https://github.com/grathium-industries" class="button">GitHub</a>
+	</header>
 
-		<div class="divider"></div>
+	<h1>Negative Binomial Distribution</h1>
+	<h3 class="pub-time">18/07/2022</h3>
+	<h2>Use Case</h2>
+	<p>The <u>Negative Binomial Distribution</u> is used to calculate how many events / failures will occur until we get
+		<i>r</i> number of success.<br>
+	<p>This distribution is used if we have independent trials and perform them until we get a specific number of
+		successes.</p>
 
-		<div class="container">
-			<h4>Pr(X = i), p(i)<h4>
-			<img src="images/nb.png" alt="Pr(X = i)">
-		</div>
+	<p>
+	<div class="code-block container">
+		X ~ NB(r, p), 0 < p < 1<br>
+			r = success trials<br>
+			p = probability of the event occurring once<br>
+			i = number of trials / failures until <i>r</i> successes<br>
+	</div>
+	</p>
 
-		<div class="container">
-			<h4>Pr(X <= i), F(i)</h4>
-			<img src="images/nb2.png" alt="Pr(X <= i)">
-		</div>
+	<div class="divider"></div>
 
-		<div class="container">
-			<h4>Expected Value (E[X])</h4>
-			<code>
+	<div class="container">
+		<h4>Pr(X = i), p(i)<h4>
+				<img src="images/nb.png" alt="Pr(X = i)">
+	</div>
+
+	<div class="container">
+		<h4>Pr(X <= i), F(i)</h4>
+				<img src="images/nb2.png" alt="Pr(X <= i)">
+	</div>
+
+	<div class="container">
+		<h4>Expected Value (E[X])</h4>
+		<code>
 				r / p
 			</code>
-		</div>
+	</div>
 
-		<div class="container">
-			<h4>Variance (Var[X])</h4>
-			<code>
+	<div class="container">
+		<h4>Variance (Var[X])</h4>
+		<code>
 				(r(1 - p)) / (p^2)
 			</code>
-		</div>
+	</div>
 
-		<div class="disquis-comments">
-            <div class="divider"></div>
+	<div class="divider"></div>
 
-            <script id="dsq-count-scr" src="//grathium-industries.disqus.com/count.js" async></script>
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                this.page.url = "https://grathium-industries.github.io/posts/blog/browser-compare.html";  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = "browser_compare"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://grathium-industries-1.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-	</body>
+	<div class="disquis-comments">
+		<script id="dsq-count-scr" src="//grathium-industries.disqus.com/count.js" async></script>
+		<div id="disqus_thread"></div>
+		<script>
+			var disqus_config = function () {
+				this.page.url = "https://grathium-industries.github.io/posts/blog/negative-binomial.html";  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = "negative_binomial"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			(function () { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://grathium-industries-1.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+				Disqus.</a></noscript>
+	</div>
 
-	<footer>
-		<div id="cookie-consent" class="cookie-consent-banner">
-			<div class="cookie-consent-banner__inner">
-				<div class="cookie-consent-banner__copy">
+	<div class="content-footer">
+		<iframe src="/posts/components/suggestedArticles.html" scrolling="no" frameborder="0"></iframe>
+	</div>
+</body>
+
+<footer>
+	<div id="cookie-consent" class="cookie-consent-banner">
+		<div class="cookie-consent-banner__inner">
+			<div class="cookie-consent-banner__copy">
 				<div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES</div>
-				<div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use our website.</div>
+				<div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social
+					media features and to analyse our traffic. We also share information about your use of our site with our
+					social media, advertising and analytics partners who may combine it with other information that you’ve
+					provided to them or that they’ve collected from your use of their services. You consent to our cookies if you
+					continue to use our website.</div>
 			</div>
-		  
+
 			<div class="cookie-consent-banner__actions">
 				<a href="#" class="cookie-consent-banner__cta" onclick="createConsentCookie();">
-				OK
+					OK
 				</a>
-				
+
 				<a href="https://www.google.com/" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">
-				Decline
+					Decline
 				</a>
 			</div>
 		</div>
@@ -105,12 +118,13 @@
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
+			function gtag() { dataLayer.push(arguments); }
 			gtag('js', new Date());
 
 			gtag('config', 'G-R245NSN3MZ');
 		</script>
 
 		<script src="/static/js/dist/global.js"></script>
-	</footer>
+</footer>
+
 </html>

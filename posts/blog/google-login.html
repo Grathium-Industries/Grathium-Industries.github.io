@@ -1,106 +1,124 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="description" content="How to Fix 'App not enabled for this user' When Signing in with Google">
-		<meta name="keywords" content="google, saml, sso, app, error, 403, app_not_enabled_for_user error">
-		<meta name="author" content="Grathium Industries">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>How to Fix 'App not enabled for this user'</title>
-		<link rel="icon" href="/static/favicon.ico">
-		<link rel="stylesheet" href="dist/style.css">
-		<link rel="stylesheet" href="/static/css/dist/global.css">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
-     		crossorigin="anonymous"></script>
-	</head>
-	<body>
-		<header>
-			<a href="/" class="button">Home</a>
-			<a href="/posts/" class="button">Articles</a>
-			<a href="https://github.com/grathium-industries" class="button">GitHub</a>
-		</header>
 
-		<h1>How to Fix 'App not enabled for this user' When Signing in with Google</h1>
-		<h3 class="pub-time">27/07/2022</h3>
-		
-		<h2>Fixes Errors</h2>
-		<code>403 app_not_enabled_for_user error<br></code>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="How to Fix 'App not enabled for this user' When Signing in with Google">
+	<meta name="keywords" content="google, saml, sso, app, error, 403, app_not_enabled_for_user error">
+	<meta name="author" content="Grathium Industries">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>How to Fix 'App not enabled for this user'</title>
+	<link rel="icon" href="/static/favicon.ico">
+	<link rel="stylesheet" href="dist/style.css">
+	<link rel="stylesheet" href="/static/css/dist/global.css">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
+		crossorigin="anonymous"></script>
+</head>
 
-		<h2>Description</h2>
-		<p>
-			When using SSO with Google, sometimes you will meet the error 403 app_not_enabled_for_user error. This is most common on mobile devices. You may be able to connect using the Google account on another device, but fail to log in on another.
-		</p>
+<body>
+	<header>
+		<a href="/" class="button">Home</a>
+		<a href="/posts/" class="button">Articles</a>
+		<a href="https://github.com/grathium-industries" class="button">GitHub</a>
+	</header>
 
-		<h2>Problem</h2>
-		<p>
-			<p>After logging into an external application (Slack, Calendar, etc...) with Google SSO, you will be met with a nasty error code</p>
-		</p>
+	<h1>How to Fix 'App not enabled for this user' When Signing in with Google</h1>
+	<h3 class="pub-time">27/07/2022</h3>
 
-		<h2>Solution</h2>
-		<p>One of two things is happening. 1) You are trying to log in with a different account, rather than the one which has the app enabled or 2) Your system administrator has not allowed you to use the app</p>
+	<h2>Fixes Errors</h2>
+	<code>403 app_not_enabled_for_user error<br></code>
 
-		<p>
-			<ol>
-				<li>The quickest fix for this problem, is to install a separate web browser which you do not currently have installed. Sign into the account you want to sign in with on that browser. Switch the default browser to the new web browser. Click the "Sign in with Google" button again. This should force your sign in to use the specified account. <br> <i>Note: Don't forget to change the web browser back later!</i></li>
-				<li>Contact your System administrator to gain access to the app</li>
-			</ol>
-		</p>
+	<h2>Description</h2>
+	<p>
+		When using SSO with Google, sometimes you will meet the error 403 app_not_enabled_for_user error. This is most
+		common on mobile devices. You may be able to connect using the Google account on another device, but fail to log in
+		on another.
+	</p>
 
-		<div class="divider"></div>
+	<h2>Problem</h2>
+	<p>
+	<p>After logging into an external application (Slack, Calendar, etc...) with Google SSO, you will be met with a nasty
+		error code</p>
+	</p>
 
-		<h2>For Sysadmin</h2>
-		<p>
-			<ol>
-				<li>Navigate to your <a href="https://admin.google.com/">Google Admin Portal</a></li>
-				<li>Navigate to "Users" in the side panel</li>
-				<li>Search for your user</li>
-				<li>Go to "Apps"</li>
-				<li>Make sure the App is enabled for the user under "External Apps"</li>
-				<li>If not, you may need to enable the app, or change the users OU or group where the app is enabled</li>
-			</ol>
-		</p>
+	<h2>Solution</h2>
+	<p>One of two things is happening. 1) You are trying to log in with a different account, rather than the one which has
+		the app enabled or 2) Your system administrator has not allowed you to use the app</p>
 
-		<div class="divider"></div>
+	<p>
+	<ol>
+		<li>The quickest fix for this problem, is to install a separate web browser which you do not currently have
+			installed. Sign into the account you want to sign in with on that browser. Switch the default browser to the new
+			web browser. Click the "Sign in with Google" button again. This should force your sign in to use the specified
+			account. <br> <i>Note: Don't forget to change the web browser back later!</i></li>
+		<li>Contact your System administrator to gain access to the app</li>
+	</ol>
+	</p>
 
-		<h2>External Links</h2>
-		<a href="https://support.google.com/a/answer/6301076?hl=en">https://support.google.com/a/answer/6301076?hl=en</a>
-	
-		<div class="disquis-comments">
-            <div class="divider"></div>
+	<div class="divider"></div>
 
-            <script id="dsq-count-scr" src="//grathium-industries.disqus.com/count.js" async></script>
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                this.page.url = "https://grathium-industries.github.io/posts/blog/browser-compare.html";  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = "browser_compare"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://grathium-industries-1.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-	</body>
+	<h2>For Sysadmin</h2>
+	<p>
+	<ol>
+		<li>Navigate to your <a href="https://admin.google.com/">Google Admin Portal</a></li>
+		<li>Navigate to "Users" in the side panel</li>
+		<li>Search for your user</li>
+		<li>Go to "Apps"</li>
+		<li>Make sure the App is enabled for the user under "External Apps"</li>
+		<li>If not, you may need to enable the app, or change the users OU or group where the app is enabled</li>
+	</ol>
+	</p>
 
-	<footer>
-		<div id="cookie-consent" class="cookie-consent-banner">
-			<div class="cookie-consent-banner__inner">
-				<div class="cookie-consent-banner__copy">
+	<div class="divider"></div>
+
+	<h2>External Links</h2>
+	<a href="https://support.google.com/a/answer/6301076?hl=en">https://support.google.com/a/answer/6301076?hl=en</a>
+
+	<div class="divider"></div>
+
+  <div class="disquis-comments">
+    <script id="dsq-count-scr" src="//grathium-industries.disqus.com/count.js" async></script>
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = "https://grathium-industries.github.io/posts/blog/google-login.html";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "google_login"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://grathium-industries-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+  </div>
+
+  <div class="content-footer">
+    <iframe src="/posts/components/suggestedArticles.html" scrolling="no" frameborder="0"></iframe>
+  </div>
+</body>
+
+<footer>
+	<div id="cookie-consent" class="cookie-consent-banner">
+		<div class="cookie-consent-banner__inner">
+			<div class="cookie-consent-banner__copy">
 				<div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES</div>
-				<div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use our website.</div>
+				<div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social
+					media features and to analyse our traffic. We also share information about your use of our site with our
+					social media, advertising and analytics partners who may combine it with other information that you’ve
+					provided to them or that they’ve collected from your use of their services. You consent to our cookies if you
+					continue to use our website.</div>
 			</div>
-		  
+
 			<div class="cookie-consent-banner__actions">
 				<a href="#" class="cookie-consent-banner__cta" onclick="createConsentCookie();">
-				OK
+					OK
 				</a>
-				
+
 				<a href="https://www.google.com/" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">
-				Decline
+					Decline
 				</a>
 			</div>
 		</div>
@@ -109,12 +127,13 @@
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
+			function gtag() { dataLayer.push(arguments); }
 			gtag('js', new Date());
 
 			gtag('config', 'G-R245NSN3MZ');
 		</script>
 
 		<script src="/static/js/dist/global.js"></script>
-	</footer>
+</footer>
+
 </html>

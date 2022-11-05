@@ -1,87 +1,106 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="description" content="How to Test if a User is From Europe Without Checking IP">
-		<meta name="keywords" content="europe, european, cookies, cookie-consent">
-		<meta name="author" content="Grathium Industries">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>How to Test if a User is From Europe Without Checking IP</title>
-		<link rel="icon" href="/static/favicon.ico">
-		<link rel="stylesheet" href="dist/style.css">
-		<link rel="stylesheet" href="/static/css/dist/global.css">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
-     		crossorigin="anonymous"></script>
-	</head>
-	<body>
-		<header>
-			<a href="/" class="button">Home</a>
-			<a href="/posts/" class="button">Articles</a>
-			<a href="https://github.com/grathium-industries" class="button">GitHub</a>
-		</header>
 
-		<h1>How to Test if a User is From Europe Without Checking IP</h1>
-		<h3 class="pub-time">04/08/2022</h3>
-		
-        <div>
-            <h2>Description</h2>
-            <p>
-                These days, knowing if a user is from europe is an important part of web development. This is because european countries have a lot of laws and regulations (such as the cookie consent header) that can be intrusive to users outside the EU. Since we only have to serve these notifications to users inside the EU, we can use a check to see if the user is from europe. This has been traditionally done through the use of IP addresses. However, using IP addresses over other methods can prove to be more unreliable, a larger security risk, harder to implement, more inaccurate if a user is using a VPN, and harm privacy. Therefore, this article will show you how to test if a user is from europe without checking IP.
-            </p>
-        </div>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="How to Test if a User is From Europe Without Checking IP">
+	<meta name="keywords" content="europe, european, cookies, cookie-consent">
+	<meta name="author" content="Grathium Industries">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>How to Test if a User is From Europe Without Checking IP</title>
+	<link rel="icon" href="/static/favicon.ico">
+	<link rel="stylesheet" href="dist/style.css">
+	<link rel="stylesheet" href="/static/css/dist/global.css">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
+		crossorigin="anonymous"></script>
+</head>
 
-		<h2>How to Use</h2>
-        <p>Code type: <code>JavaScript/TypeScript</code></p>
+<body>
+	<header>
+		<a href="/" class="button">Home</a>
+		<a href="/posts/" class="button">Articles</a>
+		<a href="https://github.com/grathium-industries" class="button">GitHub</a>
+	</header>
 
-        <p>Simply add this line of code to your code, it will set the variable <code>inEu</code> to <code>true</code> if the user is in the EU, and <code>false</code> if they are not.</p><br>
-		<div class="code-block">
-            const inEu = Intl.DateTimeFormat().resolvedOptions().timeZone.startsWith("Europe");
-        </div>
+	<h1>How to Test if a User is From Europe Without Checking IP</h1>
+	<h3 class="pub-time">04/08/2022</h3>
 
-        <div class="divider"></div><br>
+	<div>
+		<h2>Description</h2>
+		<p>
+			These days, knowing if a user is from europe is an important part of web development. This is because european
+			countries have a lot of laws and regulations (such as the cookie consent header) that can be intrusive to users
+			outside the EU. Since we only have to serve these notifications to users inside the EU, we can use a check to see
+			if the user is from europe. This has been traditionally done through the use of IP addresses. However, using IP
+			addresses over other methods can prove to be more unreliable, a larger security risk, harder to implement, more
+			inaccurate if a user is using a VPN, and harm privacy. Therefore, this article will show you how to test if a user
+			is from europe without checking IP.
+		</p>
+	</div>
 
-        <div>
-            <strong>Statement Breakdown</strong><br>
-            <code>const inEu</code> makes an immutable variable called inEu which stores the state of whether the client is from the EU.<br>
-            <code>Intl.DateTimeFormat().resolvedOptions().timeZone.startsWith("Europe")</code> gets the system time and returns a boolean value whether or not the user is from the EU<br>
-        </div>
-		
-		<div class="disquis-comments">
-            <div class="divider"></div>
+	<h2>How to Use</h2>
+	<p>Code type: <code>JavaScript/TypeScript</code></p>
 
-            <script id="dsq-count-scr" src="//grathium-industries.disqus.com/count.js" async></script>
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                this.page.url = "https://grathium-industries.github.io/posts/blog/browser-compare.html";  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = "browser_compare"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://grathium-industries-1.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-	</body>
+	<p>Simply add this line of code to your code, it will set the variable <code>inEu</code> to <code>true</code> if the
+		user is in the EU, and <code>false</code> if they are not.</p><br>
+	<div class="code-block">
+		const inEu = Intl.DateTimeFormat().resolvedOptions().timeZone.startsWith("Europe");
+	</div>
 
-	<footer>
-		<div id="cookie-consent" class="cookie-consent-banner">
-			<div class="cookie-consent-banner__inner">
-				<div class="cookie-consent-banner__copy">
+	<div class="divider"></div><br>
+
+	<div>
+		<strong>Statement Breakdown</strong><br>
+		<code>const inEu</code> makes an immutable variable called inEu which stores the state of whether the client is from
+		the EU.<br>
+		<code>Intl.DateTimeFormat().resolvedOptions().timeZone.startsWith("Europe")</code> gets the system time and returns
+		a boolean value whether or not the user is from the EU<br>
+	</div>
+
+	<div class="divider"></div>
+
+	<div class="disquis-comments">
+		<script id="dsq-count-scr" src="//grathium-industries.disqus.com/count.js" async></script>
+		<div id="disqus_thread"></div>
+		<script>
+				var disqus_config = function () {
+				this.page.url = "https://grathium-industries.github.io/posts/blog/european-countries.html";  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = "eurpoean_countries"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://grathium-industries-1.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+				})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	</div>
+
+	<div class="content-footer">
+		<iframe src="/posts/components/suggestedArticles.html" scrolling="no" frameborder="0"></iframe>
+	</div>
+</body>
+
+<footer>
+	<div id="cookie-consent" class="cookie-consent-banner">
+		<div class="cookie-consent-banner__inner">
+			<div class="cookie-consent-banner__copy">
 				<div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES</div>
-				<div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use our website.</div>
+				<div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social
+					media features and to analyse our traffic. We also share information about your use of our site with our
+					social media, advertising and analytics partners who may combine it with other information that you’ve
+					provided to them or that they’ve collected from your use of their services. You consent to our cookies if you
+					continue to use our website.</div>
 			</div>
-		  
+
 			<div class="cookie-consent-banner__actions">
 				<a href="#" class="cookie-consent-banner__cta" onclick="createConsentCookie();">
-				OK
+					OK
 				</a>
-				
+
 				<a href="https://www.google.com/" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">
-				Decline
+					Decline
 				</a>
 			</div>
 		</div>
@@ -90,12 +109,13 @@
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
+			function gtag() { dataLayer.push(arguments); }
 			gtag('js', new Date());
 
 			gtag('config', 'G-R245NSN3MZ');
 		</script>
 
 		<script src="/static/js/dist/global.js"></script>
-	</footer>
+</footer>
+
 </html>

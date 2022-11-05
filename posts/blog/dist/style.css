@@ -41,7 +41,10 @@ img {
   height: auto;
 }
 
-a, a:active, a:visited, a:focus {
+a,
+a:active,
+a:visited,
+a:focus {
   color: #000099;
   text-decoration: underline;
   max-width: 100%;
@@ -85,7 +88,8 @@ a:hover {
   max-width: 100%;
 }
 
-code, .code-block {
+code,
+.code-block {
   position: relative;
   font-family: "Source Code Pro", monospace;
   font-size: 16px;
@@ -136,7 +140,9 @@ a.button:hover {
   background-color: #ccc;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 

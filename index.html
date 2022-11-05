@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html id="webpage" class="container" lang="en" onscroll="updateFooter();">
+
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="How to install R studio on Ubuntu 22 linux">
@@ -7,7 +8,7 @@
   <meta name="author" content="Grathium Industries">
   <meta name="viewport" content="width = device-width" />
   <title>Grathium Industries</title>
-  <link rel="shortcut icon" type="image/png" href="static/favicon.ico"/>
+  <link rel="shortcut icon" type="image/png" href="static/favicon.ico" />
   <link rel="stylesheet" href="static/css/dist/style.css">
   <link rel="stylesheet" href="static/css/dist/global.css">
   <link rel="manifest" href="/manifest.webmanifest">
@@ -17,12 +18,13 @@
 
 <body>
   <div id="gradient" class="container demo content">
-        <div id="large-header" class="large-header container demo content">
-          <div class="main-title">
-            <h1 id="title"><span class="thin">Grathium</span> [Industries]</h1>
-            <p>Innovative programing languages, desktop environments, computer aided accelerated learning & irrational linear offset encoding</p>
-          </div>
-        </div>
+    <div id="large-header" class="large-header container demo content">
+      <div class="main-title">
+        <h1 id="title"><span class="thin">Grathium</span> [Industries]</h1>
+        <p>Innovative programing languages, desktop environments, computer aided accelerated learning & irrational
+          linear offset encoding</p>
+      </div>
+    </div>
   </div>
   <a href="#content" onclick="scrollToContent();">
     <div class="arrow"></div>
@@ -31,15 +33,9 @@
 
 <a id="back2Top" title="Back to top" href="#">&#10148;</a>
 
-<!--Infinate scroll website-->
 <div class="websiteScroll">
-  <iframe
-    id="websiteScroll"
-    src="posts/summary_index.html"
-    scrolling="no"
-    seamless
-    onload="this.style.height=(this.contentWindow.document.body.scrollHeight)+'pt';"
-  ></iframe>
+  <iframe id="websiteScroll" src="posts/summary_index.html" scrolling="no" seamless
+    onload="this.style.height=(this.contentWindow.document.body.scrollHeight)+'pt';"></iframe>
 </div>
 
 <footer>
@@ -47,14 +43,18 @@
     <div class="cookie-consent-banner__inner">
       <div class="cookie-consent-banner__copy">
         <div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES</div>
-        <div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use our website.</div>
+        <div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social
+          media features and to analyse our traffic. We also share information about your use of our site with our
+          social media, advertising and analytics partners who may combine it with other information that you’ve
+          provided to them or that they’ve collected from your use of their services. You consent to our cookies if you
+          continue to use our website.</div>
       </div>
-  
+
       <div class="cookie-consent-banner__actions">
         <a href="#" class="cookie-consent-banner__cta" onclick="createConsentCookie();">
           OK
         </a>
-        
+
         <a href="https://www.google.com/" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">
           Decline
         </a>
@@ -63,12 +63,12 @@
   </div>
 
   <script async defer src="static/js/dist/script.js" charset="utf-8"></script>
-  
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-R245NSN3MZ');
@@ -76,4 +76,5 @@
 
   <script src="/static/js/dist/global.js"></script>
 </footer>
+
 </html>
