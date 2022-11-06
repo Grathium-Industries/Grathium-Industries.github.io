@@ -170,7 +170,7 @@ table {
   padding: 1em;
 }
 
-// when on mobile
+// when on mobile or small screens
 @media only screen and (max-width: 1026px) {
   header {
     display: none;
@@ -181,5 +181,21 @@ table {
     width: 100%;
     margin-left: 0px;
     margin-top: 0px;
+  }
+
+  body {
+    max-width: fit-content;
+  }
+
+  p {
+    max-width: fit-content;
+  }
+}
+
+// when on mobile
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 20px;
+    padding-top: 50px;
   }
 }
