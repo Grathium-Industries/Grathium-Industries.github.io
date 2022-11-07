@@ -13,3 +13,6 @@
 [submodule "u"]
 	path = u
 	url = https://github.com/hudson-newey/URL-Shortener-and-Redirect.git
+[submodule "posts/deployments/newtab"]
+	path = posts/deployments/newtab
+	url = https://github.com/hudson-newey/Webbrowser-Newtab.git
