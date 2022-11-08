@@ -46,13 +46,13 @@ a:active,
 a:visited,
 a:focus {
   color: #000099;
-  text-decoration: underline;
+  text-decoration: none;
   max-width: 100%;
   word-wrap: break-word;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .pub-time {
