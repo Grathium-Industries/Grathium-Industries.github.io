@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="What is Screen Cast and how to use it">
+	<meta name="keywords" content="screen, cast">
+	<meta name="author" content="Grathium Industries">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>What is Screen Cast and how to use it</title>
+	<link rel="icon" href="/static/favicon.ico">
+	<link rel="stylesheet" href="dist/style.css">
+	<link rel="stylesheet" href="/static/css/dist/global.css">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
+		crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<a href="/" class="button">Home</a>
+		<a href="/posts/" class="button">Articles</a>
+		<a href="https://github.com/grathium-industries" class="button">GitHub</a>
+	</header>
+
+	<h1>What is Screen Cast and how to use it</h1>
+	<h3 class="pub-time">19/07/2022</h3>
+
+	<div>
+		<h2>Description</h2>
+		<p>
+			Screen cast is open source alternative to Chromecast capable of rendering websites on a remote display over a local area network (LAN). There are two important components of screen cast which cannot operate without the other, the screen cast server  / window, and the screen cast client.
+		</p>
+	</div>
+
+  <div>
+    <h2>Setting up the Screen / Display</h2>
+    <p>
+      The screen cast server & window is the main screen which will be used as the display. Is recommended to run this on a Raspberry Pi or similar cheap device. However, the screen cast screen is compatible with any Windows, MacOS, or Linux device which supports display rendering. To start the screen either run npm start or <code>$ ./start_screen.sh</code>. This will open an application in full screen and the always on top property. To close the screen cast screen, either press Alt+F4 or close it via the command line; as there will be no window buttons to close the screen application.
+
+      <br>
+      <div class="note">
+        Technical information: By default, the screen cast display window runs an express HTTP server on port <code>:8080</code> on the local network, and can be manually queried through a HTTP GET request following the format <code>127.0.0.1:8080?q=[website URL]</code>.
+      </div>
+    </p>
+  </div>
+
+	<div class="divider"></div><br>
+
+  <div>
+    <h2>Using the Command Line as a Client</h2>
+    <p>
+      To provide a client interface to change the website rendered on the display, both a command line interface (CLI) and web application is available. To use the command line interface, either run <code>$ ./start_client.sh</code> or use <code>go run cli_client.go</code>. Note: to use the command line interface for screen cast, you will require go lang.
+    </p>
+  </div>
+
+  <div>
+    <h2>Using the Web Client</h2>
+    <p>
+      The web client is more suited to the average user and can be used on any device (including mobile), and is accessible via the local area network (LAN). To start, either you can use the server built in go, or serve the index.html web page located in <code>client/web_client/index.html</code>. To use the provided HTTP server written in Go, run go run <code>$ ./client/web_client/server.go</code> from the command line. By default from here, you will be able to access the web client through your local area network IP address + port <code>:8081</code>.
+    </p>
+  </div>
+
+  <div>
+    <p>
+      From both the command line and web interface client, you will have to provide a display IP address and port number. This is not the machine you are connecting via the client from, but the display which you are running on either your raspberry pi or laptop. There are several articles online showing you how to find your local IP address, and by default the port number of the display screen is port <code>:8080</code> (this can be changed under <code>src/window.ts</code>). Your display screen IP address + port number should look something like <code>127.0.0.1:8080</code> (replacing <code>127.0.0.1</code> with the display screens IP address).
+    </p>
+  </div>
+
+	<div class="divider"></div>
+
+	<div class="disquis-comments">
+		<script id="dsq-count-scr" src="//grathium-industries.disqus.com/count.js" async></script>
+		<div id="disqus_thread"></div>
+		<script>
+			var disqus_config = function () {
+				this.page.url = "https://grathium-industries.github.io/posts/blog/screen-cast.html";  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = "screen_cast"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			(function () { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://grathium-industries-1.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+				Disqus.</a></noscript>
+	</div>
+
+	<div class="content-footer">
+		<iframe src="/posts/components/suggestedArticles.html" scrolling="no" frameborder="0"
+			onload="this.style.height=(this.contentWindow.document.body.scrollHeight)+'pt';">
+		</iframe>
+	</div>
+</body>
+
+<footer>
+	<div id="cookie-consent" class="cookie-consent-banner">
+		<div class="cookie-consent-banner__inner">
+			<div class="cookie-consent-banner__copy">
+				<div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES</div>
+				<div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social
+					media features and to analyse our traffic. We also share information about your use of our site with our
+					social media, advertising and analytics partners who may combine it with other information that you’ve
+					provided to them or that they’ve collected from your use of their services. You consent to our cookies if you
+					continue to use our website.</div>
+			</div>
+
+			<div class="cookie-consent-banner__actions">
+				<a href="#" class="cookie-consent-banner__cta" onclick="createConsentCookie();">
+					OK
+				</a>
+
+				<a href="https://www.google.com/" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">
+					Decline
+				</a>
+			</div>
+		</div>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+
+			gtag('config', 'G-R245NSN3MZ');
+		</script>
+
+		<script src="/static/js/dist/global.js"></script>
+</footer>
+
+</html>
