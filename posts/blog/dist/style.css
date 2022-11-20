@@ -180,3 +180,11 @@ table {
     padding-top: 50px;
   }
 }
+.socials-container {
+  position: relative;
+  color: #333;
+}
+
+.social-links {
+  cursor: pointer;
+}

@@ -67,3 +67,17 @@ button:hover {
   width: 846px;
   height: 518px;
 }
+
+a,
+a:active,
+a:visited,
+a:focus {
+  color: #0d6efd;
+  text-decoration: none;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+a:hover {
+  text-decoration: underline;
+}
