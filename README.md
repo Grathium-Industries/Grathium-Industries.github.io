@@ -1,7 +1,7 @@
-# Grathium Industries Homepage
+# Grathium Industries Website
 ---
 
-This is the landing page for Grathium Industries. Articles, demo deployments, and a showcase of projects can be found on the live website.
+Grathium Industries is an initiative to develop new methods for information & data transfer, information processing, and communication  
   
 [Live Website](https://grathium-industries.github.io)
 [Website Index](https://grathium-industries.github.io/posts/)  
