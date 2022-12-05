@@ -35,7 +35,7 @@ html {
   position: absolute;
   margin: 0;
   padding: 0;
-  color: #F9F1E9;
+  color: #f9f1e9;
   text-align: center;
   top: 35%;
   left: 50%;
@@ -105,13 +105,8 @@ div.arrow:after {
   transition: 0.2s ease;
 }
 
-div.arrow:hover::after {
-  transform: rotate(45deg);
-  height: 120%;
-}
-
-div.arrow:hover::before {
-  transform: scale(0.8);
+div.arrow:hover::after, div.arrow:hover::before {
+  transform: scale(1.2);
 }
 
 #gradient {
@@ -165,7 +160,7 @@ iframe {
 }
 
 #back2Top:hover {
-  background-color: #DDF;
+  background-color: #ddf;
   color: black;
 }
 

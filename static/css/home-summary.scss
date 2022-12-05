@@ -1,86 +1,74 @@
-html {
+// scrollable content
+.bg-black {
   background-color: black;
-  font-family: 'Barlow', sans-serif;
-}
-
-p {
-  font-family: 'Barlow', sans-serif;
-}
-
-h1 {
-  color: white;
-}
-
-h2 {
-  font-family: 'Barlow', sans-serif;
-}
-
-a {
-  font-family: 'Barlow', sans-serif;
-}
-
-img {
-  border-style: solid;
-  border-color: transparent;
-  ;
-  border-radius: 12px;
-}
-
-button {
-  position: relative;
-  width: 10%;
-  height: 200px;
-  background-color: white;
-  border-style: dashed;
-  margin-top: 20pt;
-  left: 10%;
-  width: 80%;
-}
-
-button:hover {
-  background-color: grey;
-  border-style: solid;
-  cursor: pointer;
-}
-
-.divider {
-  position: relative;
-  width: 100%;
-  height: 0px;
-  border-color: #333;
-  border-style: dashed;
-  border-width: 1px;
-  margin-top: 20px;
-}
-
-// hide images on small screens
-@media screen and (max-width: 1100px) {
-  .preview-image {
-    visibility: hidden;
-    clear: both;
-    float: left;
-    margin: 10px auto 5px 20px;
-    width: 28%;
-    display: none;
+  font-family: "Barlow", sans-serif;
+  p {
+      font-family: "Barlow", sans-serif;
   }
-}
-
-.preview-image {
-  position: relative;
-  width: 846px;
-  height: 518px;
-}
-
-a,
-a:active,
-a:visited,
-a:focus {
-  color: #0d6efd;
-  text-decoration: none;
-  max-width: 100%;
-  word-wrap: break-word;
-}
-
-a:hover {
-  text-decoration: underline;
+  h1 {
+      color: white;
+  }
+  h2 {
+      font-family: "Barlow", sans-serif;
+  }
+  a {
+      font-family: "Barlow", sans-serif;
+  }
+  img {
+      border-style: solid;
+      border-color: transparent;
+      border-radius: 12px;
+  }
+  button {
+      position: relative;
+      width: 10%;
+      height: 200px;
+      background-color: white;
+      border-style: dashed;
+      margin-top: 20pt;
+      left: 10%;
+      width: 80%;
+  }
+  button:hover {
+      background-color: grey;
+      border-style: solid;
+      cursor: pointer;
+  }
+  .divider {
+      position: relative;
+      width: 100%;
+      height: 0px;
+      border-color: #333;
+      border-style: dashed;
+      border-width: 1px;
+      margin-top: 20px;
+  }
+  // hide images on small screens
+  @media screen and (max-width: 1100px) {
+      .preview-image {
+          visibility: hidden;
+          clear: both;
+          float: left;
+          margin: 10px auto 5px 20px;
+          width: 28%;
+          display: none;
+      }
+  }
+  .preview-image {
+      position: relative;
+      width: 846px;
+      height: 518px;
+  }
+  a,
+  a:active,
+  a:visited,
+  a:focus {
+      color: #0d6efd;
+      text-decoration: none;
+      max-width: 100%;
+      word-wrap: break-word;
+  }
+  a:hover {
+      text-decoration: underline;
+  }
 }

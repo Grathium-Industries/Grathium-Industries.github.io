@@ -2,10 +2,10 @@
 $(window).scroll(function () {
     var height = $(window).scrollTop();
     if (height > 100) {
-        $('#back2Top').fadeIn();
+        $("#back2Top").fadeIn();
     }
     else {
-        $('#back2Top').fadeOut();
+        $("#back2Top").fadeOut();
     }
 });
 $(document).ready(function () {
@@ -16,13 +16,13 @@ $(document).ready(function () {
     });
 });
 var scrollToContent = function () {
-    $('html,body').animate({
+    $("html").animate({
         scrollTop: window.innerHeight
-    }, 1000);
+    }, 1);
 };
 var colors = new Array([16, 16, 4], [64, 16, 16], [16, 64, 16], [16, 16, 64], [4, 16, 16], [16, 4, 16]);
 var step = 0;
-//color table indices for: 
+//color table indices for:
 // current color left
 // next color left
 // current color right
@@ -30,9 +30,7 @@ var step = 0;
 var colorIndices = [0, 1, 2, 3];
 //transition speed
 var gradientSpeed = 0.002;
-function updateGradient() {
-    if ($ === undefined)
-        return;
+var updateGradient = function () {
     var c0_0 = colors[colorIndices[0]];
     var c0_1 = colors[colorIndices[1]];
     var c1_0 = colors[colorIndices[2]];
@@ -46,10 +44,20 @@ function updateGradient() {
     var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
     var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
     var color2 = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
-    $('#gradient').css({
-        background: "-webkit-gradient(linear, left top, right top, from(" + color1 + "), to(" + color2 + "))"
-    }).css({
-        background: "-moz-linear-gradient(left, " + color1 + " 0%, " + color2 + " 100%)"
+    $("#gradient")
+        .css({
+        background: "-webkit-gradient(linear, left top, right top, from(" +
+            color1 +
+            "), to(" +
+            color2 +
+            "))"
+    })
+        .css({
+        background: "-moz-linear-gradient(left, " +
+            color1 +
+            " 0%, " +
+            color2 +
+            " 100%)"
     });
     step += gradientSpeed;
     if (step >= 1) {
@@ -58,8 +66,14 @@ function updateGradient() {
         colorIndices[2] = colorIndices[3];
         //pick two new target color indices
         //do not pick the same as the current one
-        colorIndices[1] = (colorIndices[1] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length;
-        colorIndices[3] = (colorIndices[3] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length;
+        colorIndices[1] =
+            (colorIndices[1] +
+                Math.floor(1 + Math.random() * (colors.length - 1))) %
+                colors.length;
+        colorIndices[3] =
+            (colorIndices[3] +
+                Math.floor(1 + Math.random() * (colors.length - 1))) %
+                colors.length;
     }
-}
+};
 setInterval(updateGradient, 10);

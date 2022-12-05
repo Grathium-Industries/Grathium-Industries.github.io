@@ -1,214 +1,208 @@
 // font imports
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 
 $background-color: black;
 $secondary-color: #fafafa;
-$text-color: #F9F1E9;
+$text-color: #f9f1e9;
 $shadow-color: #999;
 
 html {
-  background-color: $background-color;
-  overflow-x: hidden;
-  -webkit-text-size-adjust: 100%;
+    background-color: $background-color;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
 }
 
 * {
-  left: 0px;
+    left: 0px;
 }
 
 .large-header {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center center;
-  z-index: 1;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
 }
 
 .demo .large-header {
-  position: initial;
-  z-index: -1;
-  top: 0px;
+    position: initial;
+    z-index: -1;
+    top: 0px;
 }
 
 .content {
-  position: relative;
-  height: 100% !important;
-  width: 100%;
+    position: relative;
+    height: 100% !important;
+    width: 100%;
 }
 
 .main-title {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  color: $text-color;
-  text-align: center;
-  top: 35%;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    color: $text-color;
+    text-align: center;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
 
-  p {
-    font-size: 1.5em;
-    font-family: 'Inter', sans-serif;
-  }
+    p {
+        font-size: 1.5em;
+        font-family: "Inter", sans-serif;
+    }
 }
 
 #title {
-  text-transform: uppercase;
-  font-size: 7em;
-  letter-spacing: 0.1em;
-  font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-size: 7em;
+    letter-spacing: 0.1em;
+    font-family: "Syne", sans-serif;
 }
 
 .main-title .thin {
-  font-weight: 200;
+    font-weight: 200;
 }
 
 @media screen and (max-width: 1100px) {
-  h1 {
-    font-size: 0.3em !important;
-  }
-
-  a {
-    font-size: 1.5em !important;
-  }
-
-  .main-title {
-    #title {
-      font-size: 10vw !important;
+    h1 {
+        font-size: 0.3em !important;
     }
 
-    p {
-      font-size: 2.5vw !important;
+    a {
+        font-size: 1.5em !important;
     }
-  }
+
+    .main-title {
+        #title {
+            font-size: 10vw !important;
+        }
+
+        p {
+            font-size: 2.5vw !important;
+        }
+    }
 }
 
 #main {
-  transition: margin-left .5s;
-  padding: 20px;
+    transition: margin-left 0.5s;
+    padding: 20px;
 }
 
 // down arrow on main content
 div.arrow::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  border-width: .8vmin .8vmin 0 0;
-  border-style: solid;
-  border-color: $secondary-color;
-  transition: .2s ease;
-  display: block;
-  transform-origin: 100% 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-width: 0.8vmin 0.8vmin 0 0;
+    border-style: solid;
+    border-color: $secondary-color;
+    transition: 0.2s ease;
+    display: block;
+    transform-origin: 100% 0;
 }
 
 div.arrow:after {
-  content: '';
-  float: left;
-  position: relative;
-  top: -100%;
-  width: 100%;
-  height: 100%;
-  border-width: 0 .8vmin 0 0;
-  border-style: solid;
-  border-color: $secondary-color;
-  transform-origin: 100% 0;
-  transition:.2s ease;
+    content: "";
+    float: left;
+    position: relative;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    border-width: 0 0.8vmin 0 0;
+    border-style: solid;
+    border-color: $secondary-color;
+    transform-origin: 100% 0;
+    transition: 0.2s ease;
 }
 
-div.arrow:hover::after {
-  transform: rotate(45deg);
-  height: 120%;
-}
-
-div.arrow:hover::before {
-  transform: scale(.8);
+div.arrow:hover::after, div.arrow:hover::before {
+    transform: scale(1.2);
 }
 
 #gradient {
-  position: absolute;
-  width: 100%;
-  height: 800px;
-  top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    top: 0px;
 }
-
 
 // BELLOW WEBSITE
 .websiteScroll {
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  background-color: $background-color;
-  color: $secondary-color;
-  margin: 0;
-  padding: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: $background-color;
+    color: $secondary-color;
+    margin: 0;
+    padding: 0;
 }
 
 iframe {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-style: none;
-  margin: 0px;
-  padding: 0;
-  z-index: 0;
-  overflow: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-style: none;
+    margin: 0px;
+    padding: 0;
+    z-index: 0;
+    overflow: auto;
 }
 
 #back2Top {
-  width: 40px;
-  line-height: 40px;
-  overflow: hidden;
-  z-index: 999;
-  display: none;
-  cursor: pointer;
-  -moz-transform: rotate(270deg);
-  -webkit-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  transform: rotate(270deg);
-  position: fixed;
-  bottom: 50px;
-  right: 0;
-  background-color: $secondary-color;
-  color: #555;
-  text-align: center;
-  font-size: 30px;
-  text-decoration: none;
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: $secondary-color;
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
 }
 
 #back2Top:hover {
-  background-color: #DDF;
-  color: $background-color;
+    background-color: #ddf;
+    color: $background-color;
 }
 
 div.arrow {
-	width: 6vmin;
-	height: 6vmin;
-	box-sizing: border-box;
-	position: fixed;
-  left: 50%;
-	bottom: 10%;
-  transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-	transform: rotate(135deg);
+    width: 6vmin;
+    height: 6vmin;
+    box-sizing: border-box;
+    position: fixed;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: rotate(135deg);
 }
 
 a,
 a:active,
 a:visited,
 a:focus {
-  color: #0d6efd;
-  text-decoration: none;
-  max-width: 100%;
-  word-wrap: break-word;
+    color: #0d6efd;
+    text-decoration: none;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }

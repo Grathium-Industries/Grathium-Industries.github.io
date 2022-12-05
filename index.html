@@ -11,13 +11,15 @@
   <link rel="shortcut icon" type="image/png" href="static/favicon.ico" />
   <link rel="stylesheet" href="static/css/dist/style.css">
   <link rel="stylesheet" href="static/css/dist/global.css">
+  <link rel="stylesheet" href="/static/css/dist/home-summary.css">
+  <link href="/lib/bootstrap.min.css" rel="stylesheet">
   <link rel="manifest" href="/manifest.webmanifest">
-  <script src="lib/jquery.min.js"></script>
+  <script src="/lib/jquery.min.js"></script>
 </head>
 
 
 <body>
-  <div id="gradient" class="container demo content">
+  <div id="gradient" class="demo content">
     <div id="large-header" class="large-header container demo content">
       <div class="main-title">
         <h1 id="title"><span class="thin">Grathium</span> [Industries]</h1>
@@ -34,8 +36,169 @@
 <a id="back2Top" title="Back to top" href="#">&#10148;</a>
 
 <div class="websiteScroll">
-  <iframe id="websiteScroll" src="posts/summary_index.html" scrolling="no" seamless
-    onload="this.style.height=(this.contentWindow.document.body.scrollHeight)+'pt';"></iframe>
+    <div class="bg-black">
+        <div class="d-flex flex-row justify-content-start m-5">
+            <div class="p-1">
+                <picture class="preview-image">
+                    <source class="preview-image" srcset="/static/imgs/neonx.jpeg">
+                    <img class="preview-image" src="/static/imgs/neonx.png" alt="Image of NeonX2.0 desktop" loading="lazy">
+                </picture>
+            </div>
+            <div class="p-1 text-white">
+                <h2 class="display-6 preview-title">
+                    NeonX2.0
+                </h2>
+                <p>
+                    An entire desktop environment inside an electron app. Complete with support for 3rd part applications, programs
+                    and custom file management system.
+                </p>
+
+                <a class="btn btn-outline-primary m-1" href="https://github.com/Grathium-Industries/NeonX2.0#neonx-source">GitHub
+                    Source Code</a>
+                <a class="btn btn-outline-primary m-1"
+                    href="https://github.com/Grathium-Industries/NeonX2.0/blob/master/README.md#neonx-readme">Readme</a>
+                <a class="btn btn-outline-primary m-1" href="/posts/deployments/NeonX2.0/login?ref=home#neonx-demo">Online
+                    Demo</a>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly m-5">
+            <div class="p-2 text-white">
+                <h2 class="preview-title">
+                    Internet Speed Test
+                </h2>
+                <p>
+                    A basic speed test with detailed analytics written in pure HTML, TypeScript & SCSS.
+                </p>
+
+                <a class="m-1" href="https://github.com/Grathium-Industries/Internet-Speed-Test#speedtest-source">GitHub Source
+                    Code</a>
+                <a class="m-1"
+                    href="https://github.com/Grathium-Industries/Internet-Speed-Test/blob/main/README.md#speedtest-readme">Readme</a>
+                <a class="m-1" href="/posts/deployments/Internet-Speed-Test/?ref=home#speedtest-demo">Online Demo</a>
+            </div>
+
+            <div class="p-2 text-white">
+                <h2 class="preview-title">
+                    Bundler
+                </h2>
+                <p>
+                    A bundler framework to easily run, distribute, and standardize any project.
+                </p>
+
+                <a class="m-1" href="https://github.com/Grathium-Industries/Bundler#bundler-source">GitHub Source Code</a>
+                <a class="m-1" href="https://github.com/Grathium-Industries/Bundler/blob/main/README.md#bundler-readme">Readme</a>
+            </div>
+
+            <div class="p-2 text-white">
+                <h2 class="preview-title">
+                    Bluff Ball (IT Crowd)
+                </h2>
+                <p>
+                    From Season 3 Ep 02 of The IT Crowd (Are We Not Men) I've created the Bluff Ball website off of "The IT Crowd".
+                </p>
+
+                <a class="m-1" href="https://github.com/hudson-newey/Bluff-Ball#bluffball-source">GitHub Source Code</a>
+                <a class="m-1" href="https://github.com/hudson-newey/Bluff-Ball/blob/master/README.md#bluffball-readme">Readme</a>
+                <a class="m-1" href="/posts/deployments/bluff-ball/?ref=home#bluffball-demo">Online Demo</a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="d-flex flex-row justify-content-start m-5">
+            <div class="p-1">
+                <picture class="preview-image">
+                    <source class="preview-image" srcset="/static/imgs/cobra-code.webp">
+                    <img class="preview-image" src="/static/imgs/cobra-code.png" alt="Example Cobra code" loading="lazy">
+                </picture>
+            </div>
+            <div class="p-1 text-white">
+                <h2 class="display-6 preview-title">
+                    Cobra (Strongly Typed Python)
+                </h2>
+                <p>
+                    Similar to what TypeScript is to JavaScript, Cobra is an abstraction of Python which can compile into Python,
+                    but with improved types, memory management, and syntax. Cobra is also backwards compatible with Python2.7 &
+                    Python3, to use (similar to TypeScript), rename your .py files to .pyc
+                </p>
+
+                <a class="btn btn-outline-primary m-1" href="https://github.com/Grathium-Industries/cobra#cobra-source">GitHub
+                    Source Code</a>
+                <a class="btn btn-outline-primary m-1"
+                    href="https://github.com/Grathium-Industries/cobra/blob/main/README.md#cobra-readme">Readme</a>
+                <a class="btn btn-outline-primary m-1" href="/posts/blog/cobra?ref=home#cobra-docs">Online Documentation</a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="d-flex flex-row justify-content-start m-5">
+            <div class="p-1">
+                <picture class="preview-image">
+                    <source class="preview-image" srcset="/static/imgs/ntp.webp">
+                    <img class="preview-image" src="/static/imgs/ntp.png" alt="Example Cobra code" loading="lazy">
+                </picture>
+            </div>
+            <div class="p-1 text-white">
+                <h2 class="display-6 preview-title">
+                    New Tab Page
+                </h2>
+                <p>
+                    Modern new tab pages provided by web browser defaults either push political agendas, are used as announcement boards, or monetized through advertisements. This is why we have created the Grathium Industries New Tab Page that promises never to fall into any pit falls seen by web browser defaults.
+                </p>
+
+                <a class="btn btn-outline-primary m-1" href="https://github.com/hudson-newey/Webbrowser-Newtab#ntp-source">GitHub
+                    Source Code</a>
+                <a class="btn btn-outline-primary m-1"
+                    href="https://github.com/hudson-newey/Webbrowser-Newtab/blob/main/README.md#ntp-readme">Readme</a>
+                <a class="btn btn-outline-primary m-1" href="/posts/deployments/newtab/index.html?ref=home#ntp-demo">Online Demo</a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="text-white m-5">
+            <h2 class="display-6 text-center">Selected Articles</h2>
+            <div class="container d-flex justify-content-evenly">
+                <div class="p-3">
+                    <a href="/posts/blog/client-redirect?ref=home#Article1" class="text-white text-decoration-none">
+                        <h5>How to Create a Lightweight Webpage Redirect Using Only HTML</h5>
+                        <h6>Published: 09/10/2022</h6>
+                    </a>
+                </div>
+
+                <div class="p-3">
+                    <a href="/posts/blog/dns-over-https?ref=home#Article2" class="text-white text-decoration-none">
+                        <h5>How to Configure Cloudflare's 1.1.1.1 DNS over HTTPS on PiHole</h5>
+                        <h6>Published: 25/07/2022</h6>
+                    </a>
+                </div>
+
+                <div class="p-3">
+                    <a href="/posts/blog/Mb-vs-MB?ref=home#Article3" class="text-white text-decoration-none">
+                        <h5>Why is my Download Speed so Much Slower than Speed Tests</h5>
+                        <h6>Published: 04/08/2022</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="container text-white m-5">
+            <h2 class="display-6">Want to Contribute?</h2>
+            <p class="text-lg-start">
+                Grathium Industries is always looking for people to contribute and support the project. Even if you are not
+                technically knowledgeable, we are always looking for graphic designers, SEO specialists, and the link. If you want
+                to contribute to a larger cause, don't hesitate to message <a
+                    href="mailto:grathiumindustries@gmail.com"><i>GrathiumIndustries@gmail.com</i></a>.
+            </p>
+            <a href="https://github.com/Grathium-Industries#GitHub">GitHub</a> <br>
+            <a href="https://addons.mozilla.org/en-US/firefox/user/16387846/#Mozilla">Mozilla Addons</a> <br>
+            <a href="/posts/?ref=home#Index">Website Index</a>
+        </div>
+    </div>
 </div>
 
 <footer>
