@@ -1,6 +1,6 @@
 [submodule "posts/deployments/NeonX2.0"]
 	path = posts/deployments/NeonX2.0
-	url = https://github.com/Grathium-Industries/NeonX2.0.git
+	url = https://github.com/hudson-newey/NeonX2.0.git
 [submodule "posts/deployments/Internet-Speed-Test"]
 	path = posts/deployments/Internet-Speed-Test
 	url = https://github.com/Grathium-Industries/Internet-Speed-Test.git
@@ -9,7 +9,7 @@
 	url = https://github.com/hudson-newey/Bluff-Ball.git
 [submodule "posts/deployments/purewatch"]
 	path = posts/deployments/purewatch
-	url = https://github.com/Grathium-Industries/Purewatch.git
+	url = https://github.com/hudson-newey/Purewatch.git
 [submodule "u"]
 	path = u
 	url = https://github.com/hudson-newey/URL-Shortener-and-Redirect.git
