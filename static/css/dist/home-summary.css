@@ -1,25 +1,24 @@
-.bg-black {
-  background-color: black;
+.black-background {
   font-family: "Barlow", sans-serif;
 }
-.bg-black p {
+.black-background p {
   font-family: "Barlow", sans-serif;
 }
-.bg-black h1 {
+.black-background h1 {
   color: white;
 }
-.bg-black h2 {
+.black-background h2 {
   font-family: "Barlow", sans-serif;
 }
-.bg-black a {
+.black-background a {
   font-family: "Barlow", sans-serif;
 }
-.bg-black img {
+.black-background img {
   border-style: solid;
   border-color: transparent;
   border-radius: 12px;
 }
-.bg-black button {
+.black-background button {
   position: relative;
   width: 10%;
   height: 200px;
@@ -29,12 +28,12 @@
   left: 10%;
   width: 80%;
 }
-.bg-black button:hover {
+.black-background button:hover {
   background-color: grey;
   border-style: solid;
   cursor: pointer;
 }
-.bg-black .divider {
+.black-background .divider {
   position: relative;
   width: 100%;
   height: 0px;
@@ -44,7 +43,7 @@
   margin-top: 20px;
 }
 @media screen and (max-width: 1100px) {
-  .bg-black .preview-image {
+  .black-background .preview-image {
     visibility: hidden;
     clear: both;
     float: left;
@@ -53,20 +52,20 @@
     display: none;
   }
 }
-.bg-black .preview-image {
+.black-background .preview-image {
   position: relative;
   width: 846px;
   height: 518px;
 }
-.bg-black a,
-.bg-black a:active,
-.bg-black a:visited,
-.bg-black a:focus {
+.black-background a,
+.black-background a:active,
+.black-background a:visited,
+.black-background a:focus {
   color: #0d6efd;
   text-decoration: none;
   max-width: 100%;
   word-wrap: break-word;
 }
-.bg-black a:hover {
+.black-background a:hover {
   text-decoration: underline;
 }

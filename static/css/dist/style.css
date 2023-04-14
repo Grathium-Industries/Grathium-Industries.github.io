@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 html {
-  background-color: black;
+  background-color: #1a1a1a;
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
 }
@@ -124,7 +124,7 @@ div.arrow:hover::after, div.arrow:hover::before {
   position: absolute;
   top: 100%;
   width: 100%;
-  background-color: black;
+  background-color: #1a1a1a;
   color: #fafafa;
   margin: 0;
   padding: 0;
@@ -165,7 +165,7 @@ iframe {
 
 #back2Top:hover {
   background-color: #ddf;
-  color: black;
+  color: #1a1a1a;
 }
 
 div.arrow {
