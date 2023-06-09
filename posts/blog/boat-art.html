@@ -3,11 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="How to Stop Teams From Auto-Starting Linux (Fedora, Debian & Ubuntu)">
-	<meta name="keywords" content="linux, teams, autostart">
+	<meta name="description" content="How to Connect to Device Shell Using SSH">
+	<meta name="keywords" content="dns, https, dns over https, DoH">
 	<meta name="author" content="Grathium Industries">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>How to Stop Teams From Auto-Starting Linux (Fedora, Debian & Ubuntu)</title>
+	<title>How to Connect to Device Shell Using SSH</title>
 	<link rel="icon" href="/static/favicon.ico">
 	<link rel="stylesheet" href="dist/style.css">
 	<link rel="stylesheet" href="/static/css/dist/global.css">
@@ -20,41 +20,26 @@
 	<header>
 		<a href="/" class="button">Home</a>
 		<a href="/posts/" class="button">Articles</a>
-		<a href="hhttps://github.com/hudson-newey" class="button">GitHub</a>
+		<a href="https://github.com/hudson-newey" class="button">GitHub</a>
 	</header>
 
-	<h1>How to Stop Teams From Auto-Starting Linux (Fedora, Debian & Ubuntu)</h1>
-	<h3 class="pub-time">17/10/2022</h3>
+	<h1>Introducing Boat-Art</h1>
+	<h3 class="pub-time">09/06/2023</h3>
 
 	<div>
 		<h2>Description</h2>
 		<p>
-			Annoyingly, Microsoft Teams on Linux Fedora, RedHat, Debian, Ubuntu, and other Linux distributions does not
-			obey/follow the autostart settings set by your desktop environment. For these reasons, to stop Teams from
-			automatically starting on boot, you will have to edit some directories manually using terminal. <br>
-			<br>
-			To stop Microsoft Teams from automatically starting on boot, run the command bellow from your terminal. <br>
-			<code>$ mv /home/$USER/.config/autostart/teams.desktop /home/$USER/.config/autostart/teams.desktop.rm</code> <br>
-			<br>
-			It's really that simple! However, this change may be reverted on some updates. To make this change more permenant,
-			you will have to create a cron job which runs on boot, checks to see if the file
-			<code>/home/$USER/.config/autostart/teams.desktop</code> exists, and delete it if it does. The script should look
-			something like the one bellow. <br>
-			<br>
-		<div class="code-block">
-			if [ -f "/home/$USER/.config/autostart/teams.desktop" ]; then
-			<div class="indent">
-				if [ if "/home/$USER/.config/autostart/teams.desktop.rm" ]; then
-				<div class="indent">
-					rm /home/$USER/.config/autostart/teams.desktop.rm;
-				</div>
-				fi
-				mv /home/$USER/.config/autostart/teams.desktop /home/$USER/.config/autostart/teams.desktop.rm;
-			</div>
-			fi
-		</div>
+            Boat-Art is the new AI-Art line I've created. More information soon.
 		</p>
 	</div>
+
+	<h2>Social Links</h2>
+	<p>
+        <a href="https://twitter.com/Boat_Art_Real">Twitter</a> <br>
+        <a href="https://www.pinterest.com.au/boatArtOffical">Pintrest</a> <br>
+        <a href="https://boat-art.redbubble.com/">Red Bubble</a> <br>
+        <a href="/posts/boat-art/index.html">Portfolio</a>
+	</p>
 
 	<div class="socials-container"><br>
     <i>Share via: </i>
@@ -69,8 +54,8 @@
 		<div id="disqus_thread"></div>
 		<script>
 			var disqus_config = function () {
-				this.page.url = "https://grathium-industries.github.io/posts/blog/teams-autostart";  // Replace PAGE_URL with your page's canonical URL variable
-				this.page.identifier = "teams_autostart"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				this.page.url = "https://grathium-industries.github.io/posts/blog/dns-over-https";  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = "dns_over_https_pihole"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 			};
 			(function () { // DON'T EDIT BELOW THIS LINE
 				var d = document, s = d.createElement('script');

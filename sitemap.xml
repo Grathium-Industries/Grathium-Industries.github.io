@@ -101,10 +101,6 @@
   </url>
 
   <url>
-    <loc>https://grathium-industries.github.io/posts/blog/teams-autostart</loc>
-  </url>
-
-  <url>
     <loc>https://grathium-industries.github.io/posts/blog/advanced-javascript</loc>
   </url>
 
@@ -146,5 +142,9 @@
 
   <url>
     <loc>https://grathium-industries.github.io/posts/deployments/newtab/</loc>
+  </url>
+
+  <url>
+    <loc>https://grathium-industries.github.io/posts/boat-art/</loc>
   </url>
 </urlset>
