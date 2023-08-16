@@ -1,5 +1,6 @@
 $text-color: black;
 $secondary-text-color: #333;
+$heading-size: 20px;
 
 html {
   font-size: 100%;
@@ -24,6 +25,8 @@ body {
   background-color: white;
   border-radius: 2.5em;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, .3);
+  margin-top: $heading-size * 2;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -100,34 +103,24 @@ code,
 
 header {
   position: absolute;
+  width: 100%;
+  top: 0px;
   left: 0px;
-  top: 20px;
-  width: 10%;
-}
+  background-color: #f5f2f0;
+  color: $text-color;
+  filter: invert(100%);
+  padding: $heading-size / 4;
 
-a.button {
-  display: block;
-  text-decoration: none;
-  color: $text-color !important;
-  border-style: solid;
-  border-width: 1px;
-  border-color: $secondary-text-color;
-  padding: 5px;
-  border-radius: 8px;
-  background-color: #efefef;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  cursor: pointer;
-  width: calc(100% - 10px);
-  margin-left: 1px;
-  margin-top: 5px;
-  text-align: center;
-}
+  & > a {
+    color: $text-color;
+    text-decoration: none;
+    font-size: large;
+    margin: 1rem;
 
-a.button:hover {
-  background-color: rgb(220, 220, 250);
-  transition: all 0.1s;
-  text-decoration: none;
+    &:hover {
+        color: $secondary-text-color;
+    }
+  }
 }
 
 table,
@@ -175,6 +168,7 @@ table {
 
   body {
     max-width: fit-content;
+    margin-top: 0px;
   }
 
   p {
