@@ -110,6 +110,7 @@ header > a {
 }
 header > a:hover {
   color: #333;
+  text-decoration: underline;
 }
 
 table,
