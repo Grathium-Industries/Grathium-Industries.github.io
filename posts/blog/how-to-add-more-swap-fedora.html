@@ -24,7 +24,7 @@
 	</header>
 
 	<h1>How to Add More swap / zram on Fedora Linux</h1>
-	<h3 class="pub-time">09/10/2022</h3>
+	<strong class="pub-time">09/10/2022</strong>
 
 	<div>
 		<h2>Description</h2>
@@ -45,7 +45,7 @@
 		<br>
 
 	<div>
-		<strong>Example zram Configuration File with 1.8 times RAM space <i>(Figure 1)</i></strong><br>
+		<h3>Example zram Configuration File with 1.8 times RAM space <i>(Figure 1)</i></h3><br>
 		<code>$ cat /etc/systemd/zram-generator.conf</code> <br>
 		<div class="code-block">
 			[zram0] <br>
@@ -56,12 +56,12 @@
 
 	<p>
 	<div>
-		<strong>Modifying zram space using nano</strong><br>
+		<h3>Modifying zram space using nano</h3><br>
 		<code>$ sudo nano /etc/systemd/zram-generator.conf</code>
 	</div><br>
 
 	<div>
-		<strong>Modifying zram space using vim</strong><br>
+		<h3>Modifying zram space using vim</h3><br>
 		<code>$ sudo vim /etc/systemd/zram-generator.conf</code>
 	</div>
 	</p>
@@ -69,7 +69,7 @@
     <hr>
 
 	<div>
-		<strong>Config File Breakdown of <i>Figure 1</i></strong>
+		<h3>Config File Breakdown of <i>Figure 1</i></h3>
 		<p><code>[zram0]</code> The zram mounting partition. On Fedora, the default zram name is zram0, therefore, the
 			config setup will be partition name surounded in sqaure brackets.</p> <br>
 		<p>
