@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: grathium-industries.github.io
-Token: b48f541708c9092e54eb59d6056669964d4cee213c48f5213d623e4632b04a75
