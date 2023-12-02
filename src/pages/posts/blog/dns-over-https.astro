@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="How to Connect to Device Shell Using SSH">
+	<meta name="keywords" content="dns, https, dns over https, DoH">
+	<meta name="author" content="Grathium Industries">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>How to Connect to Device Shell Using SSH</title>
+	<link rel="icon" href="/static/favicon.ico">
+	<link rel="stylesheet" href="/blog/dist/style.css">
+	<link rel="stylesheet" href="/static/css/dist/global.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
+		crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<a href="/" class="button">Home</a>
+		<a href="/posts/" class="button">Articles</a>
+		<a href="https://github.com/hudson-newey" class="button">GitHub</a>
+	</header>
+
+	<h1>How to Configure DNS over HTTPS on PiHole</h1>
+	<strong class="pub-time">25/07/2022</strong>
+
+	<div>
+		<h2>Description</h2>
+		<p>
+			1.1.1.1 is a privacy respecting DNS provided by Cloudflare. It is a DNS server that is used to resolve domain
+			names to IP addresses. However, by default, pihole does not use DNS over HTTPS to resolve DNS names. This can
+			result in a loss of privacy as anyone who can conduct a MITM aattack can see the DNS requests made by the user.
+		</p>
+	</div>
+
+	<h2>Set up DNS Over HTTPS Proxy on PiHole</h2>
+	<p>
+		Copy the ARM binary URL location <a
+			href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/</a><br>
+		And run the following commands on your PiHole to configure DNS over HTTPS:
+	<div class="code-block">
+		$ cd /tmp<br>
+		$ wget [ARM Binary URL Location]<br>
+		$ sudo mv cloudflared /usr/local/bin<br>
+		$ sudo chmod +x /usr/local/bin/cloudflared<br>
+		$ sudo useradd -s /usr/sbin/nologin -r -M cloudflared<br>
+		$ sudo chown cloudflared:cloudflared /usr/local/bin/cloudflared<br>
+	</div><br>
+
+	Copy the following config text into a file called / located under <code>/etc/default/cloudflared</code><br>
+	<div class="code-block">
+		CLOUDFLARED_OPTS=--port 5053 --upstream https://1.1.1.1/dns-query --upstream https://1.0.0.1/dns-query<br>
+	</div><br>
+
+	Copy the following config text into a file called / located under
+	<code>/lib/systemd/system/cloudflared.service</code><br>
+	<div class="code-block">
+		[Unit]<br>
+		Description=cloudflared DNS over HTTPS proxy<br>
+		After=syslog.target network-online.target<br>
+		<br>
+		[Service]<br>
+		Type=simple<br>
+		User=cloudflared<br>
+		EnvironmentFile=/etc/default/cloudflared<br>
+		ExecStart=/usr/local/bin/cloudflared proxy-dns $CLOUDFLARED_OPTS<br>
+		Restart=on-failure<br>
+		RestartSec=10<br>
+		KillMode=process<br>
+		<br>
+		[Install]<br>
+		WantedBy=multi-user.target
+	</div><br>
+
+	Run from Terminal <br>
+	<div class="code-block">
+		$ sudo systemctl daemon-reload<br>
+		$ sudo systemctl enable cloudflared<br>
+		$ sudo systemctl start cloudflared
+	</div><br>
+
+	To verify the proxy is working <br>
+	<code>
+        $ sudo systemctl status cloudflared<br>
+    </code>
+
+    <hr>
+
+	<h2>Configure PiHole to use DNS over HTTPS Proxy</h2>
+	<ol>
+		<li>Navigate to <a href="https://pi.hole/admin">https://pi.hole/admin</a> in your web browser</li>
+		<li>Go to Settings -> DNS</li>
+		<li>Untick all current checkboxes in the top DNS section</li>
+		<li>Tick custom IPV4 DNS</li>
+		<li>Add <code>127.0.0.1#5053</code> as the customer IPV4 DNS server</li>
+		<li>Click "Save" down the bottom and restart PiHole</li>
+	</ol>
+	</p>
+
+	<div class="socials-container"><br>
+    <i>Share via: </i>
+    <i href="#" onclick="window.location.href = `http://twitter.com/share?text=Check out this new post from Grathium Industries!&url=${window.location.href}`" class="social-links fa-brands fa fa-twitter-square"></i>
+    <i href="#" onclick="window.location.href = `https://www.reddit.com/submit?url=${window.location.href}&title=Check out this new post from Grathium Industries!`" class="social-links fa-brands fa fa-reddit-square"></i>
+    <i href="#" onclick="window.location.href = `http://pinterest.com/pin/create/button/?url=${window.location.href}&description=Check out this new post from Grathium Industries!`" class="social-links fa-brands fa fa-pinterest-square"></i>
+  </div>
+    <hr>
+
+	<div class="disquis-comments">
+		<script is:inline id="dsq-count-scr" src="//grathium-industries.disqus.com/count.js" async></script>
+		<div id="disqus_thread"></div>
+		<script is:inline>
+			var disqus_config = function () {
+				this.page.url = "https://grathium-industries.github.io/posts/blog/dns-over-https";  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = "dns_over_https_pihole"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			(function () { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://grathium-industries-1.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+				Disqus.</a></noscript>
+	</div>
+
+	<div class="content-footer">
+		<iframe src="/posts/components/suggestedArticles.html" scrolling="no" frameborder="0"
+			onload="this.style.height=(this.contentWindow.document.body.scrollHeight)+'pt';">
+		</iframe>
+	</div>
+</body>
+
+<footer>
+	<div id="cookie-consent" class="cookie-consent-banner">
+		<div class="cookie-consent-banner__inner">
+			<div class="cookie-consent-banner__copy">
+				<div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES</div>
+				<div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social
+					media features and to analyse our traffic. We also share information about your use of our site with our
+					social media, advertising and analytics partners who may combine it with other information that you’ve
+					provided to them or that they’ve collected from your use of their services. You consent to our cookies if you
+					continue to use our website.</div>
+			</div>
+
+			<div class="cookie-consent-banner__actions">
+				<a href="#" class="cookie-consent-banner__cta" onclick="createConsentCookie();">
+					OK
+				</a>
+
+				<a href="https://www.google.com/" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">
+					Decline
+				</a>
+			</div>
+		</div>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-R245NSN3MZ"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+
+			gtag('config', 'G-R245NSN3MZ');
+		</script>
+
+		<script is:inline src="/static/js/dist/global.js"></script>
+</footer>
+
+</html>

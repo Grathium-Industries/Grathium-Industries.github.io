@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="How to Install an Application on Ubuntu/Debian">
+	<meta name="keywords" content="ubuntu, install">
+	<meta name="author" content="Grathium Industries">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>How to Install an Application on Ubuntu/Debian</title>
+	<link rel="icon" href="/static/favicon.ico">
+	<link rel="stylesheet" href="/blog/dist/style.css">
+	<link rel="stylesheet" href="/static/css/dist/global.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
+		crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<a href="/" class="button">Home</a>
+		<a href="/posts/" class="button">Articles</a>
+		<a href="https://github.com/hudson-newey" class="button">GitHub</a>
+	</header>
+  <h1>How to Install an Application on Ubuntu/Debian</h1>
+  <strong class="pub-time">05/08/2022</strong>
+  
+  <div>
+    <h2>Description</h2>
+    <p>
+      Debian is a Linux based distribution at the heart of the most popular
+      operating systems today. It powers operating systems such a Ubuntu, Linux
+      mint, KDE Neon, Kubuntu, Xububtu, elementary os, and Deepin just to name a
+      few. One of the main selling points and innovations of Debian based
+      distributions is it's clear and easy to use application installer / app
+      management. The package tool used in many Debian based distros is APT.
+    </p>
+  </div>
+  
+  <h2>How to Use</h2>
+  <div>
+    <p><h3>Installing From Package Repository</h3></p>
+    <p>
+      To install an application such as NodeJS with APT simple run the following
+      command from the terminal window: <br />
+    </p>
+    <div class="code-block">
+      $ sudo apt install nodejs -y <br />
+    </div>
+  
+    <div class="note">
+      Note: the -y flag is optional, but it does remove an extra conformation step
+      otherwise required before you install an application. <br />
+    </div>
+  
+    <br />
+    <p>
+      To download an application on APT, you may need to add some extra app
+      repositories or find the package name of the application. To do both simple
+      search for the program you want to download + “apt download”. The download
+      instructions may specify Debian or Ubuntu, or another operating system that
+      you are not running. However, if you are running APT on your system, you
+      will be able to follow the instructions whether or not the instructions are
+      specific for your operating system. <br />
+    </p>
+  
+    <div class="note">
+      Note: for Ubuntu22.0+ there may be a separate set of install instructions
+      you will need to follow <br />
+    </div>
+    <br />
+  
+    <p><h3>Installing from .deb package file</h3></p>
+    <div class="code-block">
+      $ sudo apt install ./NodeJS.deb <br />
+    </div>
+  
+    <p>
+      You will have to replace ./NodeJs.deb with the relative path to where your
+      terminal is running from. To check the current path your terminal is running
+      from, use the command pwd. <br />
+    </p>
+  </div>
+  
+  <hr />
+  
+  <div>
+    <h2>Command Line Argument Breakdown</h2>
+  
+    <p>
+      <code>sudo</code> - installs the application at the root directory, this
+      means that all users will be able to use the application. Without sudo, only
+      your user account will be able to use the application. Note that some
+      applications MUST be run as root, and will not run without sudo. <br />
+    </p>
+  
+    <p>
+      <code>apt</code> - is the command name for the package manager where we are
+      going to get our application from.
+      <br />
+    </p>
+  
+    <p>
+      <code>install</code> - tells APT to install the proceeding application. <br
+      />
+    </p>
+  
+    <p>
+      <code>NodeJS</code> - you can replace this with the package name of the
+      program you are trying to install. This is the program that will install. <br
+      />
+    </p>
+  
+    <p>
+      <code>-y</code> flag - do not prompt for conformation before install. Not
+      using this flag may be useful if you have limited disk space as it prompts
+      you to confirm the disk size and package repository before install
+    </p>
+  </div>
+</body>
