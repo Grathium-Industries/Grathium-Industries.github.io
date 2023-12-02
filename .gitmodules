@@ -1,12 +1,12 @@
-[submodule "src/pages/posts/deployments/NeonX2.0"]
-	path = src/pages/posts/deployments/NeonX2.0
+[submodule "/public/deployments/NeonX2.0"]
+	path = /public/deployments/NeonX2.0
 	url = https://github.com/hudson-newey/NeonX2.0.git
-[submodule "src/pages/posts/deployments/Internet-Speed-Test"]
-	path = src/pages/posts/deployments/Internet-Speed-Test
+[submodule "/public/deployments/Internet-Speed-Test"]
+	path = /public/deployments/Internet-Speed-Test
 	url = https://github.com/hudson-newey/Internet-Speed-Test.git
-[submodule "src/pages/posts/deployments/bluff-ball"]
-	path = src/pages/posts/deployments/bluff-ball
+[submodule "/public/deployments/bluff-ball"]
+	path = /public/deployments/bluff-ball
 	url = https://github.com/hudson-newey/Bluff-Ball.git
-[submodule "src/pages/posts/deployments/newtab"]
-	path = src/pages/posts/deployments/newtab
+[submodule "/public/deployments/newtab"]
+	path = /public/deployments/newtab
 	url = https://github.com/hudson-newey/Webbrowser-Newtab.git
