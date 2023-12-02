@@ -3,16 +3,10 @@
 	url = https://github.com/hudson-newey/NeonX2.0.git
 [submodule "src/pages/posts/deployments/Internet-Speed-Test"]
 	path = src/pages/posts/deployments/Internet-Speed-Test
-	url = https://github.com/Grathium-Industries/Internet-Speed-Test.git
+	url = https://github.com/hudson-newey/Internet-Speed-Test.git
 [submodule "src/pages/posts/deployments/bluff-ball"]
 	path = src/pages/posts/deployments/bluff-ball
 	url = https://github.com/hudson-newey/Bluff-Ball.git
-[submodule "src/pages/posts/deployments/purewatch"]
-	path = src/pages/posts/deployments/purewatch
-	url = https://github.com/hudson-newey/Purewatch.git
-[submodule "u"]
-	path = u
-	url = https://github.com/hudson-newey/URL-Shortener-and-Redirect.git
 [submodule "src/pages/posts/deployments/newtab"]
 	path = src/pages/posts/deployments/newtab
 	url = https://github.com/hudson-newey/Webbrowser-Newtab.git

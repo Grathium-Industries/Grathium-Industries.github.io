@@ -2,7 +2,7 @@ const inEu: boolean = Intl.DateTimeFormat().resolvedOptions().timeZone.startsWit
 
 let removeCookieConsentBanner = (): void => {
     let bannerObj: HTMLElement | null = document.getElementById('cookie-consent');
-    
+
     if (bannerObj != null) {
         bannerObj.remove();
         bannerObj.innerHTML = '';
