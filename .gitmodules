@@ -7,3 +7,6 @@
 [submodule "public/posts/deployments/NeonX2.0"]
 	path = public/posts/deployments/NeonX2.0
 	url = https://github.com/hudson-newey/NeonX2.0.git
+[submodule "public/posts/deployments/newtab"]
+	path = public/posts/deployments/newtab
+	url = git@github.com:hudson-newey/Webbrowser-Newtab.git
