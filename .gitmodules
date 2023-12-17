@@ -1,6 +1,3 @@
-[submodule "public/posts/deployments/newtab"]
-	path = public/posts/deployments/newtab
-	url = https://github.com/hudson-newey/Webbrowser-Newtab.git
 [submodule "public/posts/deployments/bluff-ball"]
 	path = public/posts/deployments/bluff-ball
 	url = https://github.com/hudson-newey/Bluff-Ball.git
