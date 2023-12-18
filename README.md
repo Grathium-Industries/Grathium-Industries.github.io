@@ -3,7 +3,7 @@
 ## To run
 
 ```sh
-$ npm run dev
+$ pnpm dev
 >
 ```
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /posts/index.html
+Disallow: /posts/
