@@ -1,10 +1,10 @@
 ---
-import SuggestedArticles from "../../../components/SuggestedArticles.astro"
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "Cobra Online Documentation";
 ---
 
-<Blog>
-  <h1>Cobra Docs</h1>
+<BlogArticle title={title}>
   <strong class="pub-time">29/10/2022</strong>
 
   <a href="https://github.com/hudson-newey/cobra">Cobra Source Code & Download</a>
@@ -180,4 +180,4 @@ import Blog from "../../../layouts/Blog.astro";
       as the <code>.pyc</code> source file.
     </p>
   </div>
-</Blog>
+</BlogArticle>

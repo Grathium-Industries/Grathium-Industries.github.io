@@ -1,14 +1,15 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "Fix: '\r': command not found";
 ---
 
-<Blog>
-  <h1>Fix: '\r': command not found</h1>
+<BlogArticle title={title}>
   <strong class="pub-time">18/07/2022</strong>
 
   <h2>Fixes Errors</h2>
   <code>
-    '\r': command not found<br />
+    '\r': command not found
   </code>
 
   <h2>Description</h2>
@@ -26,7 +27,7 @@ import Blog from "../../../layouts/Blog.astro";
       and run, but show an end of line (EOL) error after each line.
     </p>
     <code>
-      $ ./script.sh<br />
+      $ ./script.sh
     </code>
   </p>
 
@@ -61,4 +62,4 @@ import Blog from "../../../layouts/Blog.astro";
       </div>
     </div>
   </p>
-</Blog>
+</BlogArticle>

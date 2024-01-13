@@ -1,6 +1,8 @@
 ---
-import BlogFooter from "../components/BlogFooter.astro";
 import BlogHeader from "../components/BlogHeader.astro";
+import CookieConsent from "../components/CookieConsent.astro";
+
+const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -18,6 +20,7 @@ import BlogHeader from "../components/BlogHeader.astro";
     <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
       crossorigin="anonymous"></script>
     <meta name="generator" content={Astro.generator} />
+    <title>Grathium Industries - {title ?? 'Blog'}</title>
   </head>
 
   <body>
@@ -25,6 +28,6 @@ import BlogHeader from "../components/BlogHeader.astro";
 
     <slot />
 
-    <BlogFooter></BlogFooter>
+    <CookieConsent />
   </body>
 </html>

@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "How to Test if a User is From Europe Without Checking IP";
 ---
 
-<Blog>
-	<h1>How to Test if a User is From Europe Without Checking IP</h1>
+<BlogArticle title={title}>
 	<strong class="pub-time">04/08/2022</strong>
 
 	<div>
@@ -37,4 +38,4 @@ import Blog from "../../../layouts/Blog.astro";
 		<code>Intl.DateTimeFormat().resolvedOptions().timeZone.startsWith("Europe")</code> gets the system time and returns
 		a boolean value whether or not the user is from the EU<br>
 	</div>
-</Blog>
+</BlogArticle>

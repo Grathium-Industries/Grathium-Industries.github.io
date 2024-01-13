@@ -1,26 +1,11 @@
 ---
-import BlogHeader from "../components/BlogHeader.astro";
+import Blog from "../layouts/Blog.astro"
+
+const title = "Technical Index"
 ---
 
-<!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Grathium Industries Articles">
-	<meta name="keywords" content="grathium industries, articles, howto, how to, blog">
-	<meta name="author" content="Grathium Industries">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Grathium Industries - Technical Index</title>
-	<link rel="stylesheet" href="/blog/dist/style.css">
-	<script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
-		crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <BlogHeader></BlogHeader>
-
-	<h1>Grathium Industries - Web Index</h1>
+<Blog title={title}>
+	<h1>Grathium Industries - {title}</h1>
 
     <hr>
 
@@ -83,5 +68,4 @@ import BlogHeader from "../components/BlogHeader.astro";
 		<h2>Platforms</h2>
 		<a href="https://github.com/Grathium-Industries">GitHub</a><br>
 	</div>
-</body>
-</html>
+</Blog>

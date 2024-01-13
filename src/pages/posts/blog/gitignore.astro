@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "What is a .gitignore File";
 ---
 
-<Blog>
-  <h1>What is a .gitignore File</h1>
+<BlogArticle title={title}>
   <strong class="pub-time">19/07/2022</strong>
 
   <h2>Description</h2>
@@ -144,4 +145,4 @@ import Blog from "../../../layouts/Blog.astro";
       href="https://www.geeksforgeeks.org/what-is-git-ignore-and-how-to-use-it/">https://www.geeksforgeeks.org/what-is-git-ignore-and-how-to-use-it/</a><br>
     <a href="https://git-scm.com/docs/gitignore">https://git-scm.com/docs/gitignore</a>
   </div>
-</Blog>
+</BlogArticle>

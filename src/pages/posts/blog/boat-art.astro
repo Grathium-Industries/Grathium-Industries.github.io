@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "Introducing Boat-Art";
 ---
 
-<Blog>
-	<h1>Introducing Boat-Art</h1>
+<BlogArticle title={title}>
 	<strong class="pub-time">09/06/2023</strong>
 
 	<div>
@@ -12,4 +13,4 @@ import Blog from "../../../layouts/Blog.astro";
             Boat-Art is the new AI-Art line I've created. More information soon.
 		</p>
 	</div>
-</Blog>
+</BlogArticle>

@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "Windows: command not found";
 ---
 
-<Blog>
-	<h1>Windows: command not found</h1>
+<BlogArticle title={title}>
 	<strong class="pub-time">02/08/2022</strong>
 
 	<div>
@@ -60,4 +61,4 @@ import Blog from "../../../layouts/Blog.astro";
 
 		<p>If all else fails, you may need to try a different solution.</p>
 	</div>
-</Blog>
+</BlogArticle>

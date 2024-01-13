@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "How to Add More swap / zram on Fedora Linux";
 ---
 
-<Blog>
-	<h1>How to Add More swap / zram on Fedora Linux</h1>
+<BlogArticle title={title}>
 	<strong class="pub-time">09/10/2022</strong>
 
 	<div>
@@ -58,4 +59,4 @@ import Blog from "../../../layouts/Blog.astro";
 			e.g. If the computer has 8GB of RAM, a <code>zram-fraction=1.5</code> will create a zram partition of size 12GB.
 		</p>
 	</div>
-</Blog>
+</BlogArticle>

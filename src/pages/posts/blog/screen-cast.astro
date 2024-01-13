@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "What is Screen Cast and how to use it";
 ---
 
-<Blog>
-	<h1>What is Screen Cast and how to use it</h1>
+<BlogArticle title={title}>
 	<strong class="pub-time">13/11/2022</strong>
 
     <a href="https://github.com/hudson-newey/cobra">Screen Cast Source Code & Download</a>
@@ -48,4 +49,4 @@ import Blog from "../../../layouts/Blog.astro";
       From both the command line and web interface client, you will have to provide a display IP address and port number. This is not the machine you are connecting via the client from, but the display which you are running on either your raspberry pi or laptop. There are several articles online showing you how to find your local IP address, and by default the port number of the display screen is port <code>:8080</code> (this can be changed under <code>src/window.ts</code>). Your display screen IP address + port number should look something like <code>127.0.0.1:8080</code> (replacing <code>127.0.0.1</code> with the display screens IP address).
     </p>
   </div>
-</Blog>
+</BlogArticle>

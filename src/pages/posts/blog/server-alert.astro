@@ -1,46 +1,84 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "Server Alert Online Documentation";
 ---
 
-<Blog>
-	<h1>Server Alert Docs</h1>
-	<strong class="pub-time">14/11/2022</strong>
+<BlogArticle title={title}>
+  <strong class="pub-time">14/11/2022</strong>
 
-    <a href="https://github.com/hudson-newey/cobra">Server Alert Source Code & Download</a>
+  <a href="https://github.com/hudson-newey/cobra"
+    >Server Alert Source Code & Download</a
+  >
 
-	<div>
-		<h2>Description</h2>
-		<p>
-			Server alert is a passive network connectivity monitor that validates that a web server is reachable. This basic shell script can be run either through a CRON job, daemon, or through the terminal window. Server alert can be set up in two modes, reporting or logging. Logging simply echos the time, date, server which couldn't be contacted, and the number of times it failed to ping. As server alert runs through Bash by default, this logging output can then be piped or written to a log file / reporting service.
-		</p>
-	</div><br>
+  <div>
+    <h2>Description</h2>
+    <p>
+      Server alert is a passive network connectivity monitor that validates that
+      a web server is reachable. This basic shell script can be run either
+      through a CRON job, daemon, or through the terminal window. Server alert
+      can be set up in two modes, reporting or logging. Logging simply echos the
+      time, date, server which couldn't be contacted, and the number of times it
+      failed to ping. As server alert runs through Bash by default, this logging
+      output can then be piped or written to a log file / reporting service.
+    </p>
+  </div><br />
 
   <div>
     <p>
-      Native inbuilt reporting is the most useful tool which Server Alert provides. It allows a HTML email template to be sent the the predetermined point of escalation. Since this notification is sent over SMTP, this email notification is also compatible with Slack alerting, and similar alerting services such as Pager Duty.
+      Native inbuilt reporting is the most useful tool which Server Alert
+      provides. It allows a HTML email template to be sent the the predetermined
+      point of escalation. Since this notification is sent over SMTP, this email
+      notification is also compatible with Slack alerting, and similar alerting
+      services such as Pager Duty.
     </p>
   </div>
 
-  <hr>
+  <hr />
 
   <div>
     <h2>How to Use - Alert Message / Template</h2>
     <p>
-      To use server alert, you will have to edit the script file located under <a href="https://github.com/hudson-newey/Server-Alert">the GitHub Repo</a>. In here you will find three files & variables which you will most likely want to configure. The first file which you will want to edit is the <code>alertTemplate.txt</code> file. This file provides a template for the alert message that will be sent when an ICMP ping to the server has failed <i>x</i> amount of times.
+      To use server alert, you will have to edit the script file located under <a
+        href="https://github.com/hudson-newey/Server-Alert">the GitHub Repo</a
+      >. In here you will find three files & variables which you will most
+      likely want to configure. The first file which you will want to edit is
+      the <code>alertTemplate.txt</code> file. This file provides a template for
+      the alert message that will be sent when an ICMP ping to the server has failed
+      <i>x</i> amount of times.
     </p>
   </div>
 
   <div>
     <h2>Settings the Monitored Server</h2>
     <p>
-      Next, you will want to edit the checkUp method located at line _8_ by default. By default, the pinging IP address will be set to <code>192.168.1.12</code>. You will want to change this either to your public IP address (if the server is intended to be accessed from the public internet), or your local area network address (if the server is ONLY intended to be accessed from behind a firewall or from the LAN).
+      Next, you will want to edit the checkUp method located at line _8_ by
+      default. By default, the pinging IP address will be set to <code
+        >192.168.1.12</code
+      >. You will want to change this either to your public IP address (if the
+      server is intended to be accessed from the public internet), or your local
+      area network address (if the server is ONLY intended to be accessed from
+      behind a firewall or from the LAN).
     </p>
   </div>
 
   <div>
     <h2>Points of Escalation</h2>
     <p>
-      To set your point of escalation, change the email address on line _23_ by default (<code>email@domain.com</code>) to your point of escalations email address. This will send the <code>alertTemplate.txt</code> file to the point of escalation when _x_ number of pings have failed consecutively. This _x_ number of failed consecutive pings is defined on line _30_ by default <code>("$failedDataPoints" == 4)</code>, and you can change the number of failed consecutive pings before the point of escalation is contacted. By default this value is set to four failed consecutive pings before the point of escalation is notified, but you may want to raise or lower this threshold depending on your threat model / requirements. e.g. If you wanted to set the point of escalation to be notified after _20_ failed consecutive pings, you would change <code>"$failedDataPoints" == 4</code> to <code>"$failedDataPoints" == 20</code>.
+      To set your point of escalation, change the email address on line _23_ by
+      default (<code>email@domain.com</code>) to your point of escalations email
+      address. This will send the <code>alertTemplate.txt</code> file to the point
+      of escalation when _x_ number of pings have failed consecutively. This _x_
+      number of failed consecutive pings is defined on line _30_ by default <code
+        >("$failedDataPoints" == 4)</code
+      >, and you can change the number of failed consecutive pings before the
+      point of escalation is contacted. By default this value is set to four
+      failed consecutive pings before the point of escalation is notified, but
+      you may want to raise or lower this threshold depending on your threat
+      model / requirements. e.g. If you wanted to set the point of escalation to
+      be notified after _20_ failed consecutive pings, you would change <code
+        >"$failedDataPoints" == 4</code
+      > to <code>"$failedDataPoints" == 20</code>.
     </p>
   </div>
-</Blog>
+</BlogArticle>

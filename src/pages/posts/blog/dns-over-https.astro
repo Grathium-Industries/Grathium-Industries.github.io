@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "How to Configure DNS over HTTPS on PiHole";
 ---
 
-<Blog>
-  <h1>How to Configure DNS over HTTPS on PiHole</h1>
+<BlogArticle title={title}>
   <strong class="pub-time">25/07/2022</strong>
 
   <div>
@@ -88,4 +89,4 @@ import Blog from "../../../layouts/Blog.astro";
       <li>Click "Save" down the bottom and restart PiHole</li>
     </ol>
   </p>
-</Blog>
+</BlogArticle>

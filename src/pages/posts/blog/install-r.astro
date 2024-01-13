@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "How to install R studio on Ubuntu 22";
 ---
 
-<Blog>
-	<h1>How to install R studio on Ubuntu 22</h1>
+<BlogArticle title={title}>
 	<strong class="pub-time">18/07/2022</strong>
 
 	<h2>Fixes Errors</h2>
@@ -41,4 +42,4 @@ import Blog from "../../../layouts/Blog.astro";
 		$ var="sudo locate libcrypto.so.1.1 -n 1" && SSLLoc=$(eval $var) && cp $SSLLoc /usr/lib/libcrypto.so.1.1<br>
 	</div>
 	</p>
-</Blog>
+</BlogArticle>

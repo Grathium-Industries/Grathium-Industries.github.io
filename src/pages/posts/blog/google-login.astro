@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "How to Fix 'App not enabled for this user' When Signing in with Google";
 ---
 
-<Blog>
-	<h1>How to Fix 'App not enabled for this user' When Signing in with Google</h1>
+<BlogArticle title={title}>
 	<strong class="pub-time">27/07/2022</strong>
 
 	<h2>Fixes Errors</h2>
@@ -49,4 +50,4 @@ import Blog from "../../../layouts/Blog.astro";
 		<li>If not, you may need to enable the app, or change the users OU or group where the app is enabled</li>
 	</ol>
 	</p>
-</Blog>
+</BlogArticle>

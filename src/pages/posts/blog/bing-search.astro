@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "Search Engine Keeps Reverting to Bing and not Using Browser set Search Engine"
 ---
 
-<Blog>
-  <h1>Search Engine Keeps Reverting to Bing and not Using Browser set Search Engine</h1>
+<BlogArticle title={title}>
   <strong class="pub-time">06/11/2022</strong>
 
   <div>
@@ -33,4 +34,4 @@ import Blog from "../../../layouts/Blog.astro";
       </div>
     </p>
   </div>
-</Blog>
+</BlogArticle>

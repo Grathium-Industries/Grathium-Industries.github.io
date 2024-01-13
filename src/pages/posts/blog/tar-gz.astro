@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "How to Extract / Open .tar.gz File";
 ---
 
-<Blog>
-	<h1>How to Extract / Open .tar.gz File</h1>
+<BlogArticle title={title}>
 	<strong class="pub-time">19/07/2022</strong>
 
 	<h2>Description</h2>
@@ -38,4 +39,4 @@ import Blog from "../../../layouts/Blog.astro";
 		<p><code>-f</code> Specifies in file name / path</p>
 	</div>
 	</p>
-</Blog>
+</BlogArticle>

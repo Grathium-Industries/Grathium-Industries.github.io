@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "How to Create a Lightweight Webpage Redirect Using Only HTML";
 ---
 
-<Blog>
-	<h1>How to Create a Lightweight Webpage Redirect Using Only HTML</h1>
+<BlogArticle title={title}>
 	<strong class="pub-time">29/07/2022</strong>
 
 	<div>
@@ -51,4 +52,4 @@ import Blog from "../../../layouts/Blog.astro";
 			the event that the webpage does not load. You may wish to add a link here as well incase their web browser is
 			outdated or doesn't support HTML redirect.</p>
 	</div>
-</Blog>
+</BlogArticle>

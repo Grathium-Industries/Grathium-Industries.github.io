@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "How to Connect to Device Shell Using SSH";
 ---
 
-<Blog>
-	<h1>How to Connect to Device Shell Using SSH</h1>
+<BlogArticle title={title}>
 	<strong class="pub-time">19/07/2022</strong>
 
 	<div>
@@ -42,4 +43,4 @@ import Blog from "../../../layouts/Blog.astro";
 			connecting to. The credentials used on your machine will not work when using SSH to log into another device.
 		</p>
 	</div>
-</Blog>
+</BlogArticle>

@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "How to Install an Application on Ubuntu/Debian";
 ---
 
-<Blog>
-  <h1>How to Install an Application on Ubuntu/Debian</h1>
+<BlogArticle title={title}>
   <strong class="pub-time">05/08/2022</strong>
   
   <div>
@@ -98,4 +99,4 @@ import Blog from "../../../layouts/Blog.astro";
       you to confirm the disk size and package repository before install
     </p>
   </div>
-</Blog>
+</BlogArticle>

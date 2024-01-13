@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "The IT Crowd - Bluff Ball (Season 3 Ep 02)";
 ---
 
-<Blog>
-	<h1>The IT Crowd - Bluff Ball (Season 3 Ep 02)</h1>
+<BlogArticle title={title}>
 	<strong class="pub-time">10/11/2022</strong>
 
 	<div>
@@ -27,4 +28,4 @@ import Blog from "../../../layouts/Blog.astro";
       <a href="https://bluffball.co.uk/">bluffball.co.uk</a>
 		</p>
 	</div>
-</Blog>
+</BlogArticle>

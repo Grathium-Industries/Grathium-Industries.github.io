@@ -1,9 +1,10 @@
 ---
-import Blog from "../../../layouts/Blog.astro";
+import BlogArticle from "../../../layouts/BlogArticle.astro";
+
+const title = "2UNU Online Documentation"
 ---
 
-<Blog>
-  <h1>2UNU Online Documentation</h1>
+<BlogArticle title={title}>
   <strong class="pub-time">27/07/2023</strong>
 
   <div>
@@ -45,4 +46,4 @@ import Blog from "../../../layouts/Blog.astro";
   <p>
     This will create all the programs as POSIX compliant executables under <code>./2UNU/build/bin</code>. This path can either be added to your environment PATH, or replace the appropriate executables in your system (usually <code>/bin/</code>) with the ones in the build directory.
   </p>
-</Blog>
+</BlogArticle>
