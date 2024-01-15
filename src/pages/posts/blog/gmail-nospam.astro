@@ -1,5 +1,9 @@
 ---
 import BlogArticle from "../../../layouts/BlogArticle.astro";
+import advancedSearchImage from "./images/advanced_search.png";
+import createFilterImage from "./images/new_filter.png";
+import filterAddImage from "./images/filter_add.png";
+import { Image } from "astro:assets";
 
 const title = "How to mark a sender as not spam in Gmail";
 ---
@@ -7,33 +11,54 @@ const title = "How to mark a sender as not spam in Gmail";
 <BlogArticle title={title}>
   <strong class="pub-time">18/07/2022</strong>
   <p>
-    Surprisingly, strictly marking a sender as not spam is overly complicated in Gmail / GSuite. Clicking the default "Not spam" button will only mark the individual email as not spam. Gmail will eventually learn that the sender is not spam, however, to make the sender never be sent to spam <u>now</u>, you will have to follow the steps bellow.<br>
+    Surprisingly, strictly marking a sender as not spam is overly complicated in
+    Gmail / GSuite. Clicking the default "Not spam" button will only mark the
+    individual email as not spam. Gmail will eventually learn that the sender is
+    not spam, however, to make the sender never be sent to spam <u>now</u>, you
+    will have to follow the steps bellow.<br />
   </p>
 
   <div>
     <ol>
       <div>
         <li><b>Click the Advanced Search Button</b></li>
-        <img src="https://live.staticflickr.com/65535/52549572673_00f1f98b3a_o_d.png" alt="click the advanced search button">
+        <Image
+          class="picture"
+          src={advancedSearchImage}
+          alt="click the advanced search button"
+        />
       </div>
 
-      <div><br><br>
+      <div>
+        <br /><br />
         <li><b>Create new Filter</b></li>
-        <p>Add the sender you wish to never send to spam in the "From" search field and click "Create Filter"</p><br>
-        <img src="https://live.staticflickr.com/65535/52549325429_7730a2a07f_o_d.png" alt="fill in the filter form">
+        <p>
+          Add the sender you wish to never send to spam in the "From" search
+          field and click "Create Filter"
+        </p><br />
+        <Image
+          class="picture"
+          src={createFilterImage}
+          alt="fill in the filter form"
+        />
       </div>
 
-      <div><br><br>
+      <div>
+        <br /><br />
         <li><b>Add a Rule for the Filter</b></li>
         <p>
-          Click "Never send it to Spam" and then click "Create Filter"<br>
-          This will cause all future emails from the sender to be marked as not spam. However, this rule will only apply
-          to new emails. All existing emails from the sender that are currently in your Spam inbox will not be
-          affected.<br>
-        </p><br>
-        <img src="https://live.staticflickr.com/65535/52549502690_f40d299fc7_o_d.png" alt="click the create filter button">
+          Click "Never send it to Spam" and then click "Create Filter"<br />
+          This will cause all future emails from the sender to be marked as not spam.
+          However, this rule will only apply to new emails. All existing emails from
+          the sender that are currently in your Spam inbox will not be affected.<br
+          />
+        </p><br />
+        <Image
+          class="picture"
+          src={filterAddImage}
+          alt="click the create filter button"
+        />
       </div>
-
     </ol>
   </div>
 </BlogArticle>

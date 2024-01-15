@@ -1,5 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import BlogArticle from "../../../layouts/BlogArticle.astro";
+import eolImage from "./images/eol.png";
+import eolImage2 from "./images/eol2.png";
 
 const title = "Fix: '\r': command not found";
 ---
@@ -8,16 +11,14 @@ const title = "Fix: '\r': command not found";
   <strong class="pub-time">18/07/2022</strong>
 
   <h2>Fixes Errors</h2>
-  <code>
-    '\r': command not found
-  </code>
+  <code> '\r': command not found</code>
 
   <h2>Description</h2>
   <p>
     When transfering a shell, or bash script from Windows to MacOS, you will get
     the error: '\r': command not found.<br />
-     This is due to the fact that Windows uses '\r\n' to represent a new line
-    character, while MacOS and Linux uses '\n'.<br />
+    This is due to the fact that Windows uses '\r\n' to represent a new line character,
+    while MacOS and Linux uses '\n'.<br />
   </p>
 
   <h2>Problem</h2>
@@ -26,9 +27,7 @@ const title = "Fix: '\r': command not found";
       After running a script from the command line, the script will start with,
       and run, but show an end of line (EOL) error after each line.
     </p>
-    <code>
-      $ ./script.sh
-    </code>
+    <code> $ ./script.sh</code>
   </p>
 
   <h2>Solution</h2>
@@ -38,20 +37,9 @@ const title = "Fix: '\r': command not found";
       <b>Visual Studio Code (vscode)</b>
       <div>
         <p>Ctrl + Shift + P > Change End of Line Sequence > LF</p>
-        <picture>
-          <source srcset="images/eol.webp" />
-          <img
-            src="https://live.staticflickr.com/65535/52549325434_ea6ed97941_o_d.png"
-            alt="ctrl+shift+p"
-          />
-        </picture>
-        <picture>
-          <source srcset="images/eol2.webp" />
-          <img
-            src="https://live.staticflickr.com/65535/52549325374_405f315f40_o_d.png"
-            alt="Change End of Line Sequence"
-          />
-        </picture>
+        <Image class="picture" src={eolImage} alt="Change End of Line Sequence" />
+
+        <Image class="picture" src={eolImage2} alt="Change End of Line Sequence" />
       </div>
     </div>
 
