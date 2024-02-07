@@ -1,6 +1,5 @@
 // font imports
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 
 $background-color: #1a1a1a;
 $secondary-color: #fafafa;
@@ -49,11 +48,11 @@ html {
     -webkit-transform: translate3d(-50%, -50%, 0);
     transform: translate3d(-50%, -50%, 0);
 
-    p {
+    .title-description {
         font-size: 1.5em;
-        font-family: "Inter", sans-serif;
 
         a {
+            font-size: inherit;
             color: white;
             text-decoration: none;
         }
@@ -154,33 +153,6 @@ iframe {
     padding: 0;
     z-index: 0;
     overflow: auto;
-}
-
-#back2Top {
-    width: 40px;
-    line-height: 40px;
-    overflow: hidden;
-    z-index: 999;
-    display: none;
-    cursor: pointer;
-    -moz-transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    position: fixed;
-    bottom: 50px;
-    right: 0;
-    background-color: $secondary-color;
-    color: #555;
-    text-align: center;
-    font-size: 30px;
-    text-decoration: none;
-}
-
-#back2Top:hover {
-    background-color: #ddf;
-    color: $background-color;
 }
 
 div.arrow {

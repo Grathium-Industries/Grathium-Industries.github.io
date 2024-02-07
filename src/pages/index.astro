@@ -21,7 +21,7 @@ import Layout from "../layouts/Layout.astro";
             <h1 id="title">
               <span class="thin">Grathium</span> [Industries]
             </h1>
-            <p>
+            <p class="title-description">
               <a href="https://github.com/hudson-newey">Hudson Newey's</a>
               Internet showcase.
             </p>
@@ -29,11 +29,9 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
       <a href="#content" onclick="scrollToContent();">
-        <div class="arrow"></div>
+        <div class="arrow" onclick="document.getElementsByClassName('websiteScroll')[0]?.scrollIntoView()"></div>
       </a>
     </body>
-
-    <a id="back2Top" title="Back to top" href="#">&#10148;</a>
 
     <div class="websiteScroll">
       <div class="black-background">
