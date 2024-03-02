@@ -16,7 +16,6 @@ export default defineConfig({
           "**/node_modules/**",
           "**/build/**",
           "**/.git/**",
-          "/src/pages/posts/deployments/**",
         ],
       },
     },
