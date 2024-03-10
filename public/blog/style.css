@@ -1,6 +1,8 @@
-$text-color: black;
-$secondary-text-color: #333;
-$heading-size: 20px;
+:root {
+    --text-color: black;
+    --secondary-text-color: #333;
+    --heading-size: 20px;
+}
 
 html {
   font-size: 100%;
@@ -30,16 +32,25 @@ body {
   background-color: white;
   border-radius: 2.5em;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, .3);
-  margin-top: $heading-size * 2;
+  margin-top: calc(var(--heading-size) * 2);
   overflow-x: hidden;
   margin-top: 3rem !important;
+}
+
+a {
+    color: var(--text-color);
+
+    &:hover {
+        color: var(--secondary-text-color);
+        text-decoration: underline;
+    }
 }
 
 h2 {
   position: relative;
   padding-top: 20px;
   margin: 0;
-  color: $text-color;
+  color: var(--text-color);
   font-size: 22px;
 }
 
@@ -86,10 +97,10 @@ img .picture {
 code,
 .code-block {
   position: relative;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Source Code Pro", monospace !important;
   font-size: 16px;
   line-height: 1.5;
-  color: $secondary-text-color;
+  color: var(--secondary-text-color);
   background-color: #f5f2f0;
   padding: 2px 4px;
   border-color: #ccc;
@@ -108,18 +119,18 @@ header {
   top: 0px;
   left: 0px;
   background-color: #f5f2f0;
-  color: $text-color;
+  color: var(--text-color);
   filter: invert(100%);
-  padding: $heading-size / 4;
+  padding: calc(var(--heading-size) / 4);
 
   & > a {
-    color: $text-color;
+    color: var(--text-color);
     text-decoration: none;
     font-size: large;
     margin: 1rem;
 
     &:hover {
-        color: $secondary-text-color;
+        color: var(--secondary-text-color);
         text-decoration: underline;
     }
   }
@@ -155,11 +166,9 @@ table {
   padding: 1em;
 }
 
-// when on mobile or small screens
 @media only screen and (max-width: 1026px) {
   header {
     display: none;
-
   }
 
   html {
@@ -178,7 +187,6 @@ table {
   }
 }
 
-// when on mobile
 @media only screen and (max-width: 600px) {
   body {
     padding: 20px;
@@ -188,9 +196,10 @@ table {
 
 .socials-container {
   position: relative;
-  color: $secondary-text-color;
+  color: var(--secondary-text-color);
 }
 
 .social-links {
   cursor: pointer;
+  color: var(--secondary-text-color);
 }
