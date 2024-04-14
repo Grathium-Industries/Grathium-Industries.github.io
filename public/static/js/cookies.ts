@@ -9,7 +9,7 @@ let removeCookieConsentBanner = (): void => {
     }
 }
 
-let createConsentCookie = ():void => {
+let createConsentCookie = (): void => {
     // get the current date in the format "day month (in text) year"
     let date: Date = new Date();
 
