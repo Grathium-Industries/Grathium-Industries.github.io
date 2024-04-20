@@ -4,15 +4,17 @@ import neonXImage from "../images/neonx.png";
 import twoUnuImage from "../images/2unu.png";
 import ntpImage from "../images/ntp.png";
 import Layout from "../layouts/Layout.astro";
+
+import "../css/style.css";
+import "../css/global.css";
+import "../css/home-summary.css";
 ---
 
 <Layout>
   <main>
     <head>
-      <link rel="stylesheet" href="./static/css/style.css" />
-      <link rel="stylesheet" href="./static/css/global.css" />
-      <link rel="stylesheet" href="./static/css/home-summary.css" />
       <link rel="manifest" href="/manifest.webmanifest" />
+      <script src="../js/gradient.js"></script>
     </head>
     <body>
       <div id="gradient" class="demo content">
@@ -324,5 +326,4 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </main>
-  <script is:inline src="/static/js/gradient.js"></script>
 </Layout>

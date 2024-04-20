@@ -5,7 +5,7 @@
     "scope" : "./",
     "icons": [
         {
-            "src": "./static/favicon.ico",
+            "src": "/favicon.ico",
             "sizes": "200x200",
             "type": "image/png"
         }

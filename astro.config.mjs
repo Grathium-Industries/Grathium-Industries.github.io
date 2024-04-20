@@ -18,6 +18,9 @@ export default defineConfig({
           "**/.git/**",
         ],
       },
+      ssr: {
+        noExternal: ['package-name'],
+      }
     },
   },
 });

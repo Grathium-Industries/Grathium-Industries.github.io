@@ -1,5 +1,5 @@
 <footer>
-  <div id="cookie-consent" class="cookie-consent-banner">
+  <div class="cookie-consent-banner">
     <div class="cookie-consent-banner__inner">
       <div class="cookie-consent-banner__copy">
         <div class="cookie-consent-banner__header">
@@ -20,7 +20,7 @@
         <a
           href="#"
           class="cookie-consent-banner__cta"
-          onclick="createConsentCookie();"
+          onclick="createConsentCookie()"
         >
           OK
         </a>
@@ -48,7 +48,49 @@
 
       gtag("config", "G-R245NSN3MZ");
     </script>
-
-    <script is:inline src="/static/js/dist/cookies.js"></script>
   </div>
 </footer>
+
+<script>
+function removeCookieConsentBanner() {
+    let banners = document.getElementsByClassName('cookie-consent-banner');
+
+    if (!banners) return;
+
+    for (let i = 0; i < banners.length; i++) {
+        banners[i].style.display = 'none';
+    }
+}
+
+function createConsentCookie() {
+    // get the current date in the format "day month (in text) year"
+    let date = new Date();
+
+    let day = date.getDate();
+    let month = date.getMonth();
+    let year = date.getFullYear() + 1;
+    let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let dateString = day + " " + monthNames[month] + " " + year;
+    // create the cookie
+    document.cookie = "consent=1; expires=" + dateString + "; path=/";
+
+    removeCookieConsentBanner();
+}
+
+function checkConsentCookie() {
+    // get the cookie
+    let consentCookie = document.cookie;
+    // check if the cookie exists
+    if (consentCookie.indexOf("consent=1") > -1) {
+        removeCookieConsentBanner();
+    }
+}
+
+const inEu = Intl.DateTimeFormat().resolvedOptions().timeZone.startsWith("Europe");
+
+if (inEu) {
+    checkConsentCookie();
+} else {
+    removeCookieConsentBanner();
+}
+</script>
