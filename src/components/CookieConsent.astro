@@ -18,9 +18,9 @@
 
       <div class="cookie-consent-banner__actions">
         <a
+          id="cookie-consent-btn"
           href="#"
           class="cookie-consent-banner__cta"
-          onclick="createConsentCookie()"
         >
           OK
         </a>
@@ -62,6 +62,21 @@ function removeCookieConsentBanner() {
     }
 }
 
+function createConsentCookie() {
+    // get the current date in the format "day month (in text) year"
+    let date = new Date();
+
+    let day = date.getDate();
+    let month = date.getMonth();
+    let year = date.getFullYear() + 1;
+    let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let dateString = day + " " + monthNames[month] + " " + year;
+    // create the cookie
+    document.cookie = "consent=1; expires=" + dateString + "; path=/";
+
+    removeCookieConsentBanner();
+}
+
 function checkConsentCookie() {
     // get the cookie
     let consentCookie = document.cookie;
@@ -70,6 +85,10 @@ function checkConsentCookie() {
         removeCookieConsentBanner();
     }
 }
+
+document.getElementById("cookie-consent-btn")?.addEventListener("click", () => {
+    createConsentCookie();
+});
 
 const inEu = Intl.DateTimeFormat().resolvedOptions().timeZone.startsWith("Europe");
 

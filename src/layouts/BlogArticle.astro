@@ -1,13 +1,39 @@
 ---
-import Blog from "./Blog.astro";
+import BlogHeader from "../components/BlogHeader.astro";
+import CookieConsent from "../components/CookieConsent.astro";
 import BlogFooter from "../components/BlogFooter.astro";
+
+import "../css/global.css";
+import "../css/blog.css";
 
 const { title } = Astro.props;
 ---
 
-<Blog title={title}>
-  <h1>{title}</h1>
-  <slot />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Grathium Industries" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" />
+    <meta name="author" content="Grathium Industries" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219405924277504"
+      crossorigin="anonymous"></script>
+    <meta name="generator" content={Astro.generator} />
+    <title>Grathium Industries - {title ?? 'Blog'}</title>
+  </head>
 
-  <BlogFooter />
-<Blog />
+  <body>
+    <BlogHeader></BlogHeader>
+
+    <h1>{title}</h1>
+
+    <slot />
+
+    <BlogFooter />
+
+    <CookieConsent />
+  </body>
+</html>
