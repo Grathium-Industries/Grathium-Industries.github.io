@@ -1,3 +1,7 @@
+p, a, h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+}
+
 .cookie-consent-banner {
   position: fixed;
   bottom: 0;
@@ -22,14 +26,12 @@
 .cookie-consent-banner__header {
   margin-bottom: 8px;
 
-  font-family: "CeraPRO-Bold", sans-serif, arial;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
 }
 
 .cookie-consent-banner__description {
-  font-family: "CeraPRO-Regular", sans-serif, arial;
   font-weight: normal;
   color: #838F93;
   font-size: 16px;
@@ -46,7 +48,6 @@
   color: #FFF;
   text-decoration: none;
   text-align: center;
-  font-family: "CeraPRO-Regular", sans-serif, arial;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
