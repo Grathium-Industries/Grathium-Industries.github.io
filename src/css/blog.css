@@ -63,6 +63,7 @@ p {
   position: relative;
   margin: 0;
   max-width: 80%;
+  padding-bottom: 1rem;
 }
 
 img .picture {
