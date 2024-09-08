@@ -8,5 +8,7 @@
         "type": "node-terminal"
       }
     ],
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "cSpell.words": ["grathium"],
+    "cSpell.caseSensitive": false
 }

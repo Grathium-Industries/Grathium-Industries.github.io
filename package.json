@@ -9,19 +9,23 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
+    "test": "playwright test",
     "preview": "astro preview",
     "lint": "astro check",
     "astro": "astro",
     "format": "biome format ./src"
   },
   "dependencies": {
-    "astro": "^4.12.2",
+    "astro": "^4.13.3",
     "bootstrap": "^5.3.3",
     "sharp": "^0.33.4",
     "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.8.3",
-    "@biomejs/biome": "^1.8.3"
-  }
+    "@astrojs/check": "^0.9.2",
+    "@biomejs/biome": "^1.8.3",
+    "@playwright/test": "^1.46.0",
+    "@types/node": "^22.2.0"
+  },
+  "packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf"
 }
