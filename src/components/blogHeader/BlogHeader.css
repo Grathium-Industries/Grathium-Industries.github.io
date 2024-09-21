@@ -1,0 +1,23 @@
+.blog-header {
+  position: relative;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #f5f2f0;
+  color: var(--text-color);
+  filter: invert(100%);
+  padding: calc(var(--heading-size) / 4);
+
+  & > a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: large;
+    margin: 1rem;
+
+    &:hover {
+        color: var(--secondary-text-color);
+        text-decoration: underline;
+    }
+  }
+}
+

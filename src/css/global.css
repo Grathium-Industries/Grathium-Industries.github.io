@@ -2,6 +2,10 @@ p, a, h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+    margin: 0;
+}
+
 .cookie-consent-banner {
   position: fixed;
   bottom: 0;

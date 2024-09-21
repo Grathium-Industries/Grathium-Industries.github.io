@@ -1,5 +1,5 @@
 ---
-import BlogHeader from "../components/BlogHeader.astro";
+import BlogHeader from "../components/blogHeader/BlogHeader.astro";
 import CookieConsent from "../components/CookieConsent.astro";
 import BlogFooter from "../components/BlogFooter.astro";
 
@@ -29,9 +29,12 @@ const { title } = Astro.props;
   <body>
     <BlogHeader></BlogHeader>
 
-    <h1>{title}</h1>
-
-    <slot />
+    <div class="blog-container">
+        <article>
+            <h1>{title}</h1>
+            <slot />
+        </article>
+    </div>
 
     <BlogFooter />
 
