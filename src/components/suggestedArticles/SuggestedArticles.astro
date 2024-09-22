@@ -1,0 +1,40 @@
+---
+import "./SuggestedArticles.css";
+
+interface Article {
+    title: string;
+    link: string;
+    publishedTime: string;
+}
+
+const articles: Article[] = [
+    {
+        title: "How to add more swap / zram on Fedora Linux",
+        link: "/posts/blog/how-to-add-more-swap-fedora",
+        publishedTime: "09/10/2022",
+    },
+    {
+        title: "How to Configure Cloudflare's 1.1.1.1 DNS over HTTPS on PiHole",
+        link: "/posts/blog/dns-over-https",
+        publishedTime: "25/07/2022",
+    },
+    {
+        title: "2UNU Online Documentation",
+        link: "/posts/blog/2unu",
+        publishedTime: "27/07/2023",
+    },
+];
+---
+
+<div class="content-footer">
+    <h3 class="component-title">Selected Articles</h3>
+
+    {articles.map((article) => (
+        <div class="article">
+            <a href={article.link} class="article-link">
+                <h5 class="article-title">{article.title}</h5>
+            </a>
+            <p class="article-published-time">Published: <time>{article.publishedTime}</time></p>
+        </div>
+    ))}
+</div>
