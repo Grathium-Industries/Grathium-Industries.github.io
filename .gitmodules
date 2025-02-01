@@ -1,6 +1,3 @@
-[submodule "public/posts/deployments/bluff-ball"]
-	path = public/posts/deployments/bluff-ball
-	url = https://github.com/hudson-newey/Bluff-Ball.git
 [submodule "public/posts/deployments/Internet-Speed-Test"]
 	path = public/posts/deployments/Internet-Speed-Test
 	url = https://github.com/hudson-newey/Internet-Speed-Test.git
