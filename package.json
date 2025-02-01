@@ -16,7 +16,7 @@
     "format": "biome format ./src"
   },
   "dependencies": {
-    "astro": "^4.13.3",
+    "astro": "^4.16.18",
     "bootstrap": "^5.3.3",
     "sharp": "^0.33.4",
     "typescript": "^5.5.4"
