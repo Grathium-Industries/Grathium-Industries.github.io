@@ -1,0 +1,45 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.insertFinalNewline": true,
+        "workbench.iconTheme": "material-icon-theme",
+        "editor.inlineSuggest.enabled": true,
+        "editor.renderWhitespace": "trailing",
+        "editor.defaultFormatter": "biomejs.biome",
+        "editor.formatOnSave": true,
+        "editor.rulers": [80, 120],
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "explorer.compactFolders": false,
+        "cSpell.caseSensitive": false,
+        "cSpell.words": [],
+        "cSpell.flagWords": ["yuo"],
+        "cSpell.ignorePaths": [
+            "**/node_modules/**",
+            "**/dist/**",
+            "grathium-industries.code-workspace"
+        ]
+    },
+    "extensions": {
+        "recommendations": [
+            "streetsidesoftware.code-spell-checker",
+            "biomejs.biome",
+            "ms-vscode.vscode-typescript-next",
+            "aaron-bond.better-comments",
+            "sidthesloth.html5-boilerplate",
+            "davidanson.vscode-markdownlint",
+            "ms-playwright.playwright",
+            "stylelint.vscode-stylelint",
+            "ecmel.vscode-html-css",
+            "htmlhint.vscode-htmlhint",
+            "zignd.html-css-class-completion",
+            "yzhang.markdown-all-in-one",
+            "pkief.material-icon-theme",
+            "astro-build.astro-vscode"
+        ]
+    }
+}
