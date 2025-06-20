@@ -23,9 +23,10 @@ article {
   font-size: 18px;
   line-height: 1.72857143;
   padding: 50px;
-  background-color: #fdfdfd;
+  background-color: lch(99.31% 0.01 296.81);
   border-radius: 2.5em;
   width: 80%;
+  max-width: 1200px;
 }
 
 a {
@@ -84,6 +85,11 @@ img .picture {
 
 .large-container {
   max-width: 100%;
+}
+
+pre {
+  padding: 1.5em;
+  border-radius: 0.5rem;
 }
 
 table,

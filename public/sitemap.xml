@@ -9,19 +9,15 @@
   </url>
 
   <url>
-    <loc>https://grathium-industries.github.io/posts/blog/crlf-fix</loc>
-  </url>
-
-  <url>
     <loc>https://grathium-industries.github.io/posts/blog/dns-over-https</loc>
   </url>
 
   <url>
-    <loc>https://grathium-industries.github.io/posts/blog/gitignore</loc>
+    <loc>https://grathium-industries.github.io/posts/blog/google-login</loc>
   </url>
 
   <url>
-    <loc>https://grathium-industries.github.io/posts/blog/google-login</loc>
+    <loc>https://grathium-industries.github.io/posts/blog/add-more-fedora-swap</loc>
   </url>
 
   <url>
@@ -33,51 +29,7 @@
   </url>
 
   <url>
-    <loc>https://grathium-industries.github.io/posts/blog/ssh</loc>
-  </url>
-
-  <url>
-    <loc>https://grathium-industries.github.io/posts/blog/tar-gz</loc>
-  </url>
-
-  <url>
-    <loc>https://grathium-industries.github.io/posts/blog/client-redirect</loc>
-  </url>
-
-  <url>
-    <loc>https://grathium-industries.github.io/posts/blog/cmd</loc>
-  </url>
-
-  <url>
-    <loc>https://grathium-industries.github.io/posts/blog/european-countries</loc>
-  </url>
-
-  <url>
-    <loc>https://grathium-industries.github.io/posts/blog/install-app-ubuntu</loc>
-  </url>
-
-  <url>
-    <loc>https://grathium-industries.github.io/posts/blog/how-to-add-more-swap-fedora</loc>
-  </url>
-
-  <url>
-    <loc>https://grathium-industries.github.io/posts/blog/bing-search</loc>
-  </url>
-
-  <url>
-    <loc>https://grathium-industries.github.io/posts/blog/bluff-ball</loc>
-  </url>
-
-  <url>
-    <loc>https://grathium-industries.github.io/posts/blog/screen-cast</loc>
-  </url>
-
-  <url>
-    <loc>https://grathium-industries.github.io/posts/blog/server-alert</loc>
-  </url>
-
-  <url>
-    <loc>https://grathium-industries.github.io/blog/2unu</loc>
+    <loc>https://grathium-industries.github.io/posts/blog/semicolon-less-javascript</loc>
   </url>
 
   <url>
@@ -85,22 +37,14 @@
   </url>
 
   <url>
-    <loc>https://grathium-industries.github.io/posts/deployments/Internet-Speed-Test/</loc>
-  </url>
-
-  <url>
     <loc>https://grathium-industries.github.io/posts/deployments/bluff-ball/</loc>
   </url>
 
   <url>
-    <loc>https://grathium-industries.github.io/u/</loc>
-  </url>
-
-  <url>
-    <loc>https://grathium-industries.github.io/posts/deployments/purewatch/</loc>
-  </url>
-
-  <url>
     <loc>https://grathium-industries.github.io/posts/deployments/newtab/</loc>
+  </url>
+
+  <url>
+    <loc>https://grathium-industries.github.io/posts/deployments/goal-tracker/</loc>
   </url>
 </urlset>

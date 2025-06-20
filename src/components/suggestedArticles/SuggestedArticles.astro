@@ -9,9 +9,9 @@ interface Article {
 
 const articles: Article[] = [
     {
-        title: "How to add more swap / zram on Fedora Linux",
-        link: "/posts/blog/how-to-add-more-swap-fedora",
-        publishedTime: "09/10/2022",
+        title: "A Case for Semicolon-less JavaScript (ASI)",
+        link: "/posts/blog/semicolon-less-javascript",
+        publishedTime: "31/05/2025",
     },
     {
         title: "How to Configure Cloudflare's 1.1.1.1 DNS over HTTPS on PiHole",
@@ -19,22 +19,23 @@ const articles: Article[] = [
         publishedTime: "25/07/2022",
     },
     {
-        title: "2UNU Online Documentation",
-        link: "/posts/blog/2unu",
-        publishedTime: "27/07/2023",
+        title: "How to Add More swap / zram on Fedora Linux",
+        link: "/posts/blog/add-more-fedora-swap",
+        publishedTime: "09/10/2022",
     },
 ];
 ---
 
-<div class="content-footer">
-    <h3 class="component-title">Selected Articles</h3>
-
-    {articles.map((article) => (
-        <div class="article">
-            <a href={article.link} class="article-link">
-                <h5 class="article-title">{article.title}</h5>
-            </a>
-            <p class="article-published-time">Published: <time>{article.publishedTime}</time></p>
-        </div>
-    ))}
-</div>
+<section class="component-container">
+    <h2 class="component-title">Selected Articles</h2>
+    <div class="article-container">
+        {articles.map((article) => (
+            <div class="article">
+                <a href={article.link} class="article-link">
+                    <h5 class="article-title">{article.title}</h5>
+                </a>
+                <p class="article-published-time">Published: <time>{article.publishedTime}</time></p>
+            </div>
+        ))}
+    </div>
+</section>

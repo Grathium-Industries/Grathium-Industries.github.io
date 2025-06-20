@@ -16,7 +16,7 @@
         "editor.insertSpaces": true,
         "explorer.compactFolders": false,
         "cSpell.caseSensitive": false,
-        "cSpell.words": [],
+        "cSpell.words": ["grathium"],
         "cSpell.flagWords": ["yuo"],
         "cSpell.ignorePaths": [
             "**/node_modules/**",

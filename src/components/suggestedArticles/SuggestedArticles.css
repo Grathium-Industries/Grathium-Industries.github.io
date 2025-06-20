@@ -1,26 +1,33 @@
-.content-footer {
+.component-container {
+    /* I suspect I'm going to regret adding positioning to this container */
+    margin: 3rem;
+}
+
+.article-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
+    gap: 2.5rem;
 }
 
 .component-title {
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    font-size: 2.75em;
     text-align: center;
+
+    margin-bottom: 1.5rem;
 }
 
 .article {
-    margin: 0.5rem;
+    max-width: 400px;
 
     .article-title {
-        font-size: 1.2em;
-        font-weight: bold;
-        margin: 0px;
+        font-size: 1.3em;
     }
 
     .article-published-time {
-        text-align: center;
-        font-size: 0.8em;
-        max-width: 100%;
+        margin-top: 0.5rem;
+        font-size: 1.1em;
     }
 
     .article-link {
