@@ -7,6 +7,7 @@
   color: var(--text-color);
   filter: invert(100%);
   padding: calc(var(--heading-size) / 4);
+  font-family: "Inter", sans-serif !important;
 
   & > a {
     color: var(--text-color);

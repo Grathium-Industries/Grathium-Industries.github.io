@@ -1,11 +1,8 @@
 ---
 layout: "../../../layouts/BlogArticle.astro"
 title: "How to Fix 'App not enabled for this user' When Signing in with Google"
+date: "27/07/2022"
 ---
-
-# How to Fix 'App not enabled for this user' When Signing in with Google
-
-Published: 27/07/2022
 
 ## Fixes Errors
 

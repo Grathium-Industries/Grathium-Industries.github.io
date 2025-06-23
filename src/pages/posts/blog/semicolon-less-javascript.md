@@ -1,9 +1,8 @@
 ---
 layout: "../../../layouts/BlogArticle.astro"
 title: "A Case for Semicolon-less JavaScript (ASI)"
+date: "23/06/2025"
 ---
-
-# A Case for Semicolon-less JavaScript (ASI)
 
 ## Why semi-columns
 

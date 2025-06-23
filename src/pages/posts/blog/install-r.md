@@ -1,11 +1,8 @@
 ---
 layout: "../../../layouts/BlogArticle.astro"
 title: "How to install R studio on Ubuntu 22"
+date: "18/07/2022"
 ---
-
-# How to install R studio on Ubuntu 22
-
-Published: 18/07/2022
 
 ## Fixes Errors
 

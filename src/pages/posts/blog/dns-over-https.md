@@ -1,11 +1,8 @@
 ---
 layout: "../../../layouts/BlogArticle.astro"
 title: "How to Configure DNS over HTTPS on PiHole"
+date: "25/07/2022"
 ---
-
-# How to Configure DNS over HTTPS on PiHole
-
-Published: 25/07/2022
 
 ## Description
 

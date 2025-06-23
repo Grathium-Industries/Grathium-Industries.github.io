@@ -7,9 +7,8 @@ import Layout from "../layouts/Layout.astro";
 
 import SuggestedArticles from "../components/suggestedArticles/SuggestedArticles.astro";
 
-import "../css/style.css";
+import "../css/home.css";
 import "../css/global.css";
-import "../css/home-summary.css";
 ---
 
 <Layout>
@@ -59,7 +58,7 @@ import "../css/home-summary.css";
                     </div>
                     <div class="p-1 text-white ms-2">
                         <h2 class="display-5 preview-title">NeonX2.0</h2>
-                        <p>
+                        <p class="project-description">
                             An entire desktop environment inside an electron
                             app. Complete with support for 3rd part
                             applications, programs and custom file management
@@ -89,8 +88,8 @@ import "../css/home-summary.css";
 
                 <div class="row d-flex justify-content-evenly m-5">
                     <div class="col p-2 text-white">
-                        <h2 class="preview-title">Internet Speed Test</h2>
-                        <p>
+                        <h2 class="project-title">Internet Speed Test</h2>
+                        <p class="project-description">
                             A basic speed test with detailed analytics written
                             in pure HTML, TypeScript & SCSS.
                         </p>
@@ -116,8 +115,8 @@ import "../css/home-summary.css";
                     </div>
 
                     <div class="col p-2 text-white">
-                        <h2 class="preview-title">Bundler</h2>
-                        <p>
+                        <h2 class="project-title">Bundler</h2>
+                        <p class="project-description">
                             A bundler framework to easily run, distribute, and
                             standardize any project.
                         </p>
@@ -125,18 +124,20 @@ import "../css/home-summary.css";
                         <a
                             class="link-light m-1"
                             href="https://github.com/hudson-newey/Bundler"
-                            >GitHub Source Code</a
                         >
+                            GitHub Source Code
+                        </a>
                         <a
                             class="link-light m-1"
                             href="https://github.com/hudson-newey/Bundler/blob/main/README.md"
-                            >Readme</a
                         >
+                            Readme
+                        </a>
                     </div>
 
                     <div class="col p-2 text-white">
-                        <h2 class="preview-title">Bluff Ball (IT Crowd)</h2>
-                        <p>
+                        <h2 class="project-title">Bluff Ball (IT Crowd)</h2>
+                        <p class="project-description">
                             From Season 3 Ep 02 of The IT Crowd (Are We Not Men)
                             I've created the Bluff Ball website off of "The IT
                             Crowd".
@@ -173,7 +174,7 @@ import "../css/home-summary.css";
                     </div>
                     <div class="p-1 text-white ms-2">
                         <h2 class="display-5 preview-title">New Tab Page</h2>
-                        <p>
+                        <p class="project-description">
                             Modern new tab pages provided by web browser
                             defaults either push political agendas, are used as
                             announcement boards, or monetized through
@@ -217,7 +218,7 @@ import "../css/home-summary.css";
                     </div>
                     <div class="p-1 text-white ms-2">
                         <h2 class="display-5 preview-title">Goal Tracker</h2>
-                        <p>
+                        <p class="project-description">
                             A goal tracking app that I made because existing
                             options didn't do exactly what I wanted. The
                             application supports assigning tasks to broader

@@ -1,11 +1,8 @@
 ---
 layout: "../../../layouts/BlogArticle.astro"
 title: "How to Install Brave Browser without the Play Store"
+date: "19/07/2022"
 ---
-
-# How to Install Brave Browser without the Play Store
-
-Published: 19/07/2022
 
 ## Description
 

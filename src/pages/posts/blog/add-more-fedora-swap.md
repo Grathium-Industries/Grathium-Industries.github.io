@@ -1,11 +1,8 @@
 ---
 layout: "../../../layouts/BlogArticle.astro"
 title: "How to Add More swap / zram on Fedora Linux"
+date: "09/10/2022"
 ---
-
-# How to Add More swap / zram on Fedora Linux
-
-Published: 09/10/2022
 
 ## Description
 

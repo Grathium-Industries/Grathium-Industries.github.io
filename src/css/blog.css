@@ -4,13 +4,18 @@
     --heading-size: 20px;
 }
 
-h1 {
-  position: relative;
-}
-
 hr {
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.blog-head {
+  margin-bottom: 1rem;
+
+  .blog-title {
+    position: relative;
+    margin-bottom: 0;
+  }
 }
 
 .blog-container {
@@ -19,7 +24,7 @@ hr {
 }
 
 article {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", sans-serif !important;
   font-size: 18px;
   line-height: 1.72857143;
   padding: 50px;
@@ -56,6 +61,7 @@ p {
   margin: 0;
   max-width: 80%;
   padding-bottom: 1rem;
+  letter-spacing: 0.1px;
 }
 
 img .picture {
