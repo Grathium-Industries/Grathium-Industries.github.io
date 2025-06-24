@@ -1,7 +1,9 @@
 ---
-import Blog from "../layouts/Blog.astro";
+import BlogHeader from "../components/blogHeader/BlogHeader.astro";
+import CookieConsent from "../components/cookieConsent/CookieConsent.astro";
+import Layout from "../layouts/Layout.astro";
 
-const title = "Technical Index";
+const title = "Posts";
 ---
 
 <style>
@@ -10,10 +12,8 @@ const title = "Technical Index";
     }
 </style>
 
-<Blog title={title}>
-	<h1>Grathium Industries - {title}</h1>
-
-    <hr>
+<Layout title={title}>
+    <BlogHeader></BlogHeader>
 
 	<div>
 		<h2>Online Deployment Environments</h2>
@@ -51,4 +51,6 @@ const title = "Technical Index";
 		<h2>Platforms</h2>
 		<a href="https://github.com/Grathium-Industries">GitHub</a><br>
 	</div>
-</Blog>
+
+    <CookieConsent />
+</Layout>

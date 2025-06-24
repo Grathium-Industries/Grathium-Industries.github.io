@@ -1,9 +1,14 @@
+@import url("./theming.css");
+
 a {
   color: inherit;
 }
 
 body {
     margin: 0;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .cookie-consent-banner {

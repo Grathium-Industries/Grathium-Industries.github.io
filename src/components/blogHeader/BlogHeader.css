@@ -1,7 +1,9 @@
 .blog-header {
   display: block;
-  color: var(--text-color-light);
   padding: 0.8rem;
+
+  color: var(--text-color-light);
+
   font-family: "Inter", sans-serif;
   font-weight: 300;
   letter-spacing: 2px;
