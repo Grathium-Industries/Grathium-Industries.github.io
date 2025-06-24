@@ -1,9 +1,22 @@
 ---
+import { Icon } from "astro-icon/components";
+
 import "./BlogHeader.css"
 ---
 
 <header class="blog-header">
-  <a href="/" class="button">Home</a>
-  <a href="/posts/" class="button">Articles</a>
-  <a href="https://github.com/hudson-newey" class="button">GitHub</a>
+  <a href="/posts">
+    <Icon name="ion:return-down-back" />
+    All Posts
+  </a>
+
+  <a href="https://github.com/hudson-newey">
+    <Icon name="ion:logo-github" />
+    GitHub
+  </a>
+
+  <a href="/">
+    <Icon name="ion:home" />
+    Home
+  </a>
 </header>

@@ -1,3 +1,7 @@
+/*
+    This component contains a lot of "inherit" styles so that it adopts the
+    styling of the host page and fits in "seamlessly"
+*/
 .component-container {
     /* I suspect I'm going to regret adding positioning to this container */
     margin: 3rem;
@@ -11,10 +15,12 @@
 }
 
 .component-title {
-    font-weight: 300;
-    letter-spacing: 0.1rem;
     font-size: 2.75rem;
     text-align: center;
+
+    font-family: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
 
     margin-bottom: 1.5rem;
 }
@@ -33,5 +39,6 @@
 
     .article-link {
         text-decoration: none;
+        color: inherit;
     }
 }

@@ -2,6 +2,7 @@
 import BlogHeader from "../components/blogHeader/BlogHeader.astro";
 import CookieConsent from "../components/cookieConsent/CookieConsent.astro";
 import BlogFooter from "../components/blogFooter/BlogFooter.astro";
+import SocialsContainer from "../components/socialsContainer/SocialsContainer.astro";
 
 import "../css/global.css";
 import "../css/blog.css";
@@ -9,40 +10,46 @@ import "../css/blog.css";
 const { frontmatter } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Grathium Industries" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
     <meta name="author" content="Grathium Industries" />
     <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" />
     <meta name="generator" content={Astro.generator} />
-    <title>{frontmatter.title ?? 'Blog'} - Grathium Industries</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>{frontmatter.title ?? "Blog"} - Grathium Industries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <BlogHeader />
 
     <div class="blog-container">
-        <article>
-            <div class="blog-head">
-              <h1 class="blog-title">{frontmatter.title}</h1>
-              <p class="blog-published-date">
-                Published: <time>{frontmatter.date ?? 'Unknown'}</time>
-              </p>
-            </div>
+      <article>
+        <div class="blog-head">
+          <h1 class="blog-title">{frontmatter.title}</h1>
+          <p class="blog-published-date">
+            Published: <time>{frontmatter.date ?? "Unknown"}</time>
+          </p>
+        </div>
 
-            <slot />
-        </article>
+        <slot />
+
+        <SocialsContainer class="socials-container" />
+      </article>
     </div>
 
-    <BlogFooter />
+    <div class="blog-footer">
+      <BlogFooter />
+    </div>
 
     <CookieConsent />
   </body>

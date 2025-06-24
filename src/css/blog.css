@@ -1,7 +1,6 @@
 :root {
     --text-color: black;
-    --secondary-text-color: #333;
-    --heading-size: 20px;
+    --text-color-light: #333;
 }
 
 hr {
@@ -15,6 +14,12 @@ hr {
   .blog-title {
     position: relative;
     margin-bottom: 0;
+
+    font-size: 36px;
+  }
+
+  .blog-published-date {
+    color: var(--text-color-light);
   }
 }
 
@@ -23,8 +28,11 @@ hr {
     justify-content: center;
 }
 
-article {
+article, .blog-footer {
   font-family: "Inter", sans-serif !important;
+}
+
+article {
   font-size: 18px;
   line-height: 1.72857143;
   padding: 50px;
@@ -38,7 +46,7 @@ a {
     color: var(--text-color);
 
     &:hover {
-        color: var(--secondary-text-color);
+        color: var(--text-color-light);
         text-decoration: underline;
     }
 }
@@ -56,6 +64,10 @@ h3 {
   margin: 0px;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  letter-spacing: 0.2px;
+}
+
 p {
   position: relative;
   margin: 0;
@@ -68,29 +80,6 @@ img .picture {
   position: relative;
   max-width: 100%;
   height: auto;
-}
-
-.pub-time {
-  position: relative;
-  padding-top: 0 !important;
-  font-size: 20px;
-}
-
-.indent {
-  margin-left: 20px;
-}
-
-.container {
-  position: relative;
-  min-width: 60%;
-  max-width: fit-content;
-  border-style: groove;
-  padding: 20px;
-  margin: 10px;
-}
-
-.large-container {
-  max-width: 100%;
 }
 
 pre {
@@ -128,40 +117,29 @@ table {
   padding: 1em;
 }
 
-@media only screen and (max-width: 1026px) {
-  header {
-    display: none;
-  }
-
-  html {
-    width: 100%;
-    margin-left: 0px;
-    margin-top: 0px;
-  }
-
-  body {
-    max-width: fit-content;
-    margin-top: 0px;
-  }
-
-  p {
-    max-width: fit-content;
-  }
-}
-
 @media only screen and (max-width: 600px) {
-  body {
-    padding: 20px;
-    padding-top: 50px;
+  .blog-container {
+    padding-left: 1rem;
+  }
+
+  article {
+    /*
+      I push the content down by quite a lot for 2 reasons
+        - I want the heading to be at the users eye-line when they first load
+          the page.
+        - It encourages an interaction which is good for retention.
+    */
+    padding-top: 6.25rem;
+    width: 100%;
   }
 }
 
 .socials-container {
   position: relative;
-  color: var(--secondary-text-color);
+  color: var(--text-color-light);
 }
 
 .social-links {
   cursor: pointer;
-  color: var(--secondary-text-color);
+  color: var(--text-color-light);
 }
