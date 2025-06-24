@@ -1,0 +1,17 @@
+:root {
+    --text-color: black;
+    --text-color-light: #333;
+
+    --background-color: white;
+    --card-color: lch(99.31% 0.01 296.81);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: rgb(232, 230, 227);
+        --text-color-light: rgb(200, 195, 188);
+
+        --background-color: rgb(24, 26, 27);
+        --card-color: rgb(25, 27, 28);
+    }
+}

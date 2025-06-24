@@ -16,7 +16,7 @@ I spent a long time searching for reasons for and against JavaScript semicolons.
 
 However, I have recently come across a **stronger** argument for semicolon-less JavaScript and ASI.
 
-### DIFFS AND BLAMES
+### Diffs and blames
 
 I believe that one of the quickest ways to determine the quality of a code base is to look at the Git / version control history.
 

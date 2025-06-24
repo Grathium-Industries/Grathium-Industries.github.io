@@ -1,6 +1,9 @@
-:root {
-    --text-color: black;
-    --text-color-light: #333;
+@import url("./theming.css");
+
+body {
+  background-color: var(--background-color);
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
 }
 
 hr {
@@ -28,22 +31,17 @@ hr {
     justify-content: center;
 }
 
-article, .blog-footer {
-  font-family: "Inter", sans-serif !important;
-}
-
 article {
   font-size: 18px;
   line-height: 1.72857143;
   padding: 50px;
-  background-color: lch(99.31% 0.01 296.81);
   border-radius: 2.5em;
   width: 80%;
   max-width: 1200px;
 }
 
 a {
-    color: var(--text-color);
+    text-decoration: underline;
 
     &:hover {
         color: var(--text-color-light);
@@ -55,7 +53,6 @@ h2 {
   position: relative;
   padding-top: 20px;
   margin: 0;
-  color: var(--text-color);
   font-size: 22px;
 }
 
@@ -69,9 +66,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-  position: relative;
-  margin: 0;
+  display: block;
   max-width: 80%;
+
+  margin: 0;
   padding-bottom: 1rem;
   letter-spacing: 0.1px;
 }
